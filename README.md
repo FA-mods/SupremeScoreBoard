@@ -1,4 +1,4 @@
-# SupremeScoreBoard (UI) mod 
+# SupremeScoreBoard (UI) mod (v1.2)
 
 This repository contains implementation of a User Interface mod for Supreme Commander FA game and it can be used with FAF client (http://www.faforever.com)
 
