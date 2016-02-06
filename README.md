@@ -12,5 +12,5 @@ C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged
 3. Enable SupremeScoreBoard mod in Mod Manager (in Supreme Commander FA game)
 
 or
-
+ 
 Download from the vault in <a href="http://www.faforever.com/downloads/#.VrY6vPkrIQ8" target="_blank">Forged Alliance Forever</a> client
