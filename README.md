@@ -7,7 +7,7 @@ http://forums.faforever.com/viewtopic.php?f=41&t=10887
 
 #Installation
 Download content of this repository to your "Mods" folder for Supreme Commander FA game, e.g.
-C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\
+C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\SupremeScoreBoard\
 
 or
 
