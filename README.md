@@ -1,6 +1,6 @@
 # SupremeScoreBoard (UI) mod (v1.2)
 
-This repository contains implementation of a mod for Supreme Commander FA game. This mod changes only User Interface of the game and it be used in multiplier games withouth affecting other players.
+This repository contains implementation of a mod for Supreme Commander FA game. This mod changes only User Interface of the game and it can be used in multiplayer games withouth affecting other players.
 
 #Features
 http://forums.faforever.com/viewtopic.php?f=41&t=10887
