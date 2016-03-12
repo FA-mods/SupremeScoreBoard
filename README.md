@@ -6,7 +6,8 @@ This repository contains implementation of a mod for Supreme Commander FA game. 
 http://forums.faforever.com/viewtopic.php?f=41&t=10887
 
 #Installation
-1. Download "SupremeScoreBoard.zip" file and unzip it to your "Mods" folder for Supreme Commander FA game, e.g.
+1. Download "SupremeScoreBoard.zip" file 
+2. Unzip the file to your "Mods" folder for Supreme Commander FA game, e.g.
 C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\
 2. Enable SupremeScoreBoard mod in Mod Manager (in Supreme Commander FA game)
 
