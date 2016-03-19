@@ -15,11 +15,15 @@ or
  
 Download this mod from the vault in <a href="http://www.faforever.com/downloads/#.VrY6vPkrIQ8" target="_blank">Forged Alliance Forever</a> client
 
-#Contact Info
-Shoot me a message on FAF forum or in FAF client chat. My user name is "HUSSAR":
-http://forums.faforever.com/memberlist.php?mode=viewprofile&u=9827
+#License
+The  is a very permissive license for software and other scientific or artistic works that offers a great degree of freedom. In fact, it is probably the best license out there. 
 
 #Contribution
 
 All contributions are welcome, though I can't guarantee to pull all of them in. If you do want to contribute, please create a separate branch and a pull request for that. It'll be a bit easier for me to keep the repo tidy that way.
 Thanks in advance.
+
+#Contact Info
+Shoot me a message on FAF forum or in FAF client <a href="http://forums.faforever.com/memberlist.php?mode=viewprofile&u=9827" target="_blank">chat</a>. My user name is "HUSSAR":
+
+
