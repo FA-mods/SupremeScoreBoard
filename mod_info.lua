@@ -1,51 +1,80 @@
--- ####################################################################################################
-name        = "Supreme Score Board v1.21"
--- ####################################################################################################
-version     = 1.21
-uid         = "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1210"
-author      = "HUSSAR" -- http://forums.faforever.com/memberlist.php?mode=viewprofile&u=9827
-copyright   = "HUSSAR, free to re-use code as long as you credit me in your mod"
-description = "Improves score board and replays by adding more columns, team stats, players sorting, filtering units by type, kill/lose ratio, fixed UI updates lags! (HUSSAR)"
-icon        = "/mods/SupremeScoreBoard/mod_icon.png"
-url         = "http://forums.faforever.com/viewtopic.php?f=41&t=10887"
-selectable  = true
-enabled     = true
-ui_only     = true
-exclusive   = false
+-- #########################################################
+name         = "Supreme Score Board v1.3"
+-- ######################################################### 
+version      = 1.3
+uid          = "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1300"
+author       = "HUSSAR"
+copyright    = "HUSSAR, free to re-use code as long as you credit me in your mod"
+contributors = "Anihilnine, Crotalus, Speed2, MaCielPL, Nojoke, Petricpwnz, Nexus_of_Reality, Col_Walter_Kurtz, PsychoBoB"
+description  = "Improves score board and replays by adding more columns, team stats, players sorting, filtering units by type, kill/lose ratio, and fixes UI updates lags! (HUSSAR)"
+icon         = "/mods/SupremeScoreBoard/mod_icon.png"
+url          = "http://forums.faforever.com/viewtopic.php?f=41&t=10887"
+selectable   = true
+enabled      = true
+ui_only      = true
+exclusive    = false
 requiresNames = { }
-requires    = { }
+requires      = { }
 -- this mod will conflict with all mods that modify score.lua file:
 conflicts   = { 
-    "9B5F858A-163C-4AF1-B846-A884572E61A5", -- lazyshare
-    "b0059a8c-d9ab-4c30-adcc-31c16580b59d", -- lazyshare v6
-    "c31fafc0-8199-11dd-ad8b-0866200c9a68", -- coloured allies in score
-    "b2cde810-15d0-4bfa-af66-ec2d6ecd561b", -- eco manager v3
-    "ecbf6277-24e3-437a-b968-EcoManager-v4",
-    "ecbf6277-24e3-437a-b968-EcoManager-v6",
-    "ecbf6277-24e3-437a-b968-EcoManager-v5",
-    "ecbf6277-24e3-437a-b968-EcoManager-v7",
-    "0faf3333-1122-633s-ya-VX0000001000",   -- eco info - sharing among your team
+    "9B5F858A-163C-4AF1-B846-A884572E61A5", -- INTERGRATED lazyshare  
+    "b0059a8c-d9ab-4c30-adcc-31c16580b59d", -- INTERGRATED lazyshare  
+    "c31fafc0-8199-11dd-ad8b-0866200c9a68", -- INTERGRATED coloured allies in score
     "89BF1572-9EA8-11DC-1313-635F56D89591", -- 
     "f8d8c95a-71e7-4978-921e-8765beb328e8", -- 
-    "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1100",
+    "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1100", -- old SSB
+    "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1200", -- old SSB
+    "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1230", -- old SSB
     }
 before = { }
-after = { }
-
+after = { 
+    "zcbf6277-24e3-437a-b968-Common-v1",
+    "0faf3333-1122-633s-ya-VX0000001000",   -- eco info - sharing among your team
+    "b2cde810-15d0-4bfa-af66-ec2d6ecd561b", -- eco manager v3
+    "ecbf6277-24e3-437a-b968-EcoManager-v4",
+    "ecbf6277-24e3-437a-b968-EcoManager-v5", 
+    "ecbf6277-24e3-437a-b968-EcoManager-v6",
+    "ecbf6277-24e3-437a-b968-EcoManager-v7",
+    "ecbf6277-24e3-437a-b968-EcoManager-v8",
+}
 --------------------------------------------------------------------------------------
 --[[ TODO
- add configuration window for hiding columns, changing font size, background opacity etc.
  add ping info about players (lua/modules/ui/game/connectivity.lua)
  show acu kills and mvp kill ratio  
  group players colors before selecting team color to avoid green team color if two green players are in two teams
- 
---]] 
+
+ add build power based on players engineers (requires fix in score data)
+ add images to notifications for built experimental units (requires fix in FAF score data)
+ add exp voice over from lua\ui\game\vo_computer.lua
+ add army compare (strength, DPS, mass value) between teams (in replay session)
+ add army overview with status of built TMLs. Nukes, HP for each major unit type (in game session)
+ add more notifications about built nukes/t3 arty/experimental (in replay session)
+ add stacked build menu (no tabs)
+ add supreme empire tree functionality with movable UI elements
+ -]] 
 --------------------------------------------------------------------------------------
 -- MOD HISTORY
 --------------------------------------------------------------------------------------
---[[ v1.2 BY HUSSAR - January, 2016
+--[[ v1.3 - HUSSAR - July, 2016
 --------------------------------------------------------------------------------------
-NEW FEATURES:
+- added info about who killed a player in Army notification window
+- added info about who decided to CTRL+K in Army notification window
+- added coloring of player names in Army notification window
+- added mod configuration under Game -> Options -> Interface tab
+- added interaction states for buttons in the sort line (first line of the score board)
+- changed mouse interaction in top row, now left click will show values in columns
+- changed mouse interaction in top row, now right click will sort values in columns
+- fixed compatibility with other mods that modify score.lua (e.g. EcoManager) and SSB takes precedence over these mods
+- fixed numbering of teams based on players' starting locations and map quadrants (per Gyle request)
+- fixed messages with sent resources/units to allies (observer will see message target)
+- fixed tooltip that shows unit restrictions and separated presets from custom restrictions
+- fixed detection for unranked games (if restrictions count greater than zero)
+- increased number of notifications for built experimental units (2 -> 5)
+- increased precision for rounding large numbers (1.2m -> 1.23m)
+- improved description of tooltips
+--]]
+--------------------------------------------------------------------------------------
+--[[ v1.2 - HUSSAR - January, 2016
 --------------------------------------------------------------------------------------
 - (all sessions) added replay ID below map info line
 - (all sessions) added calculation of game quality/balance if this value is not present in session options
@@ -58,9 +87,6 @@ NEW FEATURES:
 - (replay session) added auto-hiding multifunction panel because it is not used in replays at all
 - (replay session) added auto-switching between score columns (e.g. units types air|land|naval)
 - (replay session) clicking on a column toggle will disable auto-switching columns 
---------------------------------------------------------------------------------------
-FIXES:
---------------------------------------------------------------------------------------
 - fixed coloring of player names when they are not in teams (e.g. Phantom games)
 - fixed coloring of player names in replay session
 - fixed information in tooltips 
@@ -78,7 +104,7 @@ FIXES:
 - changed column with player names to include clan tags (if they exist)
 --]]
 --------------------------------------------------------------------------------------
---[[ v1.1 BY HUSSAR - October 5, 2015
+--[[ v1.1 - HUSSAR - October 5, 2015
 --------------------------------------------------------------------------------------
 - fixed info about active mods in replay session
 - fixed status of game raking
@@ -87,9 +113,7 @@ FIXES:
 - thanks to testers: Petricpwnz, Anihilnine
 --]]
 --------------------------------------------------------------------------------------
---[[ v1.0 BY HUSSAR - September 25, 2015
---------------------------------------------------------------------------------------
-FEATURES:
+--[[ v1.0 - HUSSAR - September 25, 2015
 --------------------------------------------------------------------------------------
 - added team lines that sums up statistics for allied players
 - added column with filters to show count of air/land/navy/base units  
@@ -125,12 +149,6 @@ FEATURES:
 - added notifications about 1st experimental unit built by a player
 - changed game time/speed fields into two fields   
 - changed unit counter to show unit count of all armies (in observer view) or just player's units (in player view) 
-
-*Pending FAF patch that will actually add reclaim values to score data and thus enable them to show in score panel 
-
---------------------------------------------------------------------------------------
-FIXES:
---------------------------------------------------------------------------------------
 - fixed missing tooltip for game speed slider
 - fixed performance in updating score panel by limiting number of for loops (n*n-times to n-times)
 - fixed issues with performing operations on uninitialized values of score data
@@ -138,7 +156,8 @@ FIXES:
 - fixed redundant function calls to GetFocusArmy()
 - fixed redundant function calls to SessionIsReplay()
 - fixed redundant function calls to SessionGetScenarioInfo()
-- fixed redundant imports of some LUA scripts (e.g. announcement.LUA)
+- fixed redundant imports of some LUA scripts (e.g. announcement.lua)
+* pending FAF patch that will actually add reclaim values to score data and thus enable them to show in score panel 
 --]]
 --------------------------------------------------------------------------------------
 --[[ TEST NOTES:
@@ -148,7 +167,10 @@ FIXES:
 -- ai           Neptune, EntropicVoid on The Dark Heart
 -- max teams    Fractal Cancer, Seraphim Glaciers, White Fire 
 -- clans        SGI Nequilich e VoR
-                
-logs line =  line# in this file + # of lines in original score.LUA (620) 630
+
+FAF bugs:
+limit logging: "Particle cap exceeded, discarding excess."
+
+logs line =  line# in this file + # of lines in original score.lua (615) 
 --]]  
 --------------------------------------------------------------------------------------

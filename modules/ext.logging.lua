@@ -1,5 +1,5 @@
  
---LOG("HUSSAR: " .. "Loading string extensions module: stringX.LUA... "  )
+--LOG("HUSSAR: " .. "Loading string extensions module: stringX.lua... "  )
 local Tab = import('ext.tables.lua')
  
 --[[
@@ -8,7 +8,8 @@ TODO:
 -  
 --]]
 
-Prefix = 'HUSSAR >>>' --'
+Prefix = 'SSB >>>' --'
+--Level = 'error|warning|info|table'
 Level = 'error|warning|info|trace|table'
 IsEnabled = true
 
@@ -38,8 +39,8 @@ function Record(msgType, message)
         message = Prefix and Prefix .. ' ' .. message or message
         LOG(message)
         --print(message)
-    else 
-        LOG('skipped message type ' .. msgType)
+    --else 
+      --  LOG('skipped message type ' .. msgType)
     end
 end
 -- record recursively table with its keys and corresponding values  
@@ -49,9 +50,12 @@ function Table(tblValue, tblName)
     local msgType = 'table'
     
     local tblType = type(tblValue)
-    if (not tblValue) then
-        Record(msgType, tblName .. ' is nil')
+    if tblValue == nil then
+        Record(msgType, tblName .. ' = nil')
         return
+    --if (not tblValue) then
+    --    Record(msgType, tblName .. ' is nil')
+    --    return
     elseif (tblType == "table") then
         Record(msgType, tblName .. ' = {}')
         for key,val in Tab.GetPairs(tblValue) do

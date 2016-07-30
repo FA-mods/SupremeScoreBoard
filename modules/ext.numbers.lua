@@ -1,5 +1,5 @@
 -- ##########################################################################################
---  File:    /LUA/modules/UI/game/score.LUA
+--  File:     
 --  Summary: Module for working with numbers
 --  Author:  HUSSAR
 -- ##########################################################################################
@@ -43,7 +43,7 @@ function mod(a, b)
     a = init(a)
     b = init(b)    
     if b == 0 then return 0 end
-	return a - math.floor(a / b) * b
+    return a - math.floor(a / b) * b
 end
 -- sort two variables based on their numeric value or alpha order (strings)
 function sort(valueA, valueB)
@@ -79,9 +79,11 @@ function frmt(value)
         ret = string.format("%01.1fk", value / 1000)
     elseif value < 1000000 then      -- 10K to 999K
         ret = string.format("%01.0fk", value / 1000)
-    elseif value < 10000000 then   -- 1.0M to 9.9M
+    elseif value < 10000000 then    -- 1.0M to 9.9M
+        ret = string.format("%01.2fm", value / 1000000)
+    elseif value < 100000000 then   -- 10.0M to 99.9M
         ret = string.format("%01.1fm", value / 1000000)
-    elseif value < 1000000000 then  -- 10.0M to 999M
+    elseif value < 1000000000 then  -- 100.0M to 999M
         ret = string.format("%01.0fm", value / 1000000)
     else                             -- 1.0B to ....
         ret = string.format("%01.1fb", value / 1000000000)

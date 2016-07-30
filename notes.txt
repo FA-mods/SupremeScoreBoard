@@ -1,0 +1,2194 @@
+
+        --local success, value = pcall(function() 
+        --    return unit:IsBeingBuilt()
+        --end)
+        --if success then
+        --    local bp = unit:GetBlueprint()
+        --    LOG('IsBeingBuilt ' .. getNameFromBp(bp) .. ' = ' .. tostring(value))
+        --    success = value
+        --else 
+        --    success = true
+        --end 
+		 
+--table.insert(Sync.Voice, {Bank='XGG', Cue='Computer_Computer_MapExpansion_01380'} )
+--PlaySound(Sound({Bank = 'Interface', Cue = 'UI_Announcement_Open'}))
+--PlaySound(Sound({Bank = 'COMPUTER_UEF_VO', Cue = 'UEFComputer_Completed_01398'}))
+ 
+--PlaySound(Sound({Bank = 'Interface', Cue = 'UI_END_Game_Victory'}))
+--PlayVoice(Sound{ Bank='COMPUTER_UEF_VO', Cue='UEFComputer_Completed_01398' }, true)
+--TODO 'Satellite Launch Detected.',  bank = 'XGG_VO', cue = 'XGG_Computer_CV01_05115'
+--PlayVoice(Sound{ Bank='XGG', Cue='Computer_Computer_UnitRevalation_01370' }, true)
+--PlayVoice(Sound{ Bank='COMPUTER_UEF_VO', Cue='UEFComputer_Expiremental_01363' }, true)
+ 
+--PlaySound(Sound{ Bank='COMPUTER_UEF_VO', Cue='UEFComputer_Expiremental_01363' }, true)
+--PlayVoice(Sound{ Bank='COMPUTER_UEF_VO', Cue='UEFComputer_Expiremental_01363' })
+--PlayVoice(Sound{ Bank='Experimental_VO', Cue='Experimental_Ops_Cybran_01235' })
+--PlayVoice(Sound{ Bank='Computer_Computer', Cue='UEFComputer_Expiremental_01363' }, true)
+  
+--PlayVoice(Sound{ Bank='XGG_VO', Cue='XGG_HQ_GD1_04146' }, true)
+--PlayVoice(Sound({ Bank='XGG', Cue='XGG_HQ_GD1_04182' }))
+--PlayVoice(Sound{ Bank='COMPUTER_UEF_VO', Cue='UEFComputer_Expiremental_01363' }, true) 
+ 
+
+INFO: scoreData {
+INFO: scoreData    type = "Human"
+INFO: scoreData    general   {
+INFO: scoreData    general      score = 33
+INFO: scoreData    general      currentcap   {
+INFO: scoreData    general      currentcap      count = 750
+INFO: scoreData    general      currentcap   }
+INFO: scoreData    general      lastReclaimedMass = 0
+INFO: scoreData    general      mass = 811.20434570313
+INFO: scoreData    general      built   {
+INFO: scoreData    general      built      mass = 0
+INFO: scoreData    general      built      count = 14
+INFO: scoreData    general      built      energy = 0
+INFO: scoreData    general      built   }
+INFO: scoreData    general      kills   {
+INFO: scoreData    general      kills      mass = 0
+INFO: scoreData    general      kills      count = 0
+INFO: scoreData    general      kills      energy = 0
+INFO: scoreData    general      kills   }
+INFO: scoreData    general      lost   {
+INFO: scoreData    general      lost      mass = 0
+INFO: scoreData    general      lost      count = 0
+INFO: scoreData    general      lost      energy = 0
+INFO: scoreData    general      lost   }
+INFO: scoreData    general      currentunits   {
+INFO: scoreData    general      currentunits      count = 14
+INFO: scoreData    general      currentunits   }
+INFO: scoreData    general      energy = 5914.8056640625
+INFO: scoreData    general      lastReclaimedEnergy = 0
+INFO: scoreData    general   }
+INFO: scoreData    faction = 3
+INFO: scoreData    resources   {
+INFO: scoreData    resources      massin   {
+INFO: scoreData    resources      massin      total = 811.20434570313
+INFO: scoreData    resources      massin      rate = 0.89999997615814
+INFO: scoreData    resources      massin   }
+INFO: scoreData    resources      energyout   {
+INFO: scoreData    resources      energyout      total = 1344.0003662109
+INFO: scoreData    resources      energyout      rate = 40.799999237061
+INFO: scoreData    resources      energyout   }
+INFO: scoreData    resources      energyin   {
+INFO: scoreData    resources      energyin      total = 5914.8056640625
+INFO: scoreData    resources      energyin      rate = 19.2001953125
+INFO: scoreData    resources      energyin   }
+INFO: scoreData    resources      energyover = 1361.62890625
+INFO: scoreData    resources      massover = 17.100463867188
+INFO: scoreData    resources      massout   {
+INFO: scoreData    resources      massout      total = 0
+INFO: scoreData    resources      massout      rate = 0
+INFO: scoreData    resources      massout   }
+INFO: scoreData    resources   }
+INFO: scoreData    name = "H-USA-R"
+INFO: scoreData    units   {
+INFO: scoreData    units      urb0101   {
+INFO: scoreData    units      urb0101      built = 1
+INFO: scoreData    units      urb0101   }
+INFO: scoreData    units      tech3   {
+INFO: scoreData    units      tech3      lost = 0
+INFO: scoreData    units      tech3      kills = 0
+INFO: scoreData    units      tech3      built = 0
+INFO: scoreData    units      tech3   }
+INFO: scoreData    units      url0402   {
+INFO: scoreData    units      url0402      built = 1
+INFO: scoreData    units      url0402   }
+INFO: scoreData    units      ual0105   {
+INFO: scoreData    units      ual0105      built = 3
+INFO: scoreData    units      ual0105   }
+INFO: scoreData    units      xrl0403   {
+INFO: scoreData    units      xrl0403      built = 1
+INFO: scoreData    units      xrl0403   }
+INFO: scoreData    units      ueb0101   {
+INFO: scoreData    units      ueb0101      built = 1
+INFO: scoreData    units      ueb0101   }
+INFO: scoreData    units      uab0101   {
+INFO: scoreData    units      uab0101      built = 3
+INFO: scoreData    units      uab0101   }
+INFO: scoreData    units      ual0001   {
+INFO: scoreData    units      ual0001      built = 3
+INFO: scoreData    units      ual0001      lowest_health = 11000
+INFO: scoreData    units      ual0001   }
+INFO: scoreData    units      land   {
+INFO: scoreData    units      land      lost = 0
+INFO: scoreData    units      land      kills = 0
+INFO: scoreData    units      land      built = 5
+INFO: scoreData    units      land   }
+INFO: scoreData    units      url0001   {
+INFO: scoreData    units      url0001      built = 1
+INFO: scoreData    units      url0001      lowest_health = 10000
+INFO: scoreData    units      url0001   }
+INFO: scoreData    units      structures   {
+INFO: scoreData    units      structures      lost = 0
+INFO: scoreData    units      structures      kills = 0
+INFO: scoreData    units      structures      built = 9
+INFO: scoreData    units      structures   }
+INFO: scoreData    units      cdr   {
+INFO: scoreData    units      cdr      lost = 0
+INFO: scoreData    units      cdr      kills = 0
+INFO: scoreData    units      cdr      built = 1
+INFO: scoreData    units      cdr   }
+INFO: scoreData    units      uel0001   {
+INFO: scoreData    units      uel0001      built = 1
+INFO: scoreData    units      uel0001      lowest_health = 12000
+INFO: scoreData    units      uel0001   }
+INFO: scoreData    units      uel0105   {
+INFO: scoreData    units      uel0105      built = 1
+INFO: scoreData    units      uel0105   }
+INFO: scoreData    units      air   {
+INFO: scoreData    units      air      lost = 0
+INFO: scoreData    units      air      kills = 0
+INFO: scoreData    units      air      built = 1
+INFO: scoreData    units      air   }
+INFO: scoreData    units      urb1101   {
+INFO: scoreData    units      urb1101      built = 4
+INFO: scoreData    units      urb1101   }
+INFO: scoreData    units      ura0401   {
+INFO: scoreData    units      ura0401      built = 1
+INFO: scoreData    units      ura0401   }
+INFO: scoreData    units      tech1   {
+INFO: scoreData    units      tech1      lost = 0
+INFO: scoreData    units      tech1      kills = 0
+INFO: scoreData    units      tech1      built = 9
+INFO: scoreData    units      tech1   }
+INFO: scoreData    units      uab1101   {
+INFO: scoreData    units      uab1101      built = 15
+INFO: scoreData    units      uab1101   }
+INFO: scoreData    units      tech2   {
+INFO: scoreData    units      tech2      lost = 0
+INFO: scoreData    units      tech2      kills = 0
+INFO: scoreData    units      tech2      built = 0
+INFO: scoreData    units      tech2   }
+INFO: scoreData    units      engineer   {
+INFO: scoreData    units      engineer      lost = 0
+INFO: scoreData    units      engineer      kills = 0
+INFO: scoreData    units      engineer      built = 1
+INFO: scoreData    units      engineer   }
+INFO: scoreData    units      urb1103   {
+INFO: scoreData    units      urb1103      built = 4
+INFO: scoreData    units      urb1103   }
+INFO: scoreData    units      transportation   {
+INFO: scoreData    units      transportation      lost = 0
+INFO: scoreData    units      transportation      kills = 0
+INFO: scoreData    units      transportation      built = 0
+INFO: scoreData    units      transportation   }
+INFO: scoreData    units      ueb1103   {
+INFO: scoreData    units      ueb1103      built = 4
+INFO: scoreData    units      ueb1103   }
+INFO: scoreData    units      sacu   {
+INFO: scoreData    units      sacu      lost = 0
+INFO: scoreData    units      sacu      kills = 0
+INFO: scoreData    units      sacu      built = 0
+INFO: scoreData    units      sacu   }
+INFO: scoreData    units      uab1103   {
+INFO: scoreData    units      uab1103      built = 12
+INFO: scoreData    units      uab1103   }
+INFO: scoreData    units      ueb1101   {
+INFO: scoreData    units      ueb1101      built = 5
+INFO: scoreData    units      ueb1101   }
+INFO: scoreData    units      experimental   {
+INFO: scoreData    units      experimental      lost = 0
+INFO: scoreData    units      experimental      kills = 0
+INFO: scoreData    units      experimental      built = 4
+INFO: scoreData    units      experimental   }
+INFO: scoreData    units      naval   {
+INFO: scoreData    units      naval      lost = 0
+INFO: scoreData    units      naval      kills = 0
+INFO: scoreData    units      naval      built = 0
+INFO: scoreData    units      naval   }
+INFO: scoreData    units      url0401   {
+INFO: scoreData    units      url0401      built = 1
+INFO: scoreData    units      url0401   }
+INFO: scoreData    units   }
+
+
+
+
+INFO: HUSSAR >>> TRACE scoreData ----------- Jagels (AI: Sorian AI Adaptive)
+INFO: HUSSAR >>> TABLE scoreData.units = {}
+INFO: HUSSAR >>> TABLE scoreData.units.air = {}
+INFO: HUSSAR >>> TABLE scoreData.units.air.built = 0
+INFO: HUSSAR >>> TABLE scoreData.units.air.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.air.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.cdr = {}
+INFO: HUSSAR >>> TABLE scoreData.units.cdr.built = 1
+INFO: HUSSAR >>> TABLE scoreData.units.cdr.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.cdr.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.engineer = {}
+INFO: HUSSAR >>> TABLE scoreData.units.engineer.built = 1
+INFO: HUSSAR >>> TABLE scoreData.units.engineer.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.engineer.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.experimental = {}
+INFO: HUSSAR >>> TABLE scoreData.units.experimental.built = 1
+INFO: HUSSAR >>> TABLE scoreData.units.experimental.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.experimental.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.land = {}
+INFO: HUSSAR >>> TABLE scoreData.units.land.built = 1
+INFO: HUSSAR >>> TABLE scoreData.units.land.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.land.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.naval = {}
+INFO: HUSSAR >>> TABLE scoreData.units.naval.built = 0
+INFO: HUSSAR >>> TABLE scoreData.units.naval.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.naval.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.sacu = {}
+INFO: HUSSAR >>> TABLE scoreData.units.sacu.built = 0
+INFO: HUSSAR >>> TABLE scoreData.units.sacu.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.sacu.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.structures = {}
+INFO: HUSSAR >>> TABLE scoreData.units.structures.built = 1
+INFO: HUSSAR >>> TABLE scoreData.units.structures.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.structures.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.tech1 = {}
+INFO: HUSSAR >>> TABLE scoreData.units.tech1.built = 0
+INFO: HUSSAR >>> TABLE scoreData.units.tech1.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.tech1.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.tech2 = {}
+INFO: HUSSAR >>> TABLE scoreData.units.tech2.built = 0
+INFO: HUSSAR >>> TABLE scoreData.units.tech2.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.tech2.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.tech3 = {}
+INFO: HUSSAR >>> TABLE scoreData.units.tech3.built = 0
+INFO: HUSSAR >>> TABLE scoreData.units.tech3.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.tech3.lost = 0
+INFO: HUSSAR >>> TABLE scoreData.units.transportation = {}
+INFO: HUSSAR >>> TABLE scoreData.units.transportation.built = 0
+INFO: HUSSAR >>> TABLE scoreData.units.transportation.kills = 0
+INFO: HUSSAR >>> TABLE scoreData.units.transportation.lost = 0
+
+INFO: HUSSAR >>> TABLE scoreData.units.ual0001.built = 1
+INFO: HUSSAR >>> TABLE scoreData.units.ual0001.lowest_health = 11000
+INFO: HUSSAR >>> TABLE scoreData.units.url0001.built = 1
+INFO: HUSSAR >>> TABLE scoreData.units.url0001.lowest_health = 10000
+
+INFO: HUSSAR >>> TABLE scoreData.units.uel0111.built = 2	MML
+INFO: HUSSAR >>> TABLE scoreData.units.url0111.built = 2	MML
+INFO: HUSSAR >>> TABLE scoreData.units.uel0201.built = 5	medium tank
+INFO: HUSSAR >>> TABLE scoreData.units.uel0202.built = 3	heavy tank
+INFO: HUSSAR >>> TABLE scoreData.units.uel0303.built = 2	heavy bot
+INFO: HUSSAR >>> TABLE scoreData.units.url0107.built = 5	bot
+INFO: HUSSAR >>> TABLE scoreData.units.url0202.built = 3	heavy tank
+INFO: HUSSAR >>> TABLE scoreData.units.url0303.built = 2	bot
+INFO: HUSSAR >>> TABLE scoreData.units.xel0305.built = 1	bot
+INFO: HUSSAR >>> TABLE scoreData.units.xrl0305.built = 1	bot
+
+
+INFO: HUSSAR >>> TABLE scoreData.units.xab1401 = {}
+INFO: HUSSAR >>> TABLE scoreData.units.xab1401.built = 1	Paragon
+
+            cats.engineersT1  = categories.TECH1
+            cats.engineersT2  = categories.TECH2 - categories.FIELDENGINEER
+            cats.engineersT3  = categories.TECH3 - categories.SUBCOMMANDER
+            cats.engineersSCU = categories.SUBCOMMANDER
+            cats.engineersT2F = categories.TECH2 * categories.FIELDENGINEER
+
+
+INFO: currentScores {
+INFO: currentScores    1   {
+INFO: currentScores    1      type = "Human"
+INFO: currentScores    1      general   {
+INFO: currentScores    1      general      score = 34
+INFO: currentScores    1      general      currentcap   {
+INFO: currentScores    1      general      currentcap      count = 750
+INFO: currentScores    1      general      currentcap   }
+INFO: currentScores    1      general      lastReclaimedMass = 0
+INFO: currentScores    1      general      mass = 1202.7034912109
+INFO: currentScores    1      general      built   {
+INFO: currentScores    1      general      built      mass = 0
+INFO: currentScores    1      general      built      count = 22
+INFO: currentScores    1      general      built      energy = 0
+INFO: currentScores    1      general      built   }
+INFO: currentScores    1      general      kills   {
+INFO: currentScores    1      general      kills      mass = 0
+INFO: currentScores    1      general      kills      count = 0
+INFO: currentScores    1      general      kills      energy = 0
+INFO: currentScores    1      general      kills   }
+INFO: currentScores    1      general      lost   {
+INFO: currentScores    1      general      lost      mass = 0
+INFO: currentScores    1      general      lost      count = 0
+INFO: currentScores    1      general      lost      energy = 0
+INFO: currentScores    1      general      lost   }
+INFO: currentScores    1      general      currentunits   {
+INFO: currentScores    1      general      currentunits      count = 22
+INFO: currentScores    1      general      currentunits   }
+INFO: currentScores    1      general      energy = 26500
+INFO: currentScores    1      general      lastReclaimedEnergy = 0
+INFO: currentScores    1      general   }
+INFO: currentScores    1      faction = 3
+INFO: currentScores    1      resources   {
+INFO: currentScores    1      resources      massin   {
+INFO: currentScores    1      resources      massin      total = 1202.7034912109
+INFO: currentScores    1      resources      massin      rate = 20.699998855591
+INFO: currentScores    1      resources      massin   }
+INFO: currentScores    1      resources      energyout   {
+INFO: currentScores    1      resources      energyout      total = 1387.4000244141
+INFO: currentScores    1      resources      energyout      rate = 60.200008392334
+INFO: currentScores    1      resources      energyout   }
+INFO: currentScores    1      resources      energyin   {
+INFO: currentScores    1      resources      energyin      total = 26500
+INFO: currentScores    1      resources      energyin      rate = 260
+INFO: currentScores    1      resources      energyin   }
+INFO: currentScores    1      resources      energyover = 21094.185546875
+INFO: currentScores    1      resources      massover = 407.00701904297
+INFO: currentScores    1      resources      massout   {
+INFO: currentScores    1      resources      massout      total = 0
+INFO: currentScores    1      resources      massout      rate = 0
+INFO: currentScores    1      resources      massout   }
+INFO: currentScores    1      resources   }
+INFO: currentScores    1      name = "H-USA-R"
+INFO: currentScores    1      units   {
+INFO: currentScores    1      units      urb0101   {
+INFO: currentScores    1      units      urb0101      built = 1
+INFO: currentScores    1      units      urb0101   }
+INFO: currentScores    1      units      urb1101   {
+INFO: currentScores    1      units      urb1101      built = 4
+INFO: currentScores    1      units      urb1101   }
+INFO: currentScores    1      units      urb1302   {
+INFO: currentScores    1      units      urb1302      built = 11
+INFO: currentScores    1      units      urb1302   }
+INFO: currentScores    1      units      xsb0101   {
+INFO: currentScores    1      units      xsb0101      built = 3
+INFO: currentScores    1      units      xsb0101   }
+INFO: currentScores    1      units      xsb1101   {
+INFO: currentScores    1      units      xsb1101      built = 12
+INFO: currentScores    1      units      xsb1101   }
+INFO: currentScores    1      units      url0001   {
+INFO: currentScores    1      units      url0001      built = 1
+INFO: currentScores    1      units      url0001      lowest_health = 10000
+INFO: currentScores    1      units      url0001   }
+INFO: currentScores    1      units      land   {
+INFO: currentScores    1      units      land      lost = 0
+INFO: currentScores    1      units      land      kills = 0
+INFO: currentScores    1      units      land      built = 2
+INFO: currentScores    1      units      land   }
+INFO: currentScores    1      units      urb1301   {
+INFO: currentScores    1      units      urb1301      built = 1
+INFO: currentScores    1      units      urb1301   }
+INFO: currentScores    1      units      structures   {
+INFO: currentScores    1      units      structures      lost = 0
+INFO: currentScores    1      units      structures      kills = 0
+INFO: currentScores    1      units      structures      built = 21
+INFO: currentScores    1      units      structures   }
+INFO: currentScores    1      units      air   {
+INFO: currentScores    1      units      air      lost = 0
+INFO: currentScores    1      units      air      kills = 0
+INFO: currentScores    1      units      air      built = 0
+INFO: currentScores    1      units      air   }
+INFO: currentScores    1      units      xsb1103   {
+INFO: currentScores    1      units      xsb1103      built = 12
+INFO: currentScores    1      units      xsb1103   }
+INFO: currentScores    1      units      experimental   {
+INFO: currentScores    1      units      experimental      lost = 0
+INFO: currentScores    1      units      experimental      kills = 0
+INFO: currentScores    1      units      experimental      built = 0
+INFO: currentScores    1      units      experimental   }
+INFO: currentScores    1      units      tech2   {
+INFO: currentScores    1      units      tech2      lost = 0
+INFO: currentScores    1      units      tech2      kills = 0
+INFO: currentScores    1      units      tech2      built = 0
+INFO: currentScores    1      units      tech2   }
+INFO: currentScores    1      units      tech3   {
+INFO: currentScores    1      units      tech3      lost = 0
+INFO: currentScores    1      units      tech3      kills = 0
+INFO: currentScores    1      units      tech3      built = 12
+INFO: currentScores    1      units      tech3   }
+INFO: currentScores    1      units      tech1   {
+INFO: currentScores    1      units      tech1      lost = 0
+INFO: currentScores    1      units      tech1      kills = 0
+INFO: currentScores    1      units      tech1      built = 9
+INFO: currentScores    1      units      tech1   }
+INFO: currentScores    1      units      transportation   {
+INFO: currentScores    1      units      transportation      lost = 0
+INFO: currentScores    1      units      transportation      kills = 0
+INFO: currentScores    1      units      transportation      built = 0
+INFO: currentScores    1      units      transportation   }
+INFO: currentScores    1      units      xsl0105   {
+INFO: currentScores    1      units      xsl0105      built = 3
+INFO: currentScores    1      units      xsl0105   }
+INFO: currentScores    1      units      sacu   {
+INFO: currentScores    1      units      sacu      lost = 0
+INFO: currentScores    1      units      sacu      kills = 0
+INFO: currentScores    1      units      sacu      built = 0
+INFO: currentScores    1      units      sacu   }
+INFO: currentScores    1      units      urb1103   {
+INFO: currentScores    1      units      urb1103      built = 4
+INFO: currentScores    1      units      urb1103   }
+INFO: currentScores    1      units      xsl0001   {
+INFO: currentScores    1      units      xsl0001      built = 3
+INFO: currentScores    1      units      xsl0001      lowest_health = 11500
+INFO: currentScores    1      units      xsl0001   }
+INFO: currentScores    1      units      cdr   {
+INFO: currentScores    1      units      cdr      lost = 0
+INFO: currentScores    1      units      cdr      kills = 0
+INFO: currentScores    1      units      cdr      built = 1
+INFO: currentScores    1      units      cdr   }
+INFO: currentScores    1      units      naval   {
+INFO: currentScores    1      units      naval      lost = 0
+INFO: currentScores    1      units      naval      kills = 0
+INFO: currentScores    1      units      naval      built = 0
+INFO: currentScores    1      units      naval   }
+INFO: currentScores    1      units      engineer   {
+INFO: currentScores    1      units      engineer      lost = 0
+INFO: currentScores    1      units      engineer      kills = 0
+INFO: currentScores    1      units      engineer      built = 1
+INFO: currentScores    1      units      engineer   }
+INFO: currentScores    1      units   }
+INFO: currentScores    1   }
+INFO: currentScores    2   {
+INFO: currentScores    2      type = "AI"
+INFO: currentScores    2      general   {
+INFO: currentScores    2      general      score = 92
+INFO: currentScores    2      general      currentcap   {
+INFO: currentScores    2      general      currentcap      count = 750
+INFO: currentScores    2      general      currentcap   }
+INFO: currentScores    2      general      lastReclaimedMass = 0
+INFO: currentScores    2      general      mass = 873.701171875
+INFO: currentScores    2      general      built   {
+INFO: currentScores    2      general      built      mass = 52
+INFO: currentScores    2      general      built      count = 11
+INFO: currentScores    2      general      built      energy = 260
+INFO: currentScores    2      general      built   }
+INFO: currentScores    2      general      kills   {
+INFO: currentScores    2      general      kills      mass = 0
+INFO: currentScores    2      general      kills      count = 0
+INFO: currentScores    2      general      kills      energy = 0
+INFO: currentScores    2      general      kills   }
+INFO: currentScores    2      general      lost   {
+INFO: currentScores    2      general      lost      mass = 0
+INFO: currentScores    2      general      lost      count = 0
+INFO: currentScores    2      general      lost      energy = 0
+INFO: currentScores    2      general      lost   }
+INFO: currentScores    2      general      currentunits   {
+INFO: currentScores    2      general      currentunits      count = 12
+INFO: currentScores    2      general      currentunits   }
+INFO: currentScores    2      general      energy = 5780.400390625
+INFO: currentScores    2      general      lastReclaimedEnergy = 0
+INFO: currentScores    2      general   }
+INFO: currentScores    2      faction = 4
+INFO: currentScores    2      resources   {
+INFO: currentScores    2      resources      massin   {
+INFO: currentScores    2      resources      massin      total = 873.701171875
+INFO: currentScores    2      resources      massin      rate = 0.89999997615814
+INFO: currentScores    2      resources      massin   }
+INFO: currentScores    2      resources      energyout   {
+INFO: currentScores    2      resources      energyout      total = 1152.7999267578
+INFO: currentScores    2      resources      energyout      rate = 6.8000001907349
+INFO: currentScores    2      resources      energyout   }
+INFO: currentScores    2      resources      energyin   {
+INFO: currentScores    2      resources      energyin      total = 5780.400390625
+INFO: currentScores    2      resources      energyin      rate = 12
+INFO: currentScores    2      resources      energyin   }
+INFO: currentScores    2      resources      energyover = 627.63427734375
+INFO: currentScores    2      resources      massover = 6.301025390625
+INFO: currentScores    2      resources      massout   {
+INFO: currentScores    2      resources      massout      total = 127.39994049072
+INFO: currentScores    2      resources      massout      rate = 0.60000002384186
+INFO: currentScores    2      resources      massout   }
+INFO: currentScores    2      resources   }
+INFO: currentScores    2      name = "Al-Ghoussein (AI: Easy)"
+INFO: currentScores    2      units   {
+INFO: currentScores    2      units      urb0101   {
+INFO: currentScores    2      units      urb0101      built = 1
+INFO: currentScores    2      units      urb0101   }
+INFO: currentScores    2      units      urb1101   {
+INFO: currentScores    2      units      urb1101      built = 4
+INFO: currentScores    2      units      urb1101   }
+INFO: currentScores    2      units      urb1302   {
+INFO: currentScores    2      units      urb1302      built = 11
+INFO: currentScores    2      units      urb1302   }
+INFO: currentScores    2      units      xsb0101   {
+INFO: currentScores    2      units      xsb0101      built = 3
+INFO: currentScores    2      units      xsb0101   }
+INFO: currentScores    2      units      xsb1101   {
+INFO: currentScores    2      units      xsb1101      built = 12
+INFO: currentScores    2      units      xsb1101   }
+INFO: currentScores    2      units      url0001   {
+INFO: currentScores    2      units      url0001      built = 1
+INFO: currentScores    2      units      url0001      lowest_health = 10000
+INFO: currentScores    2      units      url0001   }
+INFO: currentScores    2      units      land   {
+INFO: currentScores    2      units      land      lost = 0
+INFO: currentScores    2      units      land      kills = 0
+INFO: currentScores    2      units      land      built = 3
+INFO: currentScores    2      units      land   }
+INFO: currentScores    2      units      urb1301   {
+INFO: currentScores    2      units      urb1301      built = 1
+INFO: currentScores    2      units      urb1301   }
+INFO: currentScores    2      units      structures   {
+INFO: currentScores    2      units      structures      lost = 0
+INFO: currentScores    2      units      structures      kills = 0
+INFO: currentScores    2      units      structures      built = 9
+INFO: currentScores    2      units      structures   }
+INFO: currentScores    2      units      air   {
+INFO: currentScores    2      units      air      lost = 0
+INFO: currentScores    2      units      air      kills = 0
+INFO: currentScores    2      units      air      built = 0
+INFO: currentScores    2      units      air   }
+INFO: currentScores    2      units      xsb1103   {
+INFO: currentScores    2      units      xsb1103      built = 12
+INFO: currentScores    2      units      xsb1103   }
+INFO: currentScores    2      units      experimental   {
+INFO: currentScores    2      units      experimental      lost = 0
+INFO: currentScores    2      units      experimental      kills = 0
+INFO: currentScores    2      units      experimental      built = 0
+INFO: currentScores    2      units      experimental   }
+INFO: currentScores    2      units      tech2   {
+INFO: currentScores    2      units      tech2      lost = 0
+INFO: currentScores    2      units      tech2      kills = 0
+INFO: currentScores    2      units      tech2      built = 0
+INFO: currentScores    2      units      tech2   }
+INFO: currentScores    2      units      tech3   {
+INFO: currentScores    2      units      tech3      lost = 0
+INFO: currentScores    2      units      tech3      kills = 0
+INFO: currentScores    2      units      tech3      built = 0
+INFO: currentScores    2      units      tech3   }
+INFO: currentScores    2      units      tech1   {
+INFO: currentScores    2      units      tech1      lost = 0
+INFO: currentScores    2      units      tech1      kills = 0
+INFO: currentScores    2      units      tech1      built = 10
+INFO: currentScores    2      units      tech1   }
+INFO: currentScores    2      units      transportation   {
+INFO: currentScores    2      units      transportation      lost = 0
+INFO: currentScores    2      units      transportation      kills = 0
+INFO: currentScores    2      units      transportation      built = 0
+INFO: currentScores    2      units      transportation   }
+INFO: currentScores    2      units      xsl0105   {
+INFO: currentScores    2      units      xsl0105      built = 3
+INFO: currentScores    2      units      xsl0105   }
+INFO: currentScores    2      units      sacu   {
+INFO: currentScores    2      units      sacu      lost = 0
+INFO: currentScores    2      units      sacu      kills = 0
+INFO: currentScores    2      units      sacu      built = 0
+INFO: currentScores    2      units      sacu   }
+INFO: currentScores    2      units      urb1103   {
+INFO: currentScores    2      units      urb1103      built = 4
+INFO: currentScores    2      units      urb1103   }
+INFO: currentScores    2      units      xsl0001   {
+INFO: currentScores    2      units      xsl0001      built = 3
+INFO: currentScores    2      units      xsl0001      lowest_health = 11500
+INFO: currentScores    2      units      xsl0001   }
+INFO: currentScores    2      units      cdr   {
+INFO: currentScores    2      units      cdr      lost = 0
+INFO: currentScores    2      units      cdr      kills = 0
+INFO: currentScores    2      units      cdr      built = 1
+INFO: currentScores    2      units      cdr   }
+INFO: currentScores    2      units      naval   {
+INFO: currentScores    2      units      naval      lost = 0
+INFO: currentScores    2      units      naval      kills = 0
+INFO: currentScores    2      units      naval      built = 0
+INFO: currentScores    2      units      naval   }
+INFO: currentScores    2      units      engineer   {
+INFO: currentScores    2      units      engineer      lost = 0
+INFO: currentScores    2      units      engineer      kills = 0
+INFO: currentScores    2      units      engineer      built = 2
+INFO: currentScores    2      units      engineer   }
+INFO: currentScores    2      units   }
+INFO: currentScores    2   }
+INFO: currentScores    3   {
+INFO: currentScores    3      type = "AI"
+INFO: currentScores    3      general   {
+INFO: currentScores    3      general      score = 92
+INFO: currentScores    3      general      currentcap   {
+INFO: currentScores    3      general      currentcap      count = 750
+INFO: currentScores    3      general      currentcap   }
+INFO: currentScores    3      general      lastReclaimedMass = 0
+INFO: currentScores    3      general      mass = 808.90423583984
+INFO: currentScores    3      general      built   {
+INFO: currentScores    3      general      built      mass = 127
+INFO: currentScores    3      general      built      count = 12
+INFO: currentScores    3      general      built      energy = 1010
+INFO: currentScores    3      general      built   }
+INFO: currentScores    3      general      kills   {
+INFO: currentScores    3      general      kills      mass = 0
+INFO: currentScores    3      general      kills      count = 0
+INFO: currentScores    3      general      kills      energy = 0
+INFO: currentScores    3      general      kills   }
+INFO: currentScores    3      general      lost   {
+INFO: currentScores    3      general      lost      mass = 0
+INFO: currentScores    3      general      lost      count = 0
+INFO: currentScores    3      general      lost      energy = 0
+INFO: currentScores    3      general      lost   }
+INFO: currentScores    3      general      currentunits   {
+INFO: currentScores    3      general      currentunits      count = 12
+INFO: currentScores    3      general      currentunits   }
+INFO: currentScores    3      general      energy = 5772
+INFO: currentScores    3      general      lastReclaimedEnergy = 0
+INFO: currentScores    3      general   }
+INFO: currentScores    3      faction = 4
+INFO: currentScores    3      resources   {
+INFO: currentScores    3      resources      massin   {
+INFO: currentScores    3      resources      massin      total = 808.90423583984
+INFO: currentScores    3      resources      massin      rate = 0.89999997615814
+INFO: currentScores    3      resources      massin   }
+INFO: currentScores    3      resources      energyout   {
+INFO: currentScores    3      resources      energyout      total = 1159.5999755859
+INFO: currentScores    3      resources      energyout      rate = 6.8000001907349
+INFO: currentScores    3      resources      energyout   }
+INFO: currentScores    3      resources      energyin   {
+INFO: currentScores    3      resources      energyin      total = 5772
+INFO: currentScores    3      resources      energyin      rate = 12
+INFO: currentScores    3      resources      energyin   }
+INFO: currentScores    3      resources      energyover = 594.0341796875
+INFO: currentScores    3      resources      massover = 0
+INFO: currentScores    3      resources      massout   {
+INFO: currentScores    3      resources      massout      total = 127.99993896484
+INFO: currentScores    3      resources      massout      rate = 0.60000002384186
+INFO: currentScores    3      resources      massout   }
+INFO: currentScores    3      resources   }
+INFO: currentScores    3      name = "Seth-Ushavoh (AI: Easy)"
+INFO: currentScores    3      units   {
+INFO: currentScores    3      units      urb0101   {
+INFO: currentScores    3      units      urb0101      built = 1
+INFO: currentScores    3      units      urb0101   }
+INFO: currentScores    3      units      urb1101   {
+INFO: currentScores    3      units      urb1101      built = 4
+INFO: currentScores    3      units      urb1101   }
+INFO: currentScores    3      units      urb1302   {
+INFO: currentScores    3      units      urb1302      built = 11
+INFO: currentScores    3      units      urb1302   }
+INFO: currentScores    3      units      xsb0101   {
+INFO: currentScores    3      units      xsb0101      built = 3
+INFO: currentScores    3      units      xsb0101   }
+INFO: currentScores    3      units      xsb1101   {
+INFO: currentScores    3      units      xsb1101      built = 15
+INFO: currentScores    3      units      xsb1101   }
+INFO: currentScores    3      units      url0001   {
+INFO: currentScores    3      units      url0001      built = 1
+INFO: currentScores    3      units      url0001      lowest_health = 10000
+INFO: currentScores    3      units      url0001   }
+INFO: currentScores    3      units      land   {
+INFO: currentScores    3      units      land      lost = 0
+INFO: currentScores    3      units      land      kills = 0
+INFO: currentScores    3      units      land      built = 3
+INFO: currentScores    3      units      land   }
+INFO: currentScores    3      units      urb1301   {
+INFO: currentScores    3      units      urb1301      built = 1
+INFO: currentScores    3      units      urb1301   }
+INFO: currentScores    3      units      structures   {
+INFO: currentScores    3      units      structures      lost = 0
+INFO: currentScores    3      units      structures      kills = 0
+INFO: currentScores    3      units      structures      built = 10
+INFO: currentScores    3      units      structures   }
+INFO: currentScores    3      units      air   {
+INFO: currentScores    3      units      air      lost = 0
+INFO: currentScores    3      units      air      kills = 0
+INFO: currentScores    3      units      air      built = 0
+INFO: currentScores    3      units      air   }
+INFO: currentScores    3      units      xsb1103   {
+INFO: currentScores    3      units      xsb1103      built = 12
+INFO: currentScores    3      units      xsb1103   }
+INFO: currentScores    3      units      experimental   {
+INFO: currentScores    3      units      experimental      lost = 0
+INFO: currentScores    3      units      experimental      kills = 0
+INFO: currentScores    3      units      experimental      built = 0
+INFO: currentScores    3      units      experimental   }
+INFO: currentScores    3      units      tech2   {
+INFO: currentScores    3      units      tech2      lost = 0
+INFO: currentScores    3      units      tech2      kills = 0
+INFO: currentScores    3      units      tech2      built = 0
+INFO: currentScores    3      units      tech2   }
+INFO: currentScores    3      units      tech3   {
+INFO: currentScores    3      units      tech3      lost = 0
+INFO: currentScores    3      units      tech3      kills = 0
+INFO: currentScores    3      units      tech3      built = 0
+INFO: currentScores    3      units      tech3   }
+INFO: currentScores    3      units      tech1   {
+INFO: currentScores    3      units      tech1      lost = 0
+INFO: currentScores    3      units      tech1      kills = 0
+INFO: currentScores    3      units      tech1      built = 11
+INFO: currentScores    3      units      tech1   }
+INFO: currentScores    3      units      transportation   {
+INFO: currentScores    3      units      transportation      lost = 0
+INFO: currentScores    3      units      transportation      kills = 0
+INFO: currentScores    3      units      transportation      built = 0
+INFO: currentScores    3      units      transportation   }
+INFO: currentScores    3      units      xsl0105   {
+INFO: currentScores    3      units      xsl0105      built = 3
+INFO: currentScores    3      units      xsl0105   }
+INFO: currentScores    3      units      sacu   {
+INFO: currentScores    3      units      sacu      lost = 0
+INFO: currentScores    3      units      sacu      kills = 0
+INFO: currentScores    3      units      sacu      built = 0
+INFO: currentScores    3      units      sacu   }
+INFO: currentScores    3      units      urb1103   {
+INFO: currentScores    3      units      urb1103      built = 4
+INFO: currentScores    3      units      urb1103   }
+INFO: currentScores    3      units      xsl0001   {
+INFO: currentScores    3      units      xsl0001      built = 3
+INFO: currentScores    3      units      xsl0001      lowest_health = 11500
+INFO: currentScores    3      units      xsl0001   }
+INFO: currentScores    3      units      cdr   {
+INFO: currentScores    3      units      cdr      lost = 0
+INFO: currentScores    3      units      cdr      kills = 0
+INFO: currentScores    3      units      cdr      built = 1
+INFO: currentScores    3      units      cdr   }
+INFO: currentScores    3      units      naval   {
+INFO: currentScores    3      units      naval      lost = 0
+INFO: currentScores    3      units      naval      kills = 0
+INFO: currentScores    3      units      naval      built = 0
+INFO: currentScores    3      units      naval   }
+INFO: currentScores    3      units      engineer   {
+INFO: currentScores    3      units      engineer      lost = 0
+INFO: currentScores    3      units      engineer      kills = 0
+INFO: currentScores    3      units      engineer      built = 2
+INFO: currentScores    3      units      engineer   }
+INFO: currentScores    3      units   }
+INFO: currentScores    3   }
+INFO: currentScores    4   {
+INFO: currentScores    4      type = "AI"
+INFO: currentScores    4      general   {
+INFO: currentScores    4      general      score = 93
+INFO: currentScores    4      general      currentcap   {
+INFO: currentScores    4      general      currentcap      count = 750
+INFO: currentScores    4      general      currentcap   }
+INFO: currentScores    4      general      lastReclaimedMass = 0
+INFO: currentScores    4      general      mass = 810.40423583984
+INFO: currentScores    4      general      built   {
+INFO: currentScores    4      general      built      mass = 127
+INFO: currentScores    4      general      built      count = 12
+INFO: currentScores    4      general      built      energy = 1010
+INFO: currentScores    4      general      built   }
+INFO: currentScores    4      general      kills   {
+INFO: currentScores    4      general      kills      mass = 0
+INFO: currentScores    4      general      kills      count = 0
+INFO: currentScores    4      general      kills      energy = 0
+INFO: currentScores    4      general      kills   }
+INFO: currentScores    4      general      lost   {
+INFO: currentScores    4      general      lost      mass = 0
+INFO: currentScores    4      general      lost      count = 0
+INFO: currentScores    4      general      lost      energy = 0
+INFO: currentScores    4      general      lost   }
+INFO: currentScores    4      general      currentunits   {
+INFO: currentScores    4      general      currentunits      count = 12
+INFO: currentScores    4      general      currentunits   }
+INFO: currentScores    4      general      energy = 5808.400390625
+INFO: currentScores    4      general      lastReclaimedEnergy = 0
+INFO: currentScores    4      general   }
+INFO: currentScores    4      faction = 4
+INFO: currentScores    4      resources   {
+INFO: currentScores    4      resources      massin   {
+INFO: currentScores    4      resources      massin      total = 810.40423583984
+INFO: currentScores    4      resources      massin      rate = 0.89999997615814
+INFO: currentScores    4      resources      massin   }
+INFO: currentScores    4      resources      energyout   {
+INFO: currentScores    4      resources      energyout      total = 1160.4000244141
+INFO: currentScores    4      resources      energyout      rate = 0.80000001192093
+INFO: currentScores    4      resources      energyout   }
+INFO: currentScores    4      resources      energyin   {
+INFO: currentScores    4      resources      energyin      total = 5808.400390625
+INFO: currentScores    4      resources      energyin      rate = 12
+INFO: currentScores    4      resources      energyin   }
+INFO: currentScores    4      resources      energyover = 648.03466796875
+INFO: currentScores    4      resources      massover = 0
+INFO: currentScores    4      resources      massout   {
+INFO: currentScores    4      resources      massout      total = 127.99993896484
+INFO: currentScores    4      resources      massout      rate = 0
+INFO: currentScores    4      resources      massout   }
+INFO: currentScores    4      resources   }
+INFO: currentScores    4      name = "Zan-Uyalthow (AI: Easy)"
+INFO: currentScores    4      units   {
+INFO: currentScores    4      units      urb0101   {
+INFO: currentScores    4      units      urb0101      built = 1
+INFO: currentScores    4      units      urb0101   }
+INFO: currentScores    4      units      urb1101   {
+INFO: currentScores    4      units      urb1101      built = 4
+INFO: currentScores    4      units      urb1101   }
+INFO: currentScores    4      units      urb1302   {
+INFO: currentScores    4      units      urb1302      built = 11
+INFO: currentScores    4      units      urb1302   }
+INFO: currentScores    4      units      xsb0101   {
+INFO: currentScores    4      units      xsb0101      built = 3
+INFO: currentScores    4      units      xsb0101   }
+INFO: currentScores    4      units      xsb1101   {
+INFO: currentScores    4      units      xsb1101      built = 15
+INFO: currentScores    4      units      xsb1101   }
+INFO: currentScores    4      units      url0001   {
+INFO: currentScores    4      units      url0001      built = 1
+INFO: currentScores    4      units      url0001      lowest_health = 10000
+INFO: currentScores    4      units      url0001   }
+INFO: currentScores    4      units      land   {
+INFO: currentScores    4      units      land      lost = 0
+INFO: currentScores    4      units      land      kills = 0
+INFO: currentScores    4      units      land      built = 3
+INFO: currentScores    4      units      land   }
+INFO: currentScores    4      units      urb1301   {
+INFO: currentScores    4      units      urb1301      built = 1
+INFO: currentScores    4      units      urb1301   }
+INFO: currentScores    4      units      structures   {
+INFO: currentScores    4      units      structures      lost = 0
+INFO: currentScores    4      units      structures      kills = 0
+INFO: currentScores    4      units      structures      built = 10
+INFO: currentScores    4      units      structures   }
+INFO: currentScores    4      units      air   {
+INFO: currentScores    4      units      air      lost = 0
+INFO: currentScores    4      units      air      kills = 0
+INFO: currentScores    4      units      air      built = 0
+INFO: currentScores    4      units      air   }
+INFO: currentScores    4      units      xsb1103   {
+INFO: currentScores    4      units      xsb1103      built = 12
+INFO: currentScores    4      units      xsb1103   }
+INFO: currentScores    4      units      experimental   {
+INFO: currentScores    4      units      experimental      lost = 0
+INFO: currentScores    4      units      experimental      kills = 0
+INFO: currentScores    4      units      experimental      built = 0
+INFO: currentScores    4      units      experimental   }
+INFO: currentScores    4      units      tech2   {
+INFO: currentScores    4      units      tech2      lost = 0
+INFO: currentScores    4      units      tech2      kills = 0
+INFO: currentScores    4      units      tech2      built = 0
+INFO: currentScores    4      units      tech2   }
+INFO: currentScores    4      units      tech3   {
+INFO: currentScores    4      units      tech3      lost = 0
+INFO: currentScores    4      units      tech3      kills = 0
+INFO: currentScores    4      units      tech3      built = 0
+INFO: currentScores    4      units      tech3   }
+INFO: currentScores    4      units      tech1   {
+INFO: currentScores    4      units      tech1      lost = 0
+INFO: currentScores    4      units      tech1      kills = 0
+INFO: currentScores    4      units      tech1      built = 11
+INFO: currentScores    4      units      tech1   }
+INFO: currentScores    4      units      transportation   {
+INFO: currentScores    4      units      transportation      lost = 0
+INFO: currentScores    4      units      transportation      kills = 0
+INFO: currentScores    4      units      transportation      built = 0
+INFO: currentScores    4      units      transportation   }
+INFO: currentScores    4      units      xsl0105   {
+INFO: currentScores    4      units      xsl0105      built = 3
+INFO: currentScores    4      units      xsl0105   }
+INFO: currentScores    4      units      sacu   {
+INFO: currentScores    4      units      sacu      lost = 0
+INFO: currentScores    4      units      sacu      kills = 0
+INFO: currentScores    4      units      sacu      built = 0
+INFO: currentScores    4      units      sacu   }
+INFO: currentScores    4      units      urb1103   {
+INFO: currentScores    4      units      urb1103      built = 4
+INFO: currentScores    4      units      urb1103   }
+INFO: currentScores    4      units      xsl0001   {
+INFO: currentScores    4      units      xsl0001      built = 3
+INFO: currentScores    4      units      xsl0001      lowest_health = 11500
+INFO: currentScores    4      units      xsl0001   }
+INFO: currentScores    4      units      cdr   {
+INFO: currentScores    4      units      cdr      lost = 0
+INFO: currentScores    4      units      cdr      kills = 0
+INFO: currentScores    4      units      cdr      built = 1
+INFO: currentScores    4      units      cdr   }
+INFO: currentScores    4      units      naval   {
+INFO: currentScores    4      units      naval      lost = 0
+INFO: currentScores    4      units      naval      kills = 0
+INFO: currentScores    4      units      naval      built = 0
+INFO: currentScores    4      units      naval   }
+INFO: currentScores    4      units      engineer   {
+INFO: currentScores    4      units      engineer      lost = 0
+INFO: currentScores    4      units      engineer      kills = 0
+INFO: currentScores    4      units      engineer      built = 2
+INFO: currentScores    4      units      engineer   }
+INFO: currentScores    4      units   }
+INFO: currentScores    4   }
+INFO: currentScores    5   {
+INFO: currentScores    5      type = "AI"
+INFO: currentScores    5      general   {
+INFO: currentScores    5      general      score = 0
+INFO: currentScores    5      general      currentcap   {
+INFO: currentScores    5      general      currentcap      count = 750
+INFO: currentScores    5      general      currentcap   }
+INFO: currentScores    5      general      lastReclaimedMass = 0
+INFO: currentScores    5      general      mass = 0
+INFO: currentScores    5      general      built   {
+INFO: currentScores    5      general      built      mass = 0
+INFO: currentScores    5      general      built      count = 0
+INFO: currentScores    5      general      built      energy = 0
+INFO: currentScores    5      general      built   }
+INFO: currentScores    5      general      kills   {
+INFO: currentScores    5      general      kills      mass = 0
+INFO: currentScores    5      general      kills      count = 0
+INFO: currentScores    5      general      kills      energy = 0
+INFO: currentScores    5      general      kills   }
+INFO: currentScores    5      general      lost   {
+INFO: currentScores    5      general      lost      mass = 0
+INFO: currentScores    5      general      lost      count = 0
+INFO: currentScores    5      general      lost      energy = 0
+INFO: currentScores    5      general      lost   }
+INFO: currentScores    5      general      currentunits   {
+INFO: currentScores    5      general      currentunits      count = 0
+INFO: currentScores    5      general      currentunits   }
+INFO: currentScores    5      general      energy = 0
+INFO: currentScores    5      general      lastReclaimedEnergy = 0
+INFO: currentScores    5      general   }
+INFO: currentScores    5      faction = 5
+INFO: currentScores    5      resources   {
+INFO: currentScores    5      resources      massin   {
+INFO: currentScores    5      resources      massin      total = 0
+INFO: currentScores    5      resources      massin      rate = 0
+INFO: currentScores    5      resources      massin   }
+INFO: currentScores    5      resources      energyout   {
+INFO: currentScores    5      resources      energyout      total = 0
+INFO: currentScores    5      resources      energyout      rate = 0
+INFO: currentScores    5      resources      energyout   }
+INFO: currentScores    5      resources      energyin   {
+INFO: currentScores    5      resources      energyin      total = 0
+INFO: currentScores    5      resources      energyin      rate = 0
+INFO: currentScores    5      resources      energyin   }
+INFO: currentScores    5      resources      energyover = 0
+INFO: currentScores    5      resources      massover = 0
+INFO: currentScores    5      resources      massout   {
+INFO: currentScores    5      resources      massout      total = 0
+INFO: currentScores    5      resources      massout      rate = 0
+INFO: currentScores    5      resources      massout   }
+INFO: currentScores    5      resources   }
+INFO: currentScores    5      name = "civilian"
+INFO: currentScores    5      units   {
+INFO: currentScores    5      units      urb0101   {
+INFO: currentScores    5      units      urb0101      built = 1
+INFO: currentScores    5      units      urb0101   }
+INFO: currentScores    5      units      urb1101   {
+INFO: currentScores    5      units      urb1101      built = 4
+INFO: currentScores    5      units      urb1101   }
+INFO: currentScores    5      units      urb1302   {
+INFO: currentScores    5      units      urb1302      built = 11
+INFO: currentScores    5      units      urb1302   }
+INFO: currentScores    5      units      xsb0101   {
+INFO: currentScores    5      units      xsb0101      built = 3
+INFO: currentScores    5      units      xsb0101   }
+INFO: currentScores    5      units      xsb1101   {
+INFO: currentScores    5      units      xsb1101      built = 15
+INFO: currentScores    5      units      xsb1101   }
+INFO: currentScores    5      units      url0001   {
+INFO: currentScores    5      units      url0001      built = 1
+INFO: currentScores    5      units      url0001      lowest_health = 10000
+INFO: currentScores    5      units      url0001   }
+INFO: currentScores    5      units      land   {
+INFO: currentScores    5      units      land      lost = 0
+INFO: currentScores    5      units      land      kills = 0
+INFO: currentScores    5      units      land      built = 0
+INFO: currentScores    5      units      land   }
+INFO: currentScores    5      units      urb1301   {
+INFO: currentScores    5      units      urb1301      built = 1
+INFO: currentScores    5      units      urb1301   }
+INFO: currentScores    5      units      structures   {
+INFO: currentScores    5      units      structures      lost = 0
+INFO: currentScores    5      units      structures      kills = 0
+INFO: currentScores    5      units      structures      built = 0
+INFO: currentScores    5      units      structures   }
+INFO: currentScores    5      units      air   {
+INFO: currentScores    5      units      air      lost = 0
+INFO: currentScores    5      units      air      kills = 0
+INFO: currentScores    5      units      air      built = 0
+INFO: currentScores    5      units      air   }
+INFO: currentScores    5      units      xsb1103   {
+INFO: currentScores    5      units      xsb1103      built = 12
+INFO: currentScores    5      units      xsb1103   }
+INFO: currentScores    5      units      experimental   {
+INFO: currentScores    5      units      experimental      lost = 0
+INFO: currentScores    5      units      experimental      kills = 0
+INFO: currentScores    5      units      experimental      built = 0
+INFO: currentScores    5      units      experimental   }
+INFO: currentScores    5      units      tech2   {
+INFO: currentScores    5      units      tech2      lost = 0
+INFO: currentScores    5      units      tech2      kills = 0
+INFO: currentScores    5      units      tech2      built = 0
+INFO: currentScores    5      units      tech2   }
+INFO: currentScores    5      units      tech3   {
+INFO: currentScores    5      units      tech3      lost = 0
+INFO: currentScores    5      units      tech3      kills = 0
+INFO: currentScores    5      units      tech3      built = 0
+INFO: currentScores    5      units      tech3   }
+INFO: currentScores    5      units      tech1   {
+INFO: currentScores    5      units      tech1      lost = 0
+INFO: currentScores    5      units      tech1      kills = 0
+INFO: currentScores    5      units      tech1      built = 0
+INFO: currentScores    5      units      tech1   }
+INFO: currentScores    5      units      transportation   {
+INFO: currentScores    5      units      transportation      lost = 0
+INFO: currentScores    5      units      transportation      kills = 0
+INFO: currentScores    5      units      transportation      built = 0
+INFO: currentScores    5      units      transportation   }
+INFO: currentScores    5      units      xsl0105   {
+INFO: currentScores    5      units      xsl0105      built = 3
+INFO: currentScores    5      units      xsl0105   }
+INFO: currentScores    5      units      sacu   {
+INFO: currentScores    5      units      sacu      lost = 0
+INFO: currentScores    5      units      sacu      kills = 0
+INFO: currentScores    5      units      sacu      built = 0
+INFO: currentScores    5      units      sacu   }
+INFO: currentScores    5      units      urb1103   {
+INFO: currentScores    5      units      urb1103      built = 4
+INFO: currentScores    5      units      urb1103   }
+INFO: currentScores    5      units      xsl0001   {
+INFO: currentScores    5      units      xsl0001      built = 3
+INFO: currentScores    5      units      xsl0001      lowest_health = 11500
+INFO: currentScores    5      units      xsl0001   }
+INFO: currentScores    5      units      cdr   {
+INFO: currentScores    5      units      cdr      lost = 0
+INFO: currentScores    5      units      cdr      kills = 0
+INFO: currentScores    5      units      cdr      built = 0
+INFO: currentScores    5      units      cdr   }
+INFO: currentScores    5      units      naval   {
+INFO: currentScores    5      units      naval      lost = 0
+INFO: currentScores    5      units      naval      kills = 0
+INFO: currentScores    5      units      naval      built = 0
+INFO: currentScores    5      units      naval   }
+INFO: currentScores    5      units      engineer   {
+INFO: currentScores    5      units      engineer      lost = 0
+INFO: currentScores    5      units      engineer      kills = 0
+INFO: currentScores    5      units      engineer      built = 0
+INFO: currentScores    5      units      engineer   }
+INFO: currentScores    5      units   }
+INFO: currentScores    5   }
+INFO: currentScores    6   {
+INFO: currentScores    6      type = "AI"
+INFO: currentScores    6      general   {
+INFO: currentScores    6      general      score = 0
+INFO: currentScores    6      general      currentcap   {
+INFO: currentScores    6      general      currentcap      count = 750
+INFO: currentScores    6      general      currentcap   }
+INFO: currentScores    6      general      lastReclaimedMass = 0
+INFO: currentScores    6      general      mass = 0
+INFO: currentScores    6      general      built   {
+INFO: currentScores    6      general      built      mass = 0
+INFO: currentScores    6      general      built      count = 0
+INFO: currentScores    6      general      built      energy = 0
+INFO: currentScores    6      general      built   }
+INFO: currentScores    6      general      kills   {
+INFO: currentScores    6      general      kills      mass = 0
+INFO: currentScores    6      general      kills      count = 0
+INFO: currentScores    6      general      kills      energy = 0
+INFO: currentScores    6      general      kills   }
+INFO: currentScores    6      general      lost   {
+INFO: currentScores    6      general      lost      mass = 0
+INFO: currentScores    6      general      lost      count = 0
+INFO: currentScores    6      general      lost      energy = 0
+INFO: currentScores    6      general      lost   }
+INFO: currentScores    6      general      currentunits   {
+INFO: currentScores    6      general      currentunits      count = 0
+INFO: currentScores    6      general      currentunits   }
+INFO: currentScores    6      general      energy = 0
+INFO: currentScores    6      general      lastReclaimedEnergy = 0
+INFO: currentScores    6      general   }
+INFO: currentScores    6      faction = 5
+INFO: currentScores    6      resources   {
+INFO: currentScores    6      resources      massin   {
+INFO: currentScores    6      resources      massin      total = 0
+INFO: currentScores    6      resources      massin      rate = 0
+INFO: currentScores    6      resources      massin   }
+INFO: currentScores    6      resources      energyout   {
+INFO: currentScores    6      resources      energyout      total = 0
+INFO: currentScores    6      resources      energyout      rate = 0
+INFO: currentScores    6      resources      energyout   }
+INFO: currentScores    6      resources      energyin   {
+INFO: currentScores    6      resources      energyin      total = 0
+INFO: currentScores    6      resources      energyin      rate = 0
+INFO: currentScores    6      resources      energyin   }
+INFO: currentScores    6      resources      energyover = 0
+INFO: currentScores    6      resources      massover = 0
+INFO: currentScores    6      resources      massout   {
+INFO: currentScores    6      resources      massout      total = 0
+INFO: currentScores    6      resources      massout      rate = 0
+INFO: currentScores    6      resources      massout   }
+INFO: currentScores    6      resources   }
+INFO: currentScores    6      name = "civilian"
+INFO: currentScores    6      units   {
+INFO: currentScores    6      units      urb0101   {
+INFO: currentScores    6      units      urb0101      built = 1
+INFO: currentScores    6      units      urb0101   }
+INFO: currentScores    6      units      urb1101   {
+INFO: currentScores    6      units      urb1101      built = 4
+INFO: currentScores    6      units      urb1101   }
+INFO: currentScores    6      units      urb1302   {
+INFO: currentScores    6      units      urb1302      built = 11
+INFO: currentScores    6      units      urb1302   }
+INFO: currentScores    6      units      xsb0101   {
+INFO: currentScores    6      units      xsb0101      built = 3
+INFO: currentScores    6      units      xsb0101   }
+INFO: currentScores    6      units      xsb1101   {
+INFO: currentScores    6      units      xsb1101      built = 15
+INFO: currentScores    6      units      xsb1101   }
+INFO: currentScores    6      units      url0001   {
+INFO: currentScores    6      units      url0001      built = 1
+INFO: currentScores    6      units      url0001      lowest_health = 10000
+INFO: currentScores    6      units      url0001   }
+INFO: currentScores    6      units      land   {
+INFO: currentScores    6      units      land      lost = 0
+INFO: currentScores    6      units      land      kills = 0
+INFO: currentScores    6      units      land      built = 0
+INFO: currentScores    6      units      land   }
+INFO: currentScores    6      units      urb1301   {
+INFO: currentScores    6      units      urb1301      built = 1
+INFO: currentScores    6      units      urb1301   }
+INFO: currentScores    6      units      structures   {
+INFO: currentScores    6      units      structures      lost = 0
+INFO: currentScores    6      units      structures      kills = 0
+INFO: currentScores    6      units      structures      built = 0
+INFO: currentScores    6      units      structures   }
+INFO: currentScores    6      units      air   {
+INFO: currentScores    6      units      air      lost = 0
+INFO: currentScores    6      units      air      kills = 0
+INFO: currentScores    6      units      air      built = 0
+INFO: currentScores    6      units      air   }
+INFO: currentScores    6      units      xsb1103   {
+INFO: currentScores    6      units      xsb1103      built = 12
+INFO: currentScores    6      units      xsb1103   }
+INFO: currentScores    6      units      experimental   {
+INFO: currentScores    6      units      experimental      lost = 0
+INFO: currentScores    6      units      experimental      kills = 0
+INFO: currentScores    6      units      experimental      built = 0
+INFO: currentScores    6      units      experimental   }
+INFO: currentScores    6      units      tech2   {
+INFO: currentScores    6      units      tech2      lost = 0
+INFO: currentScores    6      units      tech2      kills = 0
+INFO: currentScores    6      units      tech2      built = 0
+INFO: currentScores    6      units      tech2   }
+INFO: currentScores    6      units      tech3   {
+INFO: currentScores    6      units      tech3      lost = 0
+INFO: currentScores    6      units      tech3      kills = 0
+INFO: currentScores    6      units      tech3      built = 0
+INFO: currentScores    6      units      tech3   }
+INFO: currentScores    6      units      tech1   {
+INFO: currentScores    6      units      tech1      lost = 0
+INFO: currentScores    6      units      tech1      kills = 0
+INFO: currentScores    6      units      tech1      built = 0
+INFO: currentScores    6      units      tech1   }
+INFO: currentScores    6      units      transportation   {
+INFO: currentScores    6      units      transportation      lost = 0
+INFO: currentScores    6      units      transportation      kills = 0
+INFO: currentScores    6      units      transportation      built = 0
+INFO: currentScores    6      units      transportation   }
+INFO: currentScores    6      units      xsl0105   {
+INFO: currentScores    6      units      xsl0105      built = 3
+INFO: currentScores    6      units      xsl0105   }
+INFO: currentScores    6      units      sacu   {
+INFO: currentScores    6      units      sacu      lost = 0
+INFO: currentScores    6      units      sacu      kills = 0
+INFO: currentScores    6      units      sacu      built = 0
+INFO: currentScores    6      units      sacu   }
+INFO: currentScores    6      units      urb1103   {
+INFO: currentScores    6      units      urb1103      built = 4
+INFO: currentScores    6      units      urb1103   }
+INFO: currentScores    6      units      xsl0001   {
+INFO: currentScores    6      units      xsl0001      built = 3
+INFO: currentScores    6      units      xsl0001      lowest_health = 11500
+INFO: currentScores    6      units      xsl0001   }
+INFO: currentScores    6      units      cdr   {
+INFO: currentScores    6      units      cdr      lost = 0
+INFO: currentScores    6      units      cdr      kills = 0
+INFO: currentScores    6      units      cdr      built = 0
+INFO: currentScores    6      units      cdr   }
+INFO: currentScores    6      units      naval   {
+INFO: currentScores    6      units      naval      lost = 0
+INFO: currentScores    6      units      naval      kills = 0
+INFO: currentScores    6      units      naval      built = 0
+INFO: currentScores    6      units      naval   }
+INFO: currentScores    6      units      engineer   {
+INFO: currentScores    6      units      engineer      lost = 0
+INFO: currentScores    6      units      engineer      kills = 0
+INFO: currentScores    6      units      engineer      built = 0
+INFO: currentScores    6      units      engineer   }
+INFO: currentScores    6      units   }
+INFO: currentScores    6   }
+INFO: currentScores }
+INFO: AnnounceDeath H-USA-R switching to H-USA-R
+INFO: syncing max ping markers: \00015
+INFO: Sync.FocusArmyChanged -1
+INFO: AI: Easy notifications <LOC url0402_help>Experimental Spiderbot match (EXPERIMENTAL)
+INFO: AI: Easy notifications <LOC url0402_help>Experimental Spiderbot match (EXPERIMENTAL)
+INFO: H-USA-R notifications <LOC url0402_help>Experimental Spiderbot match (EXPERIMENTAL)
+INFO: AI: Easy notifications <LOC url0402_help>Experimental Spiderbot match (EXPERIMENTAL)
+INFO: HUSSAR >>> TRACE ArmyAnnounce ----------- <LOC url0402_help>Experimental Spiderbot
+INFO: HUSSAR >>> TRACE ArmyAnnounce ----------- <LOC url0402_help>Experimental Spiderbot
+INFO: HUSSAR >>> TRACE ArmyAnnounce ----------- <LOC url0402_help>Experimental Spiderbot
+INFO: HUSSAR >>> TRACE ArmyAnnounce ----------- <LOC url0402_help>Experimental Spiderbot
+INFO: syncing max ping markers: \00015
+INFO: Sync.FocusArmyChanged 4
+INFO: currentScores {
+INFO: currentScores    1   {
+INFO: currentScores    1      type = "Human"
+INFO: currentScores    1      general   {
+INFO: currentScores    1      general      score = 18947
+INFO: currentScores    1      general      currentcap   {
+INFO: currentScores    1      general      currentcap      count = 750
+INFO: currentScores    1      general      currentcap   }
+INFO: currentScores    1      general      lastReclaimedMass = 0
+INFO: currentScores    1      general      mass = 35897.46875
+INFO: currentScores    1      general      built   {
+INFO: currentScores    1      general      built      mass = 19000
+INFO: currentScores    1      general      built      count = 167
+INFO: currentScores    1      general      built      energy = 260000
+INFO: currentScores    1      general      built   }
+INFO: currentScores    1      general      kills   {
+INFO: currentScores    1      general      kills      mass = 0
+INFO: currentScores    1      general      kills      count = 0
+INFO: currentScores    1      general      kills      energy = 0
+INFO: currentScores    1      general      kills   }
+INFO: currentScores    1      general      lost   {
+INFO: currentScores    1      general      lost      mass = 0
+INFO: currentScores    1      general      lost      count = 0
+INFO: currentScores    1      general      lost      energy = 0
+INFO: currentScores    1      general      lost   }
+INFO: currentScores    1      general      currentunits   {
+INFO: currentScores    1      general      currentunits      count = 167
+INFO: currentScores    1      general      currentunits   }
+INFO: currentScores    1      general      energy = 2322116.25
+INFO: currentScores    1      general      lastReclaimedEnergy = 0
+INFO: currentScores    1      general   }
+INFO: currentScores    1      faction = 3
+INFO: currentScores    1      resources   {
+INFO: currentScores    1      resources      massin   {
+INFO: currentScores    1      resources      massin      total = 35897.46875
+INFO: currentScores    1      resources      massin      rate = 160.40014648438
+INFO: currentScores    1      resources      massin   }
+INFO: currentScores    1      resources      energyout   {
+INFO: currentScores    1      resources      energyout      total = 370070.09375
+INFO: currentScores    1      resources      energyout      rate = 515.99963378906
+INFO: currentScores    1      resources      energyout   }
+INFO: currentScores    1      resources      energyin   {
+INFO: currentScores    1      resources      energyin      total = 2322116.25
+INFO: currentScores    1      resources      energyin      rate = 8612
+INFO: currentScores    1      resources      energyin   }
+INFO: currentScores    1      resources      energyover = 1947521.375
+INFO: currentScores    1      resources      massover = 15339.547851563
+INFO: currentScores    1      resources      massout   {
+INFO: currentScores    1      resources      massout      total = 19391.859375
+INFO: currentScores    1      resources      massout      rate = 0
+INFO: currentScores    1      resources      massout   }
+INFO: currentScores    1      resources   }
+INFO: currentScores    1      name = "H-USA-R"
+INFO: currentScores    1      units   {
+INFO: currentScores    1      units      urb0101   {
+INFO: currentScores    1      units      urb0101      built = 1
+INFO: currentScores    1      units      urb0101   }
+INFO: currentScores    1      units      tech3   {
+INFO: currentScores    1      units      tech3      lost = 0
+INFO: currentScores    1      units      tech3      kills = 0
+INFO: currentScores    1      units      tech3      built = 123
+INFO: currentScores    1      units      tech3   }
+INFO: currentScores    1      units      url0402   {
+INFO: currentScores    1      units      url0402      built = 1
+INFO: currentScores    1      units      url0402   }
+INFO: currentScores    1      units      urb1302   {
+INFO: currentScores    1      units      urb1302      built = 88
+INFO: currentScores    1      units      urb1302   }
+INFO: currentScores    1      units      xsb0101   {
+INFO: currentScores    1      units      xsb0101      built = 3
+INFO: currentScores    1      units      xsb0101   }
+INFO: currentScores    1      units      xsb1101   {
+INFO: currentScores    1      units      xsb1101      built = 26
+INFO: currentScores    1      units      xsb1101   }
+INFO: currentScores    1      units      ura0001   {
+INFO: currentScores    1      units      ura0001      built = 406
+INFO: currentScores    1      units      ura0001   }
+INFO: currentScores    1      units      url0001   {
+INFO: currentScores    1      units      url0001      built = 1
+INFO: currentScores    1      units      url0001      lowest_health = 10000
+INFO: currentScores    1      units      url0001   }
+INFO: currentScores    1      units      land   {
+INFO: currentScores    1      units      land      lost = 0
+INFO: currentScores    1      units      land      kills = 0
+INFO: currentScores    1      units      land      built = 4
+INFO: currentScores    1      units      land   }
+INFO: currentScores    1      units      urb1301   {
+INFO: currentScores    1      units      urb1301      built = 34
+INFO: currentScores    1      units      urb1301   }
+INFO: currentScores    1      units      structures   {
+INFO: currentScores    1      units      structures      lost = 0
+INFO: currentScores    1      units      structures      kills = 0
+INFO: currentScores    1      units      structures      built = 164
+INFO: currentScores    1      units      structures   }
+INFO: currentScores    1      units      xrb0304   {
+INFO: currentScores    1      units      xrb0304      built = 33
+INFO: currentScores    1      units      xrb0304   }
+INFO: currentScores    1      units      xsl0101   {
+INFO: currentScores    1      units      xsl0101      built = 3
+INFO: currentScores    1      units      xsl0101   }
+INFO: currentScores    1      units      experimental   {
+INFO: currentScores    1      units      experimental      lost = 0
+INFO: currentScores    1      units      experimental      kills = 0
+INFO: currentScores    1      units      experimental      built = 1
+INFO: currentScores    1      units      experimental   }
+INFO: currentScores    1      units      xsb1103   {
+INFO: currentScores    1      units      xsb1103      built = 15
+INFO: currentScores    1      units      xsb1103   }
+INFO: currentScores    1      units      tech2   {
+INFO: currentScores    1      units      tech2      lost = 0
+INFO: currentScores    1      units      tech2      kills = 0
+INFO: currentScores    1      units      tech2      built = 33
+INFO: currentScores    1      units      tech2   }
+INFO: currentScores    1      units      cdr   {
+INFO: currentScores    1      units      cdr      lost = 0
+INFO: currentScores    1      units      cdr      kills = 0
+INFO: currentScores    1      units      cdr      built = 1
+INFO: currentScores    1      units      cdr   }
+INFO: currentScores    1      units      url0301_RAS   {
+INFO: currentScores    1      units      url0301_RAS      built = 1
+INFO: currentScores    1      units      url0301_RAS   }
+INFO: currentScores    1      units      urb1101   {
+INFO: currentScores    1      units      urb1101      built = 4
+INFO: currentScores    1      units      urb1101   }
+INFO: currentScores    1      units      xsl0001   {
+INFO: currentScores    1      units      xsl0001      built = 3
+INFO: currentScores    1      units      xsl0001      lowest_health = 11500
+INFO: currentScores    1      units      xsl0001   }
+INFO: currentScores    1      units      transportation   {
+INFO: currentScores    1      units      transportation      lost = 0
+INFO: currentScores    1      units      transportation      kills = 0
+INFO: currentScores    1      units      transportation      built = 0
+INFO: currentScores    1      units      transportation   }
+INFO: currentScores    1      units      xsl0105   {
+INFO: currentScores    1      units      xsl0105      built = 12
+INFO: currentScores    1      units      xsl0105   }
+INFO: currentScores    1      units      sacu   {
+INFO: currentScores    1      units      sacu      lost = 0
+INFO: currentScores    1      units      sacu      kills = 0
+INFO: currentScores    1      units      sacu      built = 1
+INFO: currentScores    1      units      sacu   }
+INFO: currentScores    1      units      urb1103   {
+INFO: currentScores    1      units      urb1103      built = 4
+INFO: currentScores    1      units      urb1103   }
+INFO: currentScores    1      units      engineer   {
+INFO: currentScores    1      units      engineer      lost = 0
+INFO: currentScores    1      units      engineer      kills = 0
+INFO: currentScores    1      units      engineer      built = 35
+INFO: currentScores    1      units      engineer   }
+INFO: currentScores    1      units      tech1   {
+INFO: currentScores    1      units      tech1      lost = 0
+INFO: currentScores    1      units      tech1      kills = 0
+INFO: currentScores    1      units      tech1      built = 9
+INFO: currentScores    1      units      tech1   }
+INFO: currentScores    1      units      naval   {
+INFO: currentScores    1      units      naval      lost = 0
+INFO: currentScores    1      units      naval      kills = 0
+INFO: currentScores    1      units      naval      built = 0
+INFO: currentScores    1      units      naval   }
+INFO: currentScores    1      units      air   {
+INFO: currentScores    1      units      air      lost = 0
+INFO: currentScores    1      units      air      kills = 0
+INFO: currentScores    1      units      air      built = 0
+INFO: currentScores    1      units      air   }
+INFO: currentScores    1      units   }
+INFO: currentScores    1   }
+INFO: currentScores    2   {
+INFO: currentScores    2      type = "AI"
+INFO: currentScores    2      general   {
+INFO: currentScores    2      general      score = 546
+INFO: currentScores    2      general      currentcap   {
+INFO: currentScores    2      general      currentcap      count = 750
+INFO: currentScores    2      general      currentcap   }
+INFO: currentScores    2      general      lastReclaimedMass = 0
+INFO: currentScores    2      general      mass = 1573.8171386719
+INFO: currentScores    2      general      built   {
+INFO: currentScores    2      general      built      mass = 675
+INFO: currentScores    2      general      built      count = 22
+INFO: currentScores    2      general      built      energy = 5590
+INFO: currentScores    2      general      built   }
+INFO: currentScores    2      general      kills   {
+INFO: currentScores    2      general      kills      mass = 0
+INFO: currentScores    2      general      kills      count = 0
+INFO: currentScores    2      general      kills      energy = 0
+INFO: currentScores    2      general      kills   }
+INFO: currentScores    2      general      lost   {
+INFO: currentScores    2      general      lost      mass = 0
+INFO: currentScores    2      general      lost      count = 0
+INFO: currentScores    2      general      lost      energy = 0
+INFO: currentScores    2      general      lost   }
+INFO: currentScores    2      general      currentunits   {
+INFO: currentScores    2      general      currentunits      count = 26
+INFO: currentScores    2      general      currentunits   }
+INFO: currentScores    2      general      energy = 15038.400390625
+INFO: currentScores    2      general      lastReclaimedEnergy = 0
+INFO: currentScores    2      general   }
+INFO: currentScores    2      faction = 4
+INFO: currentScores    2      resources   {
+INFO: currentScores    2      resources      massin   {
+INFO: currentScores    2      resources      massin      total = 1573.8171386719
+INFO: currentScores    2      resources      massin      rate = 1.8000000715256
+INFO: currentScores    2      resources      massin   }
+INFO: currentScores    2      resources      energyout   {
+INFO: currentScores    2      resources      energyout      total = 6971.2143554688
+INFO: currentScores    2      resources      energyout      rate = 17.200000762939
+INFO: currentScores    2      resources      energyout   }
+INFO: currentScores    2      resources      energyin   {
+INFO: currentScores    2      resources      energyin      total = 15038.400390625
+INFO: currentScores    2      resources      energyin      rate = 20
+INFO: currentScores    2      resources      energyin   }
+INFO: currentScores    2      resources      energyover = 3923.3562011719
+INFO: currentScores    2      resources      massover = 48.901550292969
+INFO: currentScores    2      resources      massout   {
+INFO: currentScores    2      resources      massout      total = 745.4248046875
+INFO: currentScores    2      resources      massout      rate = 1.7999999523163
+INFO: currentScores    2      resources      massout   }
+INFO: currentScores    2      resources   }
+INFO: currentScores    2      name = "Al-Ghoussein (AI: Easy)"
+INFO: currentScores    2      units   {
+INFO: currentScores    2      units      urb0101   {
+INFO: currentScores    2      units      urb0101      built = 1
+INFO: currentScores    2      units      urb0101   }
+INFO: currentScores    2      units      tech3   {
+INFO: currentScores    2      units      tech3      lost = 0
+INFO: currentScores    2      units      tech3      kills = 0
+INFO: currentScores    2      units      tech3      built = 0
+INFO: currentScores    2      units      tech3   }
+INFO: currentScores    2      units      url0402   {
+INFO: currentScores    2      units      url0402      built = 1
+INFO: currentScores    2      units      url0402   }
+INFO: currentScores    2      units      urb1302   {
+INFO: currentScores    2      units      urb1302      built = 88
+INFO: currentScores    2      units      urb1302   }
+INFO: currentScores    2      units      xsb0101   {
+INFO: currentScores    2      units      xsb0101      built = 3
+INFO: currentScores    2      units      xsb0101   }
+INFO: currentScores    2      units      xsb1101   {
+INFO: currentScores    2      units      xsb1101      built = 26
+INFO: currentScores    2      units      xsb1101   }
+INFO: currentScores    2      units      ura0001   {
+INFO: currentScores    2      units      ura0001      built = 406
+INFO: currentScores    2      units      ura0001   }
+INFO: currentScores    2      units      url0001   {
+INFO: currentScores    2      units      url0001      built = 1
+INFO: currentScores    2      units      url0001      lowest_health = 10000
+INFO: currentScores    2      units      url0001   }
+INFO: currentScores    2      units      land   {
+INFO: currentScores    2      units      land      lost = 0
+INFO: currentScores    2      units      land      kills = 0
+INFO: currentScores    2      units      land      built = 7
+INFO: currentScores    2      units      land   }
+INFO: currentScores    2      units      urb1301   {
+INFO: currentScores    2      units      urb1301      built = 34
+INFO: currentScores    2      units      urb1301   }
+INFO: currentScores    2      units      structures   {
+INFO: currentScores    2      units      structures      lost = 0
+INFO: currentScores    2      units      structures      kills = 0
+INFO: currentScores    2      units      structures      built = 16
+INFO: currentScores    2      units      structures   }
+INFO: currentScores    2      units      xrb0304   {
+INFO: currentScores    2      units      xrb0304      built = 33
+INFO: currentScores    2      units      xrb0304   }
+INFO: currentScores    2      units      xsl0101   {
+INFO: currentScores    2      units      xsl0101      built = 3
+INFO: currentScores    2      units      xsl0101   }
+INFO: currentScores    2      units      experimental   {
+INFO: currentScores    2      units      experimental      lost = 0
+INFO: currentScores    2      units      experimental      kills = 0
+INFO: currentScores    2      units      experimental      built = 0
+INFO: currentScores    2      units      experimental   }
+INFO: currentScores    2      units      xsb1103   {
+INFO: currentScores    2      units      xsb1103      built = 15
+INFO: currentScores    2      units      xsb1103   }
+INFO: currentScores    2      units      tech2   {
+INFO: currentScores    2      units      tech2      lost = 0
+INFO: currentScores    2      units      tech2      kills = 0
+INFO: currentScores    2      units      tech2      built = 0
+INFO: currentScores    2      units      tech2   }
+INFO: currentScores    2      units      cdr   {
+INFO: currentScores    2      units      cdr      lost = 0
+INFO: currentScores    2      units      cdr      kills = 0
+INFO: currentScores    2      units      cdr      built = 1
+INFO: currentScores    2      units      cdr   }
+INFO: currentScores    2      units      url0301_RAS   {
+INFO: currentScores    2      units      url0301_RAS      built = 1
+INFO: currentScores    2      units      url0301_RAS   }
+INFO: currentScores    2      units      urb1101   {
+INFO: currentScores    2      units      urb1101      built = 4
+INFO: currentScores    2      units      urb1101   }
+INFO: currentScores    2      units      xsl0001   {
+INFO: currentScores    2      units      xsl0001      built = 3
+INFO: currentScores    2      units      xsl0001      lowest_health = 11500
+INFO: currentScores    2      units      xsl0001   }
+INFO: currentScores    2      units      transportation   {
+INFO: currentScores    2      units      transportation      lost = 0
+INFO: currentScores    2      units      transportation      kills = 0
+INFO: currentScores    2      units      transportation      built = 0
+INFO: currentScores    2      units      transportation   }
+INFO: currentScores    2      units      xsl0105   {
+INFO: currentScores    2      units      xsl0105      built = 12
+INFO: currentScores    2      units      xsl0105   }
+INFO: currentScores    2      units      sacu   {
+INFO: currentScores    2      units      sacu      lost = 0
+INFO: currentScores    2      units      sacu      kills = 0
+INFO: currentScores    2      units      sacu      built = 0
+INFO: currentScores    2      units      sacu   }
+INFO: currentScores    2      units      urb1103   {
+INFO: currentScores    2      units      urb1103      built = 4
+INFO: currentScores    2      units      urb1103   }
+INFO: currentScores    2      units      engineer   {
+INFO: currentScores    2      units      engineer      lost = 0
+INFO: currentScores    2      units      engineer      kills = 0
+INFO: currentScores    2      units      engineer      built = 5
+INFO: currentScores    2      units      engineer   }
+INFO: currentScores    2      units      tech1   {
+INFO: currentScores    2      units      tech1      lost = 0
+INFO: currentScores    2      units      tech1      kills = 0
+INFO: currentScores    2      units      tech1      built = 21
+INFO: currentScores    2      units      tech1   }
+INFO: currentScores    2      units      naval   {
+INFO: currentScores    2      units      naval      lost = 0
+INFO: currentScores    2      units      naval      kills = 0
+INFO: currentScores    2      units      naval      built = 0
+INFO: currentScores    2      units      naval   }
+INFO: currentScores    2      units      air   {
+INFO: currentScores    2      units      air      lost = 0
+INFO: currentScores    2      units      air      kills = 0
+INFO: currentScores    2      units      air      built = 0
+INFO: currentScores    2      units      air   }
+INFO: currentScores    2      units   }
+INFO: currentScores    2   }
+INFO: currentScores    3   {
+INFO: currentScores    3      type = "AI"
+INFO: currentScores    3      general   {
+INFO: currentScores    3      general      score = 485
+INFO: currentScores    3      general      currentcap   {
+INFO: currentScores    3      general      currentcap      count = 750
+INFO: currentScores    3      general      currentcap   }
+INFO: currentScores    3      general      lastReclaimedMass = 15
+INFO: currentScores    3      general      mass = 1442.25
+INFO: currentScores    3      general      built   {
+INFO: currentScores    3      general      built      mass = 639
+INFO: currentScores    3      general      built      count = 21
+INFO: currentScores    3      general      built      energy = 5230
+INFO: currentScores    3      general      built   }
+INFO: currentScores    3      general      kills   {
+INFO: currentScores    3      general      kills      mass = 0
+INFO: currentScores    3      general      kills      count = 0
+INFO: currentScores    3      general      kills      energy = 0
+INFO: currentScores    3      general      kills   }
+INFO: currentScores    3      general      lost   {
+INFO: currentScores    3      general      lost      mass = 0
+INFO: currentScores    3      general      lost      count = 0
+INFO: currentScores    3      general      lost      energy = 0
+INFO: currentScores    3      general      lost   }
+INFO: currentScores    3      general      currentunits   {
+INFO: currentScores    3      general      currentunits      count = 23
+INFO: currentScores    3      general      currentunits   }
+INFO: currentScores    3      general      energy = 14933
+INFO: currentScores    3      general      lastReclaimedEnergy = 0
+INFO: currentScores    3      general   }
+INFO: currentScores    3      faction = 4
+INFO: currentScores    3      resources   {
+INFO: currentScores    3      resources      massin   {
+INFO: currentScores    3      resources      massin      total = 1442.25
+INFO: currentScores    3      resources      massin      rate = 1.2000366449356
+INFO: currentScores    3      resources      massin   }
+INFO: currentScores    3      resources      energyout   {
+INFO: currentScores    3      resources      energyout      total = 6113.2163085938
+INFO: currentScores    3      resources      energyout      rate = 11
+INFO: currentScores    3      resources      energyout   }
+INFO: currentScores    3      resources      energyin   {
+INFO: currentScores    3      resources      energyin      total = 14933
+INFO: currentScores    3      resources      energyin      rate = 20
+INFO: currentScores    3      resources      energyin   }
+INFO: currentScores    3      resources      energyover = 4801.5517578125
+INFO: currentScores    3      resources      massover = 6.5279541015625
+INFO: currentScores    3      resources      massout   {
+INFO: currentScores    3      resources      massout      total = 665.82269287109
+INFO: currentScores    3      resources      massout      rate = 1.2000000476837
+INFO: currentScores    3      resources      massout   }
+INFO: currentScores    3      resources   }
+INFO: currentScores    3      name = "Seth-Ushavoh (AI: Easy)"
+INFO: currentScores    3      units   {
+INFO: currentScores    3      units      urb0101   {
+INFO: currentScores    3      units      urb0101      built = 1
+INFO: currentScores    3      units      urb0101   }
+INFO: currentScores    3      units      tech3   {
+INFO: currentScores    3      units      tech3      lost = 0
+INFO: currentScores    3      units      tech3      kills = 0
+INFO: currentScores    3      units      tech3      built = 0
+INFO: currentScores    3      units      tech3   }
+INFO: currentScores    3      units      url0402   {
+INFO: currentScores    3      units      url0402      built = 1
+INFO: currentScores    3      units      url0402   }
+INFO: currentScores    3      units      urb1302   {
+INFO: currentScores    3      units      urb1302      built = 88
+INFO: currentScores    3      units      urb1302   }
+INFO: currentScores    3      units      xsb0101   {
+INFO: currentScores    3      units      xsb0101      built = 3
+INFO: currentScores    3      units      xsb0101   }
+INFO: currentScores    3      units      xsb1101   {
+INFO: currentScores    3      units      xsb1101      built = 26
+INFO: currentScores    3      units      xsb1101   }
+INFO: currentScores    3      units      ura0001   {
+INFO: currentScores    3      units      ura0001      built = 406
+INFO: currentScores    3      units      ura0001   }
+INFO: currentScores    3      units      url0001   {
+INFO: currentScores    3      units      url0001      built = 1
+INFO: currentScores    3      units      url0001      lowest_health = 10000
+INFO: currentScores    3      units      url0001   }
+INFO: currentScores    3      units      land   {
+INFO: currentScores    3      units      land      lost = 0
+INFO: currentScores    3      units      land      kills = 0
+INFO: currentScores    3      units      land      built = 7
+INFO: currentScores    3      units      land   }
+INFO: currentScores    3      units      urb1301   {
+INFO: currentScores    3      units      urb1301      built = 34
+INFO: currentScores    3      units      urb1301   }
+INFO: currentScores    3      units      structures   {
+INFO: currentScores    3      units      structures      lost = 0
+INFO: currentScores    3      units      structures      kills = 0
+INFO: currentScores    3      units      structures      built = 15
+INFO: currentScores    3      units      structures   }
+INFO: currentScores    3      units      xrb0304   {
+INFO: currentScores    3      units      xrb0304      built = 33
+INFO: currentScores    3      units      xrb0304   }
+INFO: currentScores    3      units      xsl0101   {
+INFO: currentScores    3      units      xsl0101      built = 3
+INFO: currentScores    3      units      xsl0101   }
+INFO: currentScores    3      units      experimental   {
+INFO: currentScores    3      units      experimental      lost = 0
+INFO: currentScores    3      units      experimental      kills = 0
+INFO: currentScores    3      units      experimental      built = 0
+INFO: currentScores    3      units      experimental   }
+INFO: currentScores    3      units      xsb1103   {
+INFO: currentScores    3      units      xsb1103      built = 15
+INFO: currentScores    3      units      xsb1103   }
+INFO: currentScores    3      units      tech2   {
+INFO: currentScores    3      units      tech2      lost = 0
+INFO: currentScores    3      units      tech2      kills = 0
+INFO: currentScores    3      units      tech2      built = 0
+INFO: currentScores    3      units      tech2   }
+INFO: currentScores    3      units      cdr   {
+INFO: currentScores    3      units      cdr      lost = 0
+INFO: currentScores    3      units      cdr      kills = 0
+INFO: currentScores    3      units      cdr      built = 1
+INFO: currentScores    3      units      cdr   }
+INFO: currentScores    3      units      url0301_RAS   {
+INFO: currentScores    3      units      url0301_RAS      built = 1
+INFO: currentScores    3      units      url0301_RAS   }
+INFO: currentScores    3      units      urb1101   {
+INFO: currentScores    3      units      urb1101      built = 4
+INFO: currentScores    3      units      urb1101   }
+INFO: currentScores    3      units      xsl0001   {
+INFO: currentScores    3      units      xsl0001      built = 3
+INFO: currentScores    3      units      xsl0001      lowest_health = 11500
+INFO: currentScores    3      units      xsl0001   }
+INFO: currentScores    3      units      transportation   {
+INFO: currentScores    3      units      transportation      lost = 0
+INFO: currentScores    3      units      transportation      kills = 0
+INFO: currentScores    3      units      transportation      built = 0
+INFO: currentScores    3      units      transportation   }
+INFO: currentScores    3      units      xsl0105   {
+INFO: currentScores    3      units      xsl0105      built = 12
+INFO: currentScores    3      units      xsl0105   }
+INFO: currentScores    3      units      sacu   {
+INFO: currentScores    3      units      sacu      lost = 0
+INFO: currentScores    3      units      sacu      kills = 0
+INFO: currentScores    3      units      sacu      built = 0
+INFO: currentScores    3      units      sacu   }
+INFO: currentScores    3      units      urb1103   {
+INFO: currentScores    3      units      urb1103      built = 4
+INFO: currentScores    3      units      urb1103   }
+INFO: currentScores    3      units      engineer   {
+INFO: currentScores    3      units      engineer      lost = 0
+INFO: currentScores    3      units      engineer      kills = 0
+INFO: currentScores    3      units      engineer      built = 5
+INFO: currentScores    3      units      engineer   }
+INFO: currentScores    3      units      tech1   {
+INFO: currentScores    3      units      tech1      lost = 0
+INFO: currentScores    3      units      tech1      kills = 0
+INFO: currentScores    3      units      tech1      built = 20
+INFO: currentScores    3      units      tech1   }
+INFO: currentScores    3      units      naval   {
+INFO: currentScores    3      units      naval      lost = 0
+INFO: currentScores    3      units      naval      kills = 0
+INFO: currentScores    3      units      naval      built = 0
+INFO: currentScores    3      units      naval   }
+INFO: currentScores    3      units      air   {
+INFO: currentScores    3      units      air      lost = 0
+INFO: currentScores    3      units      air      kills = 0
+INFO: currentScores    3      units      air      built = 0
+INFO: currentScores    3      units      air   }
+INFO: currentScores    3      units   }
+INFO: currentScores    3   }
+INFO: currentScores    4   {
+INFO: currentScores    4      type = "AI"
+INFO: currentScores    4      general   {
+INFO: currentScores    4      general      score = 390
+INFO: currentScores    4      general      currentcap   {
+INFO: currentScores    4      general      currentcap      count = 750
+INFO: currentScores    4      general      currentcap   }
+INFO: currentScores    4      general      lastReclaimedMass = 0
+INFO: currentScores    4      general      mass = 1349.4187011719
+INFO: currentScores    4      general      built   {
+INFO: currentScores    4      general      built      mass = 528
+INFO: currentScores    4      general      built      count = 19
+INFO: currentScores    4      general      built      energy = 4120
+INFO: currentScores    4      general      built   }
+INFO: currentScores    4      general      kills   {
+INFO: currentScores    4      general      kills      mass = 0
+INFO: currentScores    4      general      kills      count = 0
+INFO: currentScores    4      general      kills      energy = 0
+INFO: currentScores    4      general      kills   }
+INFO: currentScores    4      general      lost   {
+INFO: currentScores    4      general      lost      mass = 0
+INFO: currentScores    4      general      lost      count = 0
+INFO: currentScores    4      general      lost      energy = 0
+INFO: currentScores    4      general      lost   }
+INFO: currentScores    4      general      currentunits   {
+INFO: currentScores    4      general      currentunits      count = 20
+INFO: currentScores    4      general      currentunits   }
+INFO: currentScores    4      general      energy = 14924.400390625
+INFO: currentScores    4      general      lastReclaimedEnergy = 0
+INFO: currentScores    4      general   }
+INFO: currentScores    4      faction = 4
+INFO: currentScores    4      resources   {
+INFO: currentScores    4      resources      massin   {
+INFO: currentScores    4      resources      massin      total = 1349.4187011719
+INFO: currentScores    4      resources      massin      rate = 0.89999997615814
+INFO: currentScores    4      resources      massin   }
+INFO: currentScores    4      resources      energyout   {
+INFO: currentScores    4      resources      energyout      total = 4795.9731445313
+INFO: currentScores    4      resources      energyout      rate = 2.7999999523163
+INFO: currentScores    4      resources      energyout   }
+INFO: currentScores    4      resources      energyin   {
+INFO: currentScores    4      resources      energyin      total = 14924.400390625
+INFO: currentScores    4      resources      energyin      rate = 18
+INFO: currentScores    4      resources      energyin   }
+INFO: currentScores    4      resources      energyover = 6128.55078125
+INFO: currentScores    4      resources      massover = 11.674987792969
+INFO: currentScores    4      resources      massout   {
+INFO: currentScores    4      resources      massout      total = 541.49987792969
+INFO: currentScores    4      resources      massout      rate = 0.5
+INFO: currentScores    4      resources      massout   }
+INFO: currentScores    4      resources   }
+INFO: currentScores    4      name = "Zan-Uyalthow (AI: Easy)"
+INFO: currentScores    4      units   {
+INFO: currentScores    4      units      urb0101   {
+INFO: currentScores    4      units      urb0101      built = 1
+INFO: currentScores    4      units      urb0101   }
+INFO: currentScores    4      units      tech3   {
+INFO: currentScores    4      units      tech3      lost = 0
+INFO: currentScores    4      units      tech3      kills = 0
+INFO: currentScores    4      units      tech3      built = 0
+INFO: currentScores    4      units      tech3   }
+INFO: currentScores    4      units      url0402   {
+INFO: currentScores    4      units      url0402      built = 1
+INFO: currentScores    4      units      url0402   }
+INFO: currentScores    4      units      urb1302   {
+INFO: currentScores    4      units      urb1302      built = 88
+INFO: currentScores    4      units      urb1302   }
+INFO: currentScores    4      units      xsb0101   {
+INFO: currentScores    4      units      xsb0101      built = 3
+INFO: currentScores    4      units      xsb0101   }
+INFO: currentScores    4      units      xsb1101   {
+INFO: currentScores    4      units      xsb1101      built = 26
+INFO: currentScores    4      units      xsb1101   }
+INFO: currentScores    4      units      ura0001   {
+INFO: currentScores    4      units      ura0001      built = 406
+INFO: currentScores    4      units      ura0001   }
+INFO: currentScores    4      units      url0001   {
+INFO: currentScores    4      units      url0001      built = 1
+INFO: currentScores    4      units      url0001      lowest_health = 10000
+INFO: currentScores    4      units      url0001   }
+INFO: currentScores    4      units      land   {
+INFO: currentScores    4      units      land      lost = 0
+INFO: currentScores    4      units      land      kills = 0
+INFO: currentScores    4      units      land      built = 7
+INFO: currentScores    4      units      land   }
+INFO: currentScores    4      units      urb1301   {
+INFO: currentScores    4      units      urb1301      built = 34
+INFO: currentScores    4      units      urb1301   }
+INFO: currentScores    4      units      structures   {
+INFO: currentScores    4      units      structures      lost = 0
+INFO: currentScores    4      units      structures      kills = 0
+INFO: currentScores    4      units      structures      built = 13
+INFO: currentScores    4      units      structures   }
+INFO: currentScores    4      units      xrb0304   {
+INFO: currentScores    4      units      xrb0304      built = 33
+INFO: currentScores    4      units      xrb0304   }
+INFO: currentScores    4      units      xsl0101   {
+INFO: currentScores    4      units      xsl0101      built = 3
+INFO: currentScores    4      units      xsl0101   }
+INFO: currentScores    4      units      experimental   {
+INFO: currentScores    4      units      experimental      lost = 0
+INFO: currentScores    4      units      experimental      kills = 0
+INFO: currentScores    4      units      experimental      built = 0
+INFO: currentScores    4      units      experimental   }
+INFO: currentScores    4      units      xsb1103   {
+INFO: currentScores    4      units      xsb1103      built = 15
+INFO: currentScores    4      units      xsb1103   }
+INFO: currentScores    4      units      tech2   {
+INFO: currentScores    4      units      tech2      lost = 0
+INFO: currentScores    4      units      tech2      kills = 0
+INFO: currentScores    4      units      tech2      built = 0
+INFO: currentScores    4      units      tech2   }
+INFO: currentScores    4      units      cdr   {
+INFO: currentScores    4      units      cdr      lost = 0
+INFO: currentScores    4      units      cdr      kills = 0
+INFO: currentScores    4      units      cdr      built = 1
+INFO: currentScores    4      units      cdr   }
+INFO: currentScores    4      units      url0301_RAS   {
+INFO: currentScores    4      units      url0301_RAS      built = 1
+INFO: currentScores    4      units      url0301_RAS   }
+INFO: currentScores    4      units      urb1101   {
+INFO: currentScores    4      units      urb1101      built = 4
+INFO: currentScores    4      units      urb1101   }
+INFO: currentScores    4      units      xsl0001   {
+INFO: currentScores    4      units      xsl0001      built = 3
+INFO: currentScores    4      units      xsl0001      lowest_health = 11500
+INFO: currentScores    4      units      xsl0001   }
+INFO: currentScores    4      units      transportation   {
+INFO: currentScores    4      units      transportation      lost = 0
+INFO: currentScores    4      units      transportation      kills = 0
+INFO: currentScores    4      units      transportation      built = 0
+INFO: currentScores    4      units      transportation   }
+INFO: currentScores    4      units      xsl0105   {
+INFO: currentScores    4      units      xsl0105      built = 12
+INFO: currentScores    4      units      xsl0105   }
+INFO: currentScores    4      units      sacu   {
+INFO: currentScores    4      units      sacu      lost = 0
+INFO: currentScores    4      units      sacu      kills = 0
+INFO: currentScores    4      units      sacu      built = 0
+INFO: currentScores    4      units      sacu   }
+INFO: currentScores    4      units      urb1103   {
+INFO: currentScores    4      units      urb1103      built = 4
+INFO: currentScores    4      units      urb1103   }
+INFO: currentScores    4      units      engineer   {
+INFO: currentScores    4      units      engineer      lost = 0
+INFO: currentScores    4      units      engineer      kills = 0
+INFO: currentScores    4      units      engineer      built = 5
+INFO: currentScores    4      units      engineer   }
+INFO: currentScores    4      units      tech1   {
+INFO: currentScores    4      units      tech1      lost = 0
+INFO: currentScores    4      units      tech1      kills = 0
+INFO: currentScores    4      units      tech1      built = 18
+INFO: currentScores    4      units      tech1   }
+INFO: currentScores    4      units      naval   {
+INFO: currentScores    4      units      naval      lost = 0
+INFO: currentScores    4      units      naval      kills = 0
+INFO: currentScores    4      units      naval      built = 0
+INFO: currentScores    4      units      naval   }
+INFO: currentScores    4      units      air   {
+INFO: currentScores    4      units      air      lost = 0
+INFO: currentScores    4      units      air      kills = 0
+INFO: currentScores    4      units      air      built = 0
+INFO: currentScores    4      units      air   }
+INFO: currentScores    4      units   }
+INFO: currentScores    4   }
+INFO: currentScores    5   {
+INFO: currentScores    5      type = "AI"
+INFO: currentScores    5      general   {
+INFO: currentScores    5      general      score = 0
+INFO: currentScores    5      general      currentcap   {
+INFO: currentScores    5      general      currentcap      count = 750
+INFO: currentScores    5      general      currentcap   }
+INFO: currentScores    5      general      lastReclaimedMass = 0
+INFO: currentScores    5      general      mass = 0
+INFO: currentScores    5      general      built   {
+INFO: currentScores    5      general      built      mass = 0
+INFO: currentScores    5      general      built      count = 0
+INFO: currentScores    5      general      built      energy = 0
+INFO: currentScores    5      general      built   }
+INFO: currentScores    5      general      kills   {
+INFO: currentScores    5      general      kills      mass = 0
+INFO: currentScores    5      general      kills      count = 0
+INFO: currentScores    5      general      kills      energy = 0
+INFO: currentScores    5      general      kills   }
+INFO: currentScores    5      general      lost   {
+INFO: currentScores    5      general      lost      mass = 0
+INFO: currentScores    5      general      lost      count = 0
+INFO: currentScores    5      general      lost      energy = 0
+INFO: currentScores    5      general      lost   }
+INFO: currentScores    5      general      currentunits   {
+INFO: currentScores    5      general      currentunits      count = 0
+INFO: currentScores    5      general      currentunits   }
+INFO: currentScores    5      general      energy = 0
+INFO: currentScores    5      general      lastReclaimedEnergy = 0
+INFO: currentScores    5      general   }
+INFO: currentScores    5      faction = 5
+INFO: currentScores    5      resources   {
+INFO: currentScores    5      resources      massin   {
+INFO: currentScores    5      resources      massin      total = 0
+INFO: currentScores    5      resources      massin      rate = 0
+INFO: currentScores    5      resources      massin   }
+INFO: currentScores    5      resources      energyout   {
+INFO: currentScores    5      resources      energyout      total = 0
+INFO: currentScores    5      resources      energyout      rate = 0
+INFO: currentScores    5      resources      energyout   }
+INFO: currentScores    5      resources      energyin   {
+INFO: currentScores    5      resources      energyin      total = 0
+INFO: currentScores    5      resources      energyin      rate = 0
+INFO: currentScores    5      resources      energyin   }
+INFO: currentScores    5      resources      energyover = 0
+INFO: currentScores    5      resources      massover = 0
+INFO: currentScores    5      resources      massout   {
+INFO: currentScores    5      resources      massout      total = 0
+INFO: currentScores    5      resources      massout      rate = 0
+INFO: currentScores    5      resources      massout   }
+INFO: currentScores    5      resources   }
+INFO: currentScores    5      name = "civilian"
+INFO: currentScores    5      units   {
+INFO: currentScores    5      units      urb0101   {
+INFO: currentScores    5      units      urb0101      built = 1
+INFO: currentScores    5      units      urb0101   }
+INFO: currentScores    5      units      tech3   {
+INFO: currentScores    5      units      tech3      lost = 0
+INFO: currentScores    5      units      tech3      kills = 0
+INFO: currentScores    5      units      tech3      built = 0
+INFO: currentScores    5      units      tech3   }
+INFO: currentScores    5      units      url0402   {
+INFO: currentScores    5      units      url0402      built = 1
+INFO: currentScores    5      units      url0402   }
+INFO: currentScores    5      units      urb1302   {
+INFO: currentScores    5      units      urb1302      built = 88
+INFO: currentScores    5      units      urb1302   }
+INFO: currentScores    5      units      xsb0101   {
+INFO: currentScores    5      units      xsb0101      built = 3
+INFO: currentScores    5      units      xsb0101   }
+INFO: currentScores    5      units      xsb1101   {
+INFO: currentScores    5      units      xsb1101      built = 26
+INFO: currentScores    5      units      xsb1101   }
+INFO: currentScores    5      units      ura0001   {
+INFO: currentScores    5      units      ura0001      built = 406
+INFO: currentScores    5      units      ura0001   }
+INFO: currentScores    5      units      url0001   {
+INFO: currentScores    5      units      url0001      built = 1
+INFO: currentScores    5      units      url0001      lowest_health = 10000
+INFO: currentScores    5      units      url0001   }
+INFO: currentScores    5      units      land   {
+INFO: currentScores    5      units      land      lost = 0
+INFO: currentScores    5      units      land      kills = 0
+INFO: currentScores    5      units      land      built = 0
+INFO: currentScores    5      units      land   }
+INFO: currentScores    5      units      urb1301   {
+INFO: currentScores    5      units      urb1301      built = 34
+INFO: currentScores    5      units      urb1301   }
+INFO: currentScores    5      units      structures   {
+INFO: currentScores    5      units      structures      lost = 0
+INFO: currentScores    5      units      structures      kills = 0
+INFO: currentScores    5      units      structures      built = 0
+INFO: currentScores    5      units      structures   }
+INFO: currentScores    5      units      xrb0304   {
+INFO: currentScores    5      units      xrb0304      built = 33
+INFO: currentScores    5      units      xrb0304   }
+INFO: currentScores    5      units      xsl0101   {
+INFO: currentScores    5      units      xsl0101      built = 3
+INFO: currentScores    5      units      xsl0101   }
+INFO: currentScores    5      units      experimental   {
+INFO: currentScores    5      units      experimental      lost = 0
+INFO: currentScores    5      units      experimental      kills = 0
+INFO: currentScores    5      units      experimental      built = 0
+INFO: currentScores    5      units      experimental   }
+INFO: currentScores    5      units      xsb1103   {
+INFO: currentScores    5      units      xsb1103      built = 15
+INFO: currentScores    5      units      xsb1103   }
+INFO: currentScores    5      units      tech2   {
+INFO: currentScores    5      units      tech2      lost = 0
+INFO: currentScores    5      units      tech2      kills = 0
+INFO: currentScores    5      units      tech2      built = 0
+INFO: currentScores    5      units      tech2   }
+INFO: currentScores    5      units      cdr   {
+INFO: currentScores    5      units      cdr      lost = 0
+INFO: currentScores    5      units      cdr      kills = 0
+INFO: currentScores    5      units      cdr      built = 0
+INFO: currentScores    5      units      cdr   }
+INFO: currentScores    5      units      url0301_RAS   {
+INFO: currentScores    5      units      url0301_RAS      built = 1
+INFO: currentScores    5      units      url0301_RAS   }
+INFO: currentScores    5      units      urb1101   {
+INFO: currentScores    5      units      urb1101      built = 4
+INFO: currentScores    5      units      urb1101   }
+INFO: currentScores    5      units      xsl0001   {
+INFO: currentScores    5      units      xsl0001      built = 3
+INFO: currentScores    5      units      xsl0001      lowest_health = 11500
+INFO: currentScores    5      units      xsl0001   }
+INFO: currentScores    5      units      transportation   {
+INFO: currentScores    5      units      transportation      lost = 0
+INFO: currentScores    5      units      transportation      kills = 0
+INFO: currentScores    5      units      transportation      built = 0
+INFO: currentScores    5      units      transportation   }
+INFO: currentScores    5      units      xsl0105   {
+INFO: currentScores    5      units      xsl0105      built = 12
+INFO: currentScores    5      units      xsl0105   }
+INFO: currentScores    5      units      sacu   {
+INFO: currentScores    5      units      sacu      lost = 0
+INFO: currentScores    5      units      sacu      kills = 0
+INFO: currentScores    5      units      sacu      built = 0
+INFO: currentScores    5      units      sacu   }
+INFO: currentScores    5      units      urb1103   {
+INFO: currentScores    5      units      urb1103      built = 4
+INFO: currentScores    5      units      urb1103   }
+INFO: currentScores    5      units      engineer   {
+INFO: currentScores    5      units      engineer      lost = 0
+INFO: currentScores    5      units      engineer      kills = 0
+INFO: currentScores    5      units      engineer      built = 0
+INFO: currentScores    5      units      engineer   }
+INFO: currentScores    5      units      tech1   {
+INFO: currentScores    5      units      tech1      lost = 0
+INFO: currentScores    5      units      tech1      kills = 0
+INFO: currentScores    5      units      tech1      built = 0
+INFO: currentScores    5      units      tech1   }
+INFO: currentScores    5      units      naval   {
+INFO: currentScores    5      units      naval      lost = 0
+INFO: currentScores    5      units      naval      kills = 0
+INFO: currentScores    5      units      naval      built = 0
+INFO: currentScores    5      units      naval   }
+INFO: currentScores    5      units      air   {
+INFO: currentScores    5      units      air      lost = 0
+INFO: currentScores    5      units      air      kills = 0
+INFO: currentScores    5      units      air      built = 0
+INFO: currentScores    5      units      air   }
+INFO: currentScores    5      units   }
+INFO: currentScores    5   }
+INFO: currentScores    6   {
+INFO: currentScores    6      type = "AI"
+INFO: currentScores    6      general   {
+INFO: currentScores    6      general      score = 0
+INFO: currentScores    6      general      currentcap   {
+INFO: currentScores    6      general      currentcap      count = 750
+INFO: currentScores    6      general      currentcap   }
+INFO: currentScores    6      general      lastReclaimedMass = 0
+INFO: currentScores    6      general      mass = 0
+INFO: currentScores    6      general      built   {
+INFO: currentScores    6      general      built      mass = 0
+INFO: currentScores    6      general      built      count = 0
+INFO: currentScores    6      general      built      energy = 0
+INFO: currentScores    6      general      built   }
+INFO: currentScores    6      general      kills   {
+INFO: currentScores    6      general      kills      mass = 0
+INFO: currentScores    6      general      kills      count = 0
+INFO: currentScores    6      general      kills      energy = 0
+INFO: currentScores    6      general      kills   }
+INFO: currentScores    6      general      lost   {
+INFO: currentScores    6      general      lost      mass = 0
+INFO: currentScores    6      general      lost      count = 0
+INFO: currentScores    6      general      lost      energy = 0
+INFO: currentScores    6      general      lost   }
+INFO: currentScores    6      general      currentunits   {
+INFO: currentScores    6      general      currentunits      count = 0
+INFO: currentScores    6      general      currentunits   }
+INFO: currentScores    6      general      energy = 0
+INFO: currentScores    6      general      lastReclaimedEnergy = 0
+INFO: currentScores    6      general   }
+INFO: currentScores    6      faction = 5
+INFO: currentScores    6      resources   {
+INFO: currentScores    6      resources      massin   {
+INFO: currentScores    6      resources      massin      total = 0
+INFO: currentScores    6      resources      massin      rate = 0
+INFO: currentScores    6      resources      massin   }
+INFO: currentScores    6      resources      energyout   {
+INFO: currentScores    6      resources      energyout      total = 0
+INFO: currentScores    6      resources      energyout      rate = 0
+INFO: currentScores    6      resources      energyout   }
+INFO: currentScores    6      resources      energyin   {
+INFO: currentScores    6      resources      energyin      total = 0
+INFO: currentScores    6      resources      energyin      rate = 0
+INFO: currentScores    6      resources      energyin   }
+INFO: currentScores    6      resources      energyover = 0
+INFO: currentScores    6      resources      massover = 0
+INFO: currentScores    6      resources      massout   {
+INFO: currentScores    6      resources      massout      total = 0
+INFO: currentScores    6      resources      massout      rate = 0
+INFO: currentScores    6      resources      massout   }
+INFO: currentScores    6      resources   }
+INFO: currentScores    6      name = "civilian"
+INFO: currentScores    6      units   {
+INFO: currentScores    6      units      urb0101   {
+INFO: currentScores    6      units      urb0101      built = 1
+INFO: currentScores    6      units      urb0101   }
+INFO: currentScores    6      units      tech3   {
+INFO: currentScores    6      units      tech3      lost = 0
+INFO: currentScores    6      units      tech3      kills = 0
+INFO: currentScores    6      units      tech3      built = 0
+INFO: currentScores    6      units      tech3   }
+INFO: currentScores    6      units      url0402   {
+INFO: currentScores    6      units      url0402      built = 1
+INFO: currentScores    6      units      url0402   }
+INFO: currentScores    6      units      urb1302   {
+INFO: currentScores    6      units      urb1302      built = 88
+INFO: currentScores    6      units      urb1302   }
+INFO: currentScores    6      units      xsb0101   {
+INFO: currentScores    6      units      xsb0101      built = 3
+INFO: currentScores    6      units      xsb0101   }
+INFO: currentScores    6      units      xsb1101   {
+INFO: currentScores    6      units      xsb1101      built = 26
+INFO: currentScores    6      units      xsb1101   }
+INFO: currentScores    6      units      ura0001   {
+INFO: currentScores    6      units      ura0001      built = 406
+INFO: currentScores    6      units      ura0001   }
+INFO: currentScores    6      units      url0001   {
+INFO: currentScores    6      units      url0001      built = 1
+INFO: currentScores    6      units      url0001      lowest_health = 10000
+INFO: currentScores    6      units      url0001   }
+INFO: currentScores    6      units      land   {
+INFO: currentScores    6      units      land      lost = 0
+INFO: currentScores    6      units      land      kills = 0
+INFO: currentScores    6      units      land      built = 0
+INFO: currentScores    6      units      land   }
+INFO: currentScores    6      units      urb1301   {
+INFO: currentScores    6      units      urb1301      built = 34
+
+
+INFO: currentScores    6      units      urb1301   }
+INFO: currentScores    6      units      structures   {
+INFO: currentScores    6      units      structures      lost = 0
+INFO: currentScores    6      units      structures      kills = 0
+INFO: currentScores    6      units      structures      built = 0
+INFO: currentScores    6      units      structures   }
+INFO: currentScores    6      units      xrb0304   {
+INFO: currentScores    6      units      xrb0304      built = 33
+INFO: currentScores    6      units      xrb0304   }
+INFO: currentScores    6      units      xsl0101   {
+INFO: currentScores    6      units      xsl0101      built = 3
+INFO: currentScores    6      units      xsl0101   }
+INFO: currentScores    6      units      experimental   {
+INFO: currentScores    6      units      experimental      lost = 0
+INFO: currentScores    6      units      experimental      kills = 0
+INFO: currentScores    6      units      experimental      built = 0
+INFO: currentScores    6      units      experimental   }
+INFO: currentScores    6      units      xsb1103   {
+INFO: currentScores    6      units      xsb1103      built = 15
+INFO: currentScores    6      units      xsb1103   }
+INFO: currentScores    6      units      tech2   {
+INFO: currentScores    6      units      tech2      lost = 0
+INFO: currentScores    6      units      tech2      kills = 0
+INFO: currentScores    6      units      tech2      built = 0
+INFO: currentScores    6      units      tech2   }
+INFO: currentScores    6      units      cdr   {
+INFO: currentScores    6      units      cdr      lost = 0
+INFO: currentScores    6      units      cdr      kills = 0
+INFO: currentScores    6      units      cdr      built = 0
+INFO: currentScores    6      units      cdr   }
+INFO: currentScores    6      units      url0301_RAS   {
+INFO: currentScores    6      units      url0301_RAS      built = 1
+INFO: currentScores    6      units      url0301_RAS   }
+INFO: currentScores    6      units      urb1101   {
+INFO: currentScores    6      units      urb1101      built = 4
+INFO: currentScores    6      units      urb1101   }
+INFO: currentScores    6      units      xsl0001   {
+INFO: currentScores    6      units      xsl0001      built = 3
+INFO: currentScores    6      units      xsl0001      lowest_health = 11500
+INFO: currentScores    6      units      xsl0001   }
+INFO: currentScores    6      units      transportation   {
+INFO: currentScores    6      units      transportation      lost = 0
+INFO: currentScores    6      units      transportation      kills = 0
+INFO: currentScores    6      units      transportation      built = 0
+INFO: currentScores    6      units      transportation   }
+INFO: currentScores    6      units      xsl0105   {
+INFO: currentScores    6      units      xsl0105      built = 12
+INFO: currentScores    6      units      xsl0105   }
+INFO: currentScores    6      units      sacu   {
+INFO: currentScores    6      units      sacu      lost = 0
+INFO: currentScores    6      units      sacu      kills = 0
+INFO: currentScores    6      units      sacu      built = 0
+INFO: currentScores    6      units      sacu   }
+INFO: currentScores    6      units      urb1103   {
+INFO: currentScores    6      units      urb1103      built = 4
+INFO: currentScores    6      units      urb1103   }
+INFO: currentScores    6      units      engineer   {
+INFO: currentScores    6      units      engineer      lost = 0
+INFO: currentScores    6      units      engineer      kills = 0
+INFO: currentScores    6      units      engineer      built = 0
+INFO: currentScores    6      units      engineer   }
+INFO: currentScores    6      units      tech1   {
+INFO: currentScores    6      units      tech1      lost = 0
+INFO: currentScores    6      units      tech1      kills = 0
+INFO: currentScores    6      units      tech1      built = 0
+INFO: currentScores    6      units      tech1   }
+INFO: currentScores    6      units      naval   {
+INFO: currentScores    6      units      naval      lost = 0
+INFO: currentScores    6      units      naval      kills = 0
+INFO: currentScores    6      units      naval      built = 0
+INFO: currentScores    6      units      naval   }
+INFO: currentScores    6      units      air   {
+INFO: currentScores    6      units      air      lost = 0
+INFO: currentScores    6      units      air      kills = 0
+INFO: currentScores    6      units      air      built = 0
+INFO: currentScores    6      units      air   }
+INFO: currentScores    6      units   }
+INFO: currentScores    6   }
+INFO: currentScores }

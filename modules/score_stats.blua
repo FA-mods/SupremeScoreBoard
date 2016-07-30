@@ -8,6 +8,15 @@ TODO:
 - lobby toggle option, whether obs may see stuff
 --]]
 
+local replayData = {}
+
+function SetScoreData(newData)
+	replayData = table.deepcopy(newData)
+end
+
+function GetScoreData()
+	return replayData
+end
 
 function syncStats()
 

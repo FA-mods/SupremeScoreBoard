@@ -1,0 +1,32 @@
+ -- ##########################################################################################
+--  File:    /LUA/modules/build-power.lua
+--  Author:  HUSSAR
+--  Summary: 
+--  Copyright © 2016 HUSSAR All rights reserved.
+-- ##########################################################################################
+--  NOTE: Contact HUSSAR, in case you are trying to 
+--        implement/port this mod to latest version of FAF patch
+-- http://forums.faforever.com/forums/memberlist.php?mode=viewprofile&u=9827
+-- ##########################################################################################
+ 
+local modPath = '/mods/SupremeScoreBoard/'
+local modTextures = modPath..'textures/'
+local modScripts  = modPath..'modules/'
+local modInfo  = import(modPath..'mod_info.lua')
+ 
+-- import local modules
+local tab  = import(modScripts..'ext.tables.lua')
+local str  = import(modScripts..'ext.strings.lua')
+local num  = import(modScripts..'ext.numbers.lua')
+local log  = import(modScripts..'ext.logging.lua') 
+-- import game modules
+local UIUtil        = import('/lua/ui/uiutil.lua')
+local GameMain      = import('/lua/ui/game/gamemain.lua') 
+local Announcement  = import('/lua/ui/game/announcement.lua')
+local FindClients   = import('/lua/ui/game/chat.lua').FindClients 
+local Prefs         = import('/lua/user/prefs.lua')
+
+-- session info should not changed during the game so getting it just once
+local sessionReplay  = SessionIsReplay()    
+local sessionInfo    = SessionGetScenarioInfo()   
+local sessionOptions = sessionInfo.Options

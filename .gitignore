@@ -1,1 +1,3 @@
 *.db
+hook/lua/aibrain.lua~
+hook/lua/simInit.lua~
