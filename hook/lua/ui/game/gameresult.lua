@@ -42,14 +42,14 @@ function OnReplayEnd()
     import('/lua/ui/game/tabs.lua').AddModeText("<LOC _Score>", function() import('/lua/ui/dialogs/score.lua').CreateDialog(true) end)
 end
  
-local stats = { done = false, players = {}, fallen = {}, killers = {} }
+local stats = { done = false, players = {}, fallens = {}, killers = {} }
  
 function DoGameResult(armyID, result)
     
     local armies = GetArmiesTable().armiesTable
     local armyName = armies[armyID].nickname or 'civilian' 
-    log.Trace('GameResults: [' .. armyID..'] = ' .. result .. ', army = ' .. armyName)
-      
+    log.Trace('GameResults: result = ' .. result .. ', armyID = ' .. armyID..', name = ' .. armyName)
+
     if stats.done then return end 
 
     for id, army in armies do
@@ -79,13 +79,14 @@ function DoGameResult(armyID, result)
     --stats.players[armyID][result] = value
     
     -- skip duplicated score results
-    if result == 'score' or stats.players[armyID].announced or stats.fallen[armyID] then
+    if result == 'score' or stats.players[armyID].announced or stats.fallens[armyID] then
         return 
     end
      
     stats.players[armyID].announced = true
 
     if result == 'defeat' and stats.killers[armyID] then
+       log.Trace('GameResults: ' .. tostring(result) .. ' -> ' .. 'draw')
        result = 'draw'
     end
 
@@ -108,11 +109,11 @@ function DoGameResult(armyID, result)
         if not winnerID then
            winnerID = losersID -- player did CTRL+K
         end
-        local losersName = armies[losersID].nickname  
-        local winnerName = armies[winnerID].nickname
+        local losersName = armies[losersID].nickname or 'armies[' .. losersID ..'].name = nil'
+        local winnerName = armies[winnerID].nickname or 'armies[' .. winnerID ..'].name = nil'
         log.Trace('GameResults: ' .. tostring(losersName) .. message .. tostring(winnerName))
         
-        stats.fallen[losersID] = true
+        stats.fallens[losersID] = true
 
         stats.players[winnerID].kills[losersID] = true
         stats.players[winnerID].score = stats.players[winnerID].score - 1
@@ -121,8 +122,9 @@ function DoGameResult(armyID, result)
         end        
         AnnounceDeath(losersID, message, winnerID)
 
-    elseif result == 'draw' and not stats.fallen[armyID] then 
-        log.Trace('GameResults: DRAW ' .. tostring(value) .. ' ' .. tostring(armies[armyID].nickname))
+    elseif result == 'draw' and not stats.fallens[armyID] then 
+        local armyName = armies[armyID].nickname  or 'armies[' .. armyID ..'] = nil'
+        log.Trace('GameResults: DRAW ' .. tostring(value) .. ' ' .. armyName)
         local drawingID1 = armyID
         local drawingID2 = nil
         for id, present in stats.killers do
@@ -132,21 +134,23 @@ function DoGameResult(armyID, result)
             end
         end
         log.Trace('GameResults: ' .. tostring(drawingID1) .. message .. tostring(drawingID2))
-        stats.killers[drawingID1] = false
-        stats.killers[drawingID2] = false
-        --if stats.fallen[drawingID1] then
-        --   stats.killers[drawingID1] = false
-        --end 
-        --if stats.fallen[drawingID2] then
-        --   stats.killers[drawingID2] = false
-        --end 
-        stats.fallen[drawingID1] = true
-        stats.fallen[drawingID2] = true
 
-        stats.players[drawingID1].kills[drawingID2] = true
-        stats.players[drawingID2].kills[drawingID1] = true
+        if drawingID1 ~= nil then
+            stats.killers[drawingID1] = false 
+            stats.fallens[drawingID1] = true
+        end
 
-        AnnounceDraw(drawingID1, message, drawingID2)
+        if drawingID2 ~= nil then 
+            stats.killers[drawingID2] = false
+            stats.fallens[drawingID2] = true
+        end
+
+        if drawingID1 ~= nil and drawingID2 ~= nil then
+            stats.players[drawingID1].kills[drawingID2] = true
+            stats.players[drawingID2].kills[drawingID1] = true
+
+            AnnounceDraw(drawingID1, message, drawingID2)
+        end 
     end
 
    -- log.Table(stats, 'stats')
