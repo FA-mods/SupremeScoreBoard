@@ -412,7 +412,7 @@ function CreateScoreUI(parent)
     controls.unitIcon.Height:Set(iconSize-3)
     controls.unitIcon.Width:Set(iconSize)
        
-    GameMain.AddBeatFunction(_OnBeat)
+    GameMain.AddBeatFunction(_OnBeat, true)
     controls.bg.OnDestroy = function(self)
         GameMain.RemoveBeatFunction(_OnBeat)
     end
