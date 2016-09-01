@@ -7,11 +7,14 @@ Refer to this <a href="http://forums.faforever.com/viewtopic.php?f=41&t=10887" t
 
 #Installation
 
-1. Download "SupremeScoreBoard-v1.3.zip" file (see files above this readme)
-2. Unzip the file to your "Mods" folder for Supreme Commander FA game, e.g.
+1. Download "SupremeScoreBoard-v1.3.zip" file (see zip files above this readme)
+2. Open your "Mods" folder for Supreme Commander FA game, e.g.
 C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\
-3. Click on the Yes button to override files from previous version of this mod (if any)
-4. Enable SupremeScoreBoard mod in Mod Manager (in Supreme Commander FA game)
+3. Delete or move somewhere the SupremeScoreBoard folder (if it exists). This will prevent conflicts between older version of this mod.
+4. Unzip the downloaded zip file to your "Mods" folder 
+5. Make sure mod_info.lua file is in this folder and not in subfolders of:
+C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\SupremeScoreBoard\
+5. Enable SupremeScoreBoard mod in Mod Manager (in Supreme Commander FA game)
 
 or
 
