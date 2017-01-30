@@ -44,8 +44,8 @@ function initalize()
     locals['game_mods'] = 'Mods Sim/UI'
     locals['game_id']       = 'Replay ID'
     locals['game_id_info']  = 'This is current replay identifier from the FAF vault'
-    locals['game_ver']      = 'SSB Version'
-    locals['game_ver_info'] = 'This is current version of Supreme Score Board mod'
+    locals['game_ver']      = 'SUI Version'
+    locals['game_ver_info'] = 'This is current version of Supreme User Interface mod \n aka Supreme Score Board mod'
 
     -- diplomacy
     locals['share_units'] = 'Share Your Units '  
