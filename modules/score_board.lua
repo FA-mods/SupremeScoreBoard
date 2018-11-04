@@ -107,24 +107,32 @@ local cid = 1
 -- this table is used for matching bright text color with color of an army and
 -- order of colors in this table determines priority for selecting team colors
 local Colors = { }
-Colors[cid] = {armyColor = 'ff40bf40', textColor = 'ff40bf40'} cid=cid+1 -- #ff40bf40 mid green
-Colors[cid] = {armyColor = 'ff436eee', textColor = 'ff70b5f3'} cid=cid+1 -- #ff70b5f3 new blue 
-Colors[cid] = {armyColor = 'fffafa00', textColor = 'ffffff42'} cid=cid+1 -- #ffffff42 new yellow
-Colors[cid] = {armyColor = 'ffff873e', textColor = 'FFF17224'} cid=cid+1 -- #FFF17224 orange (Nomads)
-Colors[cid] = {armyColor = 'ff9161ff', textColor = 'FFAE8AFF'} cid=cid+1 -- #FFAE8AFF purple
-Colors[cid] = {armyColor = 'ffe80a0a', textColor = 'FFFF3434'} cid=cid+1 -- #FFFF3434 Cybran red ff3f15
-Colors[cid] = {armyColor = 'ffffffff', textColor = 'ffffffff'} cid=cid+1 -- #ffffffff white
-Colors[cid] = {armyColor = 'ff66ffcc', textColor = 'ff66ffcc'} cid=cid+1 -- #ff66ffcc aqua
-Colors[cid] = {armyColor = 'ffff32ff', textColor = 'ffff32ff'} cid=cid+1 -- #ffff32ff fuschia pink
-Colors[cid] = {armyColor = 'ffff88ff', textColor = 'ffff88ff'} cid=cid+1 -- #ffff88ff light pink
-Colors[cid] = {armyColor = 'ffffbf80', textColor = 'ffffbf80'} cid=cid+1 -- #ffffbf80 light orange
-Colors[cid] = {armyColor = 'ffb76518', textColor = 'ffe17d22'} cid=cid+1 -- #ffe17d22 new brown
-Colors[cid] = {armyColor = 'ff2e8b57', textColor = 'ff3db874'} cid=cid+1 -- #ff3db874 dark new green
-Colors[cid] = {armyColor = 'ff131cd3', textColor = 'ff545bef'} cid=cid+1 -- #ff545bef dark UEF blue
-Colors[cid] = {armyColor = 'ff901427', textColor = 'ffe12b46'} cid=cid+1 -- #ffe12b46 dark red
-Colors[cid] = {armyColor = 'ff5f01a7', textColor = 'FFA946F4'} cid=cid+1 -- #FFA946F4 dark purple
-Colors[cid] = {armyColor = 'ff2f4f4f', textColor = 'ff5a9898'} cid=cid+1 -- #ff5a9898 dark green (olive)
-Colors[cid] = {armyColor = 'ff616d7e', textColor = 'ff99a3b0'} cid=cid+1 -- #ff99a3b0 grey
+Colors[cid] = {armyColor = 'ff40bf40', textColor = 'ff40bf40'} cid=cid+1 --#ff40bf40 #ff40bf40  mid green
+Colors[cid] = {armyColor = 'fffafa00', textColor = 'ffffff42'} cid=cid+1 --#fffafa00 #ffffff42  new yellow
+Colors[cid] = {armyColor = 'ff9161ff', textColor = 'FFA946F4'} cid=cid+1 --#ff9161ff #FFA946F4  purple
+Colors[cid] = {armyColor = 'ffe80a0a', textColor = 'FFF73C3C'} cid=cid+1 --#ffe80a0a #FFF73C3C  Cybran red ff3f15
+Colors[cid] = {armyColor = 'ff436eee', textColor = 'FF6184EF'} cid=cid+1 --#ff436eee #FF6184EF  new blue 
+Colors[cid] = {armyColor = 'ffffffff', textColor = 'ffffffff'} cid=cid+1 --#ffffffff #ffffffff  white
+Colors[cid] = {armyColor = 'ffff32ff', textColor = 'ffff32ff'} cid=cid+1 --#ffff32ff #ffff32ff  fuschia pink
+Colors[cid] = {armyColor = 'ffff873e', textColor = 'FFF17224'} cid=cid+1 --#ffff873e #FFF17224  orange (Nomads)
+Colors[cid] = {armyColor = 'ff66ffcc', textColor = 'ff66ffcc'} cid=cid+1 --#ff66ffcc #ff66ffcc  aqua
+
+Colors[cid] = {armyColor = 'ff76a101', textColor = 'ff76a101'} cid=cid+1 --#ff76a101 #ff76a101  Order Green (old)
+Colors[cid] = {armyColor = 'ff9fd802', textColor = 'ff9fd802'} cid=cid+1 --#ff9fd802 #ff9fd802  Order Green (new)
+Colors[cid] = {armyColor = 'ffffbf80', textColor = 'ffffbf80'} cid=cid+1 --#ffffbf80 #ffffbf80  light orange
+Colors[cid] = {armyColor = 'ff2e8b57', textColor = 'ff3db874'} cid=cid+1 --#ff2e8b57 #ff3db874  dark new green
+Colors[cid] = {armyColor = 'ffff88ff', textColor = 'ffff88ff'} cid=cid+1 --#ffff88ff #ffff88ff  light pink
+Colors[cid] = {armyColor = 'ffb76518', textColor = 'ffe17d22'} cid=cid+1 --#ffb76518 #ffe17d22  new brown
+Colors[cid] = {armyColor = 'ffa79602', textColor = 'ffa79602'} cid=cid+1 --#ffa79602 #ffa79602  Sera golden
+Colors[cid] = {armyColor = 'ff901427', textColor = 'FFCB2D44'} cid=cid+1 --#ff901427 #FFCB2D44  dark red 
+Colors[cid] = {armyColor = 'ff5f01a7', textColor = 'FF8C38CB'} cid=cid+1 --#ff5f01a7 #FF8C38CB  dark purple
+Colors[cid] = {armyColor = 'ff2f4f4f', textColor = 'FF549090'} cid=cid+1 --#ff2f4f4f #FF549090  dark green (olive)
+Colors[cid] = {armyColor = 'ff616d7e', textColor = 'ff99a3b0'} cid=cid+1 --#ff616d7e #ff99a3b0  gray
+Colors[cid] = {armyColor = 'ff616d7e', textColor = 'ff99a3b0'} cid=cid+1 --#ff616d7e #ff99a3b0  gray
+Colors[cid] = {armyColor = 'ff131cd3', textColor = 'FF4848DC'} cid=cid+1 --#ff131cd3 #FF4848DC  dark UEF blue (old)
+Colors[cid] = {armyColor = 'FF2929e1', textColor = 'FF4848DC'} cid=cid+1 --#FF2929e1 #FF4848DC  dark UEF blue (new)
+
+--WARN('SSB color fix Colors=' .. table.getsize(Colors))
 
 -- initializes Stats to store info about players' armies and aggregated armies (teams)
 function InitializeStats()
@@ -142,7 +150,7 @@ function InitializeStats()
     Stats.ai  = ScoreMng.GetInfoForAI()
     
     local armies = GetArmiesTable().armiesTable
-      
+    -- table.print(armies, 'armiesTable')
     --log.Table(sessionInfo, 'sessionInfo') 
     --log.Table(__active_mods, 'active_mods')
     --log.Table(allArmies, 'armies') 
@@ -209,7 +217,7 @@ function InitializeStats()
                 Stats.teamsCount = Stats.teamsCount + 1
                 -- save team info for each player's army
                 for _, armyID in team.members.ids do
-                    Stats.armies[armyID].txtColor = team.txtColor 
+                    Stats.armies[armyID].txtColor = team.txtColor or 'FFFFFF' --#FFFFFF
                 end
             end
         end
@@ -1629,10 +1637,10 @@ function CreateTeam(armyIndex, armies)
             -- use first player's color as team's color 
             if (team.key == '') then team.color = army.color end
             
-            -- build unique key for the team using id of allied players            
+            -- build unique key for the team using id of allied players
             team.key = team.key..armyID
             team.rating.actual = team.rating.actual + army.rating.actual
-            team.quadrant = math.min(team.quadrant, Stats.map.quadrants[army.name])
+            team.quadrant = math.min(team.quadrant, Stats.map.quadrants[army.name] or 4)
 
             table.insert(team.members.ids, armyID)
             table.insert(team.colors, army.color)
@@ -1709,6 +1717,8 @@ function GetMapData(sessionInfo)
             end
         end
     end
+    
+    table.print(map.quadrants, 'SSB map.quadrants')
     --table.print(saveData, 'saveData')
     
     return map
@@ -2030,7 +2040,7 @@ function UpdateTeamColor(team, armies)
     
     -- log.Trace('UpdateTeamColor  '..team.key)
     team.colorChanged = false
-    
+
     -- TODO improve logic so that there is no need for color searching
     for _, item in Colors do 
         for _,armyID in team.members.ids do
@@ -2721,7 +2731,7 @@ function AnnounceDeath(losersID, text, winnerID)
 
         Announcement.CreateSmartAnnouncement(armyLine, sender, message, target)
         --PlaySound(Sound({Bank = 'Interface', Cue = 'UI_END_Game_Fail'}))        
-        PlayVoice(Sound({ Bank='XGG', Cue='XGG_Computer_CV01_05115' }))
+        --PlayVoice(Sound({ Bank='XGG', Cue='XGG_Computer_CV01_05115' }))
                  
     end
 end

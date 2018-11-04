@@ -1,12 +1,13 @@
 -- #########################################################
-name         = "Supreme Score Board v1.3"
+name         = "Supreme Score Board"
 -- ######################################################### 
-version      = 1.3
-uid          = "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1300"
+version      = 2
+uid          = "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v0020"
 author       = "HUSSAR"
 copyright    = "HUSSAR, free to re-use code as long as you credit me in your mod"
 contributors = "Anihilnine, Crotalus, Speed2, MaCielPL, Nojoke, Petricpwnz, Nexus_of_Reality, Col_Walter_Kurtz, PsychoBoB"
-description  = "Improves score board and replays by adding more columns, team stats, players sorting, filtering units by type, kill/lose ratio, and fixes UI updates lags! (HUSSAR)"
+description  = "Improves score board and replays by adding more columns, team stats, players sorting, filtering units by type and more. (HUSSAR)"
+--icon         = "mod_icon.png"
 icon         = "/mods/SupremeScoreBoard/mod_icon.png"
 url          = "http://forums.faforever.com/viewtopic.php?f=41&t=10887"
 selectable   = true
@@ -25,6 +26,11 @@ conflicts   = {
     "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1100", -- old SSB
     "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1200", -- old SSB
     "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1230", -- old SSB
+    "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1300", -- old SSB
+    "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1400", -- old SSB
+    "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1500", -- old SSB
+    "HUSSAR-pl-a1e2-c4t4-scfa-SETmod-v0100",
+    "HUSSAR-PL-a1e2-c4t4-scfa-SUImod-v0900", -- old SUI v0.9
     }
 before = { }
 after = { 
@@ -36,6 +42,10 @@ after = {
     "ecbf6277-24e3-437a-b968-EcoManager-v6",
     "ecbf6277-24e3-437a-b968-EcoManager-v7",
     "ecbf6277-24e3-437a-b968-EcoManager-v8",
+    "ecbf6277-24e3-437a-b968-EcoManager-v9",
+    --"ecbf6277-24e3-437a-b968-EcoManager-v10",
+    --"ecbf6277-24e3-437a-b968-EcoManager-v11",
+    --"ecbf6277-24e3-437a-b968-EcoManager-v12",
 }
 --------------------------------------------------------------------------------------
 --[[ TODO
@@ -54,6 +64,12 @@ after = {
  -]] 
 --------------------------------------------------------------------------------------
 -- MOD HISTORY
+--------------------------------------------------------------------------------------
+--[[ v1.4 - HUSSAR - October, 2017
+--------------------------------------------------------------------------------------
+-- fixed an issue with selecting text color for armies due to changes in FAF army colors
+-- fixed an issue finding map quadrant for an army with incorrect army key defined in [map name]_save.lua
+--]]
 --------------------------------------------------------------------------------------
 --[[ v1.3 - HUSSAR - July, 2016
 --------------------------------------------------------------------------------------
