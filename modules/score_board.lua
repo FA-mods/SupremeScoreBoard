@@ -2,7 +2,7 @@
 --  File:    /LUA/modules/UI/game/score.lua
 --  Author:  Chris Blackwell, HUSSAR
 --  Summary: Supreme Score Board in Game/Replay Sessions (see mod_info.lua for details)
---  Copyright © 2005 Gas Powered Games, Inc. All rights reserved.
+--  Copyright Â© 2005 Gas Powered Games, Inc. All rights reserved.
 -- ##########################################################################################
 --  NOTE:    Contact HUSSAR, in case you are trying to 
 --           implement/port this mod to latest version of FAF patch
@@ -1609,6 +1609,7 @@ function CreateTeam(armyIndex, armies)
     team.namefull  = "TEAM"
     team.type = "team"
     team.color = 'ffffffff'
+    team.txtColor = 'ffffffff'
     team.colors = {}
     
     team.score = 0 
