@@ -1877,9 +1877,22 @@ function UpdatePlayerStats(armyID, armies, scoreData)
     player.eco.massSpent  = num.init(scoreData.resources.massout.total)
     player.eco.engyTotal  = num.init(scoreData.resources.energyin.total)
     player.eco.engySpent  = num.init(scoreData.resources.energyout.total)
-    -- assuming FAF patch added reclaim values to score data
-    player.eco.massReclaim  = num.init(scoreData.general.lastReclaimedMass)
-    player.eco.engyReclaim  = num.init(scoreData.general.lastReclaimedEnergy)
+
+    -- FIX an issue reported by Gyle due to changes in structure of FAF score data
+    -- checking if reclaimed mass is store in new or old score data structure
+    if scoreData.resources.massin.reclaimed then
+       player.eco.massReclaim = num.init(scoreData.resources.massin.reclaimed)
+    else -- old score structure
+       player.eco.massReclaim = num.init(scoreData.general.lastReclaimedMass)
+    end
+    
+    -- checking if reclaimed energy is store in new or old score data structure
+    if scoreData.resources.energyin.reclaimed then
+        player.eco.engyReclaim = num.init(scoreData.resources.energyin.reclaimed)
+    else -- old score data format
+        player.eco.engyReclaim = num.init(scoreData.general.lastReclaimedEnergy)
+    end
+
      
     -- get player's kills Stats from score data and initialize it to zero if they are nil
     player.kills.acu   = num.init(scoreData.units.cdr.kills)
