@@ -25,15 +25,16 @@ or
 
 C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\
 
-3. Delete or move somewhere the SupremeScoreBoard folder (if it exists). This will prevent conflicts between older version of this mod.
+3. Delete the SupremeScoreBoard folder (if it exists). This will prevent conflicts between older version of this mod.
 4. Unzip the downloaded zip file to your "Mods" folder 
-5. Make sure mod_info.lua file is in this folder:
-
+5. Make sure mod_info.lua file is in this folder and not in subfolders of:
 C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\SupremeScoreBoard\
+6. Enable SupremeScoreBoard mod in Mod Manager (in Supreme Commander FA game)
 
 6. Enable SupremeScoreBoard mod in Mod Manager (in Supreme Commander FA game)
 
 ## License
+
 The is a very permissive license for software and other scientific or artistic works that offers a great degree of freedom. In fact, it is probably the best license out there. 
 It is free to do what ever your like :D
 
