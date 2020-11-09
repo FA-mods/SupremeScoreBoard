@@ -1,13 +1,13 @@
 -- #########################################################
 name         = "Supreme Score Board"
 -- ######################################################### 
-version      = 2
-uid          = "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v0020"
+version      = 3
+uid          = "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v0030"
 author       = "HUSSAR"
 copyright    = "HUSSAR, free to re-use code as long as you credit me in your mod"
 contributors = "Anihilnine, Crotalus, Speed2, MaCielPL, Nojoke, Petricpwnz, Nexus_of_Reality, Col_Walter_Kurtz, PsychoBoB"
 description  = "Improves score board and replays by adding more columns, team stats, players sorting, filtering units by type and more. (HUSSAR)"
---icon         = "mod_icon.png"
+
 icon         = "/mods/SupremeScoreBoard/mod_icon.png"
 url          = "http://forums.faforever.com/viewtopic.php?f=41&t=10887"
 selectable   = true
@@ -29,6 +29,7 @@ conflicts   = {
     "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1300", -- old SSB
     "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1400", -- old SSB
     "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1500", -- old SSB
+    "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v0020", -- old SSB
     "HUSSAR-pl-a1e2-c4t4-scfa-SETmod-v0100",
     "HUSSAR-PL-a1e2-c4t4-scfa-SUImod-v0900", -- old SUI v0.9
     }
@@ -64,6 +65,13 @@ after = {
  -]] 
 --------------------------------------------------------------------------------------
 -- MOD HISTORY
+--------------------------------------------------------------------------------------
+--[[ v3.0 - HUSSAR - November, 2020
+--------------------------------------------------------------------------------------
+-- fixed displaying of reclaimed stats in score board
+-- fixed speed slider when changing game speed via keyboard shortcut
+-- fixed flashing of faction icon when a user creates a ping on the map
+--]]
 --------------------------------------------------------------------------------------
 --[[ v1.4 - HUSSAR - October, 2017
 --------------------------------------------------------------------------------------
