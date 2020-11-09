@@ -2785,6 +2785,7 @@ function AnnounceUnit(armyID, text)
         local sender = { value = army.namefull, fontColor = army.color, icon = army.icon }
         local target = nil --{ value = nil, icon = nil }
          
+        -- WARN('AnnounceUnit army.icon=' .. tostring(army.icon) )
         Announcement.CreateSmartAnnouncement(armyLine, sender, message, target)
     end
 end
@@ -2797,5 +2798,12 @@ function ArmyAnnounce(armyID, text, textDesc)
 
         --import('/lua/ui/game/announcement.lua').CreateAnnouncement(LOC(text), armyLine, textDesc)
         Announcement.CreateAnnouncement(LOC(text), armyLine, textDesc)
+    end
+end
+
+function OnGameSpeedChanged(newSpeed)
+    gameSpeed = newSpeed
+    if observerLine.speedSlider then
+       observerLine.speedSlider:SetValue(gameSpeed)
     end
 end

@@ -51,3 +51,13 @@ function HideScore()
         controls.collapseArrow:Hide() 
     end
 end
+
+local orgNoteGameSpeedChanged = NoteGameSpeedChanged
+function NoteGameSpeedChanged(newSpeed)
+    orgNoteGameSpeedChanged(newSpeed)
+   -- gameSpeed = newSpeed
+   -- if observerLine.speedSlider then
+   --     observerLine.speedSlider:SetValue(gameSpeed)
+   -- end
+   import('/mods/SupremeScoreBoard/modules/score_board.lua').OnGameSpeedChanged(newSpeed)
+end
