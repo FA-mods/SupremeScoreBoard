@@ -2807,3 +2807,32 @@ function OnGameSpeedChanged(newSpeed)
        observerLine.speedSlider:SetValue(gameSpeed)
     end
 end
+
+function DisplayPingOwner(worldView, pingData)
+
+    -- Flash the scoreboard faction icon for the ping owner to indicate the source.
+    if not pingData.Marker and not pingData.Renew then
+        -- zero-based indices FTW...
+        local pingOwnerIndex = pingData.Owner + 1
+        -- finding the owner's UI of the ping data
+        local pingOwnerLine  = GetArmyLine(pingOwnerIndex)
+        -- setting the UI element we need to flash
+        local toFlash = pingOwnerLine.faction
+
+        if toFlash then
+            local flashCount = 8
+            local flashInterval = 0.4
+            ForkThread(function()
+                -- Flash the icon the appropriate number of times
+                while flashCount > 0 do
+                    toFlash:Hide()
+                    WaitSeconds(flashInterval)
+                    toFlash:Show()
+                    WaitSeconds(flashInterval)
+                    flashCount = flashCount - 1
+                end
+            end)
+        end
+    end
+
+end

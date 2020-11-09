@@ -1,4 +1,5 @@
-local modPath = '/mods/SupremeScoreBoard/'
+local SSM = '/mods/SupremeScoreBoard/'
+local SSB = '/mods/SupremeScoreBoard/modules/score_board.lua'
 
 --currentScores = false  
 
@@ -21,8 +22,8 @@ function _OnBeat()
         --LOG('SCORE _OnBeat '  )
     --end
      
-  --import(modPath .. 'modules/score_board.lua').Update(currentScores)
-  --import(modPath .. 'modules/mciscore.lua').UpdateScoreData(newData)
+  --import(SSM .. 'modules/score_board.lua').Update(currentScores)
+  --import(SSM .. 'modules/mciscore.lua').UpdateScoreData(newData)
 end
 
 local orgToggleScoreControl = ToggleScoreControl
@@ -59,5 +60,5 @@ function NoteGameSpeedChanged(newSpeed)
    -- if observerLine.speedSlider then
    --     observerLine.speedSlider:SetValue(gameSpeed)
    -- end
-   import('/mods/SupremeScoreBoard/modules/score_board.lua').OnGameSpeedChanged(newSpeed)
+   import(SSB).OnGameSpeedChanged(newSpeed)
 end
