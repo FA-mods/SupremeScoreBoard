@@ -5,9 +5,9 @@ This repository contains implementation of a mod for Supreme Commander FA game. 
 ## Preview
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-        <img height="400px" style="border-radius: 0rem; max-width: 100%;" alt="ssb-in-replay-session"  src="previews/ssb-in-replay-session.jpg"/>
-        <img height="400px" style="border-radius: 0rem; max-width: 100%;" alt="ssb-in-game-session" src="previews/ssb-in-game-session.jpg"/>
+    <body style="background: red">
+        <img style="border-radius: 0rem; max-width: 100%;" alt="ssb-in-replay-session" src="previews/ssb-in-replay-session.jpg"/>
+        <img style="border-radius: 0rem; max-width: 100%;" alt="ssb-in-game-session"   src="previews/ssb-in-game-session.jpg"/>
     </body>
 </html>
 
@@ -30,8 +30,6 @@ C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged
 5. Make sure mod_info.lua file is in this folder and not in subfolders of:
 
 C:\Users\USER_NAME\Documents\My Games\Gas Powered Games\Supreme Commander Forged Alliance\Mods\SupremeScoreBoard\
-
-6. Enable SupremeScoreBoard mod in Mod Manager (in Supreme Commander FA game)
 
 6. Enable SupremeScoreBoard mod in Mod Manager (in Supreme Commander FA game)
 
