@@ -1878,9 +1878,22 @@ function UpdatePlayerStats(armyID, armies, scoreData)
     player.eco.massSpent  = num.init(scoreData.resources.massout.total)
     player.eco.engyTotal  = num.init(scoreData.resources.energyin.total)
     player.eco.engySpent  = num.init(scoreData.resources.energyout.total)
-    -- assuming FAF patch added reclaim values to score data
-    player.eco.massReclaim  = num.init(scoreData.general.lastReclaimedMass)
-    player.eco.engyReclaim  = num.init(scoreData.general.lastReclaimedEnergy)
+
+    -- FIX an issue reported by Gyle due to changes in structure of FAF score data
+    -- checking if reclaimed mass is store in new or old score data structure
+    if scoreData.resources.massin.reclaimed then
+       player.eco.massReclaim = num.init(scoreData.resources.massin.reclaimed)
+    else -- old score structure
+       player.eco.massReclaim = num.init(scoreData.general.lastReclaimedMass)
+    end
+    
+    -- checking if reclaimed energy is store in new or old score data structure
+    if scoreData.resources.energyin.reclaimed then
+        player.eco.engyReclaim = num.init(scoreData.resources.energyin.reclaimed)
+    else -- old score data format
+        player.eco.engyReclaim = num.init(scoreData.general.lastReclaimedEnergy)
+    end
+
      
     -- get player's kills Stats from score data and initialize it to zero if they are nil
     player.kills.acu   = num.init(scoreData.units.cdr.kills)
@@ -2773,6 +2786,7 @@ function AnnounceUnit(armyID, text)
         local sender = { value = army.namefull, fontColor = army.color, icon = army.icon }
         local target = nil --{ value = nil, icon = nil }
          
+        -- WARN('AnnounceUnit army.icon=' .. tostring(army.icon) )
         Announcement.CreateSmartAnnouncement(armyLine, sender, message, target)
     end
 end
@@ -2786,4 +2800,40 @@ function ArmyAnnounce(armyID, text, textDesc)
         --import('/lua/ui/game/announcement.lua').CreateAnnouncement(LOC(text), armyLine, textDesc)
         Announcement.CreateAnnouncement(LOC(text), armyLine, textDesc)
     end
+end
+
+function OnGameSpeedChanged(newSpeed)
+    gameSpeed = newSpeed
+    if observerLine.speedSlider then
+       observerLine.speedSlider:SetValue(gameSpeed)
+    end
+end
+
+function DisplayPingOwner(worldView, pingData)
+
+    -- Flash the scoreboard faction icon for the ping owner to indicate the source.
+    if not pingData.Marker and not pingData.Renew then
+        -- zero-based indices FTW...
+        local pingOwnerIndex = pingData.Owner + 1
+        -- finding the owner's UI of the ping data
+        local pingOwnerLine  = GetArmyLine(pingOwnerIndex)
+        -- setting the UI element we need to flash
+        local toFlash = pingOwnerLine.faction
+
+        if toFlash then
+            local flashCount = 8
+            local flashInterval = 0.4
+            ForkThread(function()
+                -- Flash the icon the appropriate number of times
+                while flashCount > 0 do
+                    toFlash:Hide()
+                    WaitSeconds(flashInterval)
+                    toFlash:Show()
+                    WaitSeconds(flashInterval)
+                    flashCount = flashCount - 1
+                end
+            end)
+        end
+    end
+
 end
