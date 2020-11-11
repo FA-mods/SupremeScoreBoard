@@ -4,12 +4,12 @@ local SSB = '/mods/SupremeScoreBoard/modules/score_board.lua'
 --currentScores = false  
 
 -- show/hide old score board
-local showScore = false
+local showOrgScore = false
 
 local orgCreateScoreUI = CreateScoreUI
 function CreateScoreUI(parent) 
     orgCreateScoreUI(parent)
-    if not showScore then HideScore() end
+    if not showOrgScore then HideScore() end
 end
 
 local firstBeat = true
@@ -29,20 +29,31 @@ end
 local orgToggleScoreControl = ToggleScoreControl
 function ToggleScoreControl(state)
     --LOG('SCORE ToggleScoreControl '  ) 
-    if showScore then orgToggleScoreControl() end
+    if showOrgScore then orgToggleScoreControl() end
 end
 
 local orgExpand = Expand
 function Expand()
     --LOG('SCORE Expand '  ) 
-    if showScore then orgExpand() else HideScore() end
+    if showOrgScore then orgExpand() else HideScore() end
+
+    import(SSB).Expand()
+end
+
+local orgContract = Contract
+function Contract()
+    --LOG('SCORE Contract '  ) 
+    if showOrgScore then orgContract() else HideScore() end
+
+    import(SSB).Contract()
 end
 
 local orgInitialAnimation = InitialAnimation
 function InitialAnimation(state)
     --LOG('SCORE InitialAnimation ' ) 
-    if showScore then orgInitialAnimation() else HideScore() end
+    if showOrgScore then orgInitialAnimation() else HideScore() end
 end
+
 -- hides UI elements of the old score board
 function HideScore()
     if controls and controls.bg then 
@@ -56,9 +67,9 @@ end
 local orgNoteGameSpeedChanged = NoteGameSpeedChanged
 function NoteGameSpeedChanged(newSpeed)
     orgNoteGameSpeedChanged(newSpeed)
-   -- gameSpeed = newSpeed
-   -- if observerLine.speedSlider then
-   --     observerLine.speedSlider:SetValue(gameSpeed)
-   -- end
-   import(SSB).OnGameSpeedChanged(newSpeed)
+    -- gameSpeed = newSpeed
+    -- if observerLine.speedSlider then
+    --     observerLine.speedSlider:SetValue(gameSpeed)
+    -- end
+    import(SSB).OnGameSpeedChanged(newSpeed)
 end
