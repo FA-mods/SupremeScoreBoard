@@ -16,6 +16,8 @@ local firstBeat = true
 
 local orgOnBeat = _OnBeat
 function _OnBeat() 
+     -- skipping updates of original Score board 
+     -- because we are updating Supreme Score board 
 
     --if firstBeat then
         --firstBeat = false
@@ -58,6 +60,10 @@ end
 function HideScore()
     if controls and controls.bg then 
         --controls.bg.Right:Set(500)
+        controls.bg.OnFrame = function(self, delta)
+            self.Right:Set(function() return savedParent.Right() - 20000 end)
+            self:SetNeedsFrameUpdate(false)
+        end
         controls.bg.Right:Set(-100)
         controls.bg:Hide()
         controls.collapseArrow:Hide() 
