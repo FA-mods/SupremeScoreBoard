@@ -28,8 +28,6 @@ WorldView = Class(orgWorldView, Control) {
             local additionalTime = options['SSB_Ping_Time'] or 0
             local startTime = GameTime()
             
-            WARN("SSB_Ping_Name " .. armyName )
-
             local pingOverlay = Bitmap(GetFrame(0))
             pingOverlay.Width:Set(10)
             pingOverlay.Height:Set(10)
