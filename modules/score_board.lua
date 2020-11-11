@@ -349,7 +349,7 @@ function CreateScoreUI(parent)
     if sessionReplay then
         boardWidth = 415 --340 -- 380  
     else 
-        boardWidth = boardWidth + 40  --280
+        boardWidth = boardWidth + 90  --280
     end    
     controls.bgTop.Width:Set(boardWidth + boardMargin)
     controls.bgBottom.Width:Set(boardWidth + boardMargin)
@@ -627,7 +627,7 @@ function CreateArmyLine(armyID, army)
     
     if isPlayerArmy and isSharing and not sessionReplay then
         local tip = ''
-        position = iconSize * 3   -- offset score column
+        position = iconSize * 2   -- offset score column
         group.shareUnitsIcon = CreateInfoIcon(group, 'units.total.dds')
         --group.shareUnitsIcon:SetTexture(modTextures..'units.total.dds')
         LayoutHelpers.AtRightIn(group.shareUnitsIcon, group, position)
@@ -646,7 +646,7 @@ function CreateArmyLine(armyID, army)
         end 
         Tooltip.AddControlTooltip(group.shareUnitsIcon, str.tooltip('share_units'))
         
-        position = position + iconSize + 2
+        position = position + iconSize + 5
         group.shareEngyIcon = CreateInfoIcon(group, 'eco.engyIncome.dds')
         --group.shareEngyIcon:SetTexture(modTextures..'eco.engyIncome.dds')
         LayoutHelpers.AtRightIn(group.shareEngyIcon, group, position)
@@ -665,7 +665,15 @@ function CreateArmyLine(armyID, army)
         end 
         Tooltip.AddControlTooltip(group.shareEngyIcon, str.tooltip('share_engy'))
         
+        -- UI for showing allied players' energy stats
         position = position + iconSize + 3
+        group.engyColumn = UIUtil.CreateText(group, '0', fontSize, fontName)
+        group.engyColumn:DisableHitTest()
+        group.engyColumn:SetColor(textColorEngy)
+        LayoutHelpers.AtRightIn(group.engyColumn, group, position)
+        LayoutHelpers.AtVerticalCenterIn(group.engyColumn, group)
+
+        position = position + 30
         group.shareMassIcon = CreateInfoIcon(group, 'eco.massIncome.dds')
         --group.shareMassIcon:SetTexture(modTextures..'eco.massIncome.dds')
         LayoutHelpers.AtRightIn(group.shareMassIcon, group, position)
@@ -683,6 +691,14 @@ function CreateArmyLine(armyID, army)
             end
         end
         Tooltip.AddControlTooltip(group.shareMassIcon, str.tooltip('share_mass'))
+
+        -- UI for showing allied players' mass stats
+        position = position + iconSize + 2
+        group.massColumn = UIUtil.CreateText(group, '0', fontSize, fontName)
+        group.massColumn:DisableHitTest()
+        group.massColumn:SetColor(textColorMass)
+        LayoutHelpers.AtRightIn(group.massColumn, group, position)
+        LayoutHelpers.AtVerticalCenterIn(group.massColumn, group)
     end
 
     -- create score data column
@@ -2356,6 +2372,10 @@ function _OnBeat()
                    -- TODO show Stats of team-mates in game session!
                    -- this will require change in FAF sync/share files 
                    -- because these Stats are not shared at this moment in UI mods
+                   if data.resources.massin.rate and line.massColumn then
+                       line.massColumn:SetText(GetStatsForArmy(player, Columns.Mass.Active))
+                       line.engyColumn:SetText(GetStatsForArmy(player, Columns.Engy.Active))
+                   end
                end
                
                -- update army's score
