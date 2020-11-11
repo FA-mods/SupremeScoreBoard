@@ -45,7 +45,7 @@ function GetColumnStates()
        },
     }
 end
- 
+
 -- SSB Auto-Toggle options
 table.insert(options.ui.items,
     {
@@ -160,3 +160,59 @@ table.insert(options.ui.items,
         custom  = GetBooleanStates(),
         set     = SetOptions,
     }) 
+    
+-- SSB Ping options
+table.insert(options.ui.items,
+    {
+        title = "SSB Ping: Shows Player's Name",
+        key = 'SSB_Ping_Name',
+        type = 'toggle',
+        default = true,
+        custom = {
+            states = {
+                {text = "On", key = true },
+                {text = "Off", key = false },
+            },
+        },
+    })
+
+table.insert(options.ui.items,
+    {
+        title = "SSB Ping: Font Color",
+        key = 'SSB_Ping_Color',
+        type = 'toggle',
+        default = 'ping',
+        custom = {
+            states = {
+                { text = "White",     key = 'white' },
+                { text = "Army color", key = 'army' },
+                { text = "Ping color", key = 'ping' },
+            },
+        },
+    })
+
+table.insert(options.ui.items,
+    {
+        title = "SSB Ping: Font Size",
+        key = 'SSB_Ping_Size',
+        type = 'slider',
+        default = 14,
+        custom = {
+            min = 10,
+            max = 30,
+            inc = 0,
+        },
+    })
+
+table.insert(options.ui.items,
+    {
+        title = "SSB Ping: Additional time",
+        key = 'SSB_Ping_Time',
+        type = 'slider',
+        default = 0,
+        custom = {
+            min = 0,
+            max = 20,
+            inc = 0,
+        },
+    })
