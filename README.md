@@ -48,7 +48,7 @@ Shoot me a message on <a href="http://forums.faforever.com/memberlist.php?mode=v
 
 ## History
 
-### Version 4 - November 12, 2020
+### Version 4-6 - November 12, 2020
 - added economy income of allied players in game session
 - added economy storage of allied players in game session
 - added support for sharing economy when phantom mod is enabled
