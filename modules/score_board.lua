@@ -70,7 +70,9 @@ local issuedNoRushWarning = false
 local gameSpeed = 0
 local needExpand = false
 local contractOnCreate = false
-local showResourceStorage = false
+
+local alliesInfoShowStorage = false
+local alliesInfo = false
 
 -- added configuration variables 
 local boardMargin = 20
@@ -134,6 +136,7 @@ Colors[cid] = {armyColor = 'ff131cd3', textColor = 'FF4848DC'} cid=cid+1 --#ff13
 Colors[cid] = {armyColor = 'FF2929e1', textColor = 'FF4848DC'} cid=cid+1 --#FF2929e1 #FF4848DC  dark UEF blue (new)
 
 --WARN('SSB color fix Colors=' .. table.getsize(Colors))
+
 
 -- initializes Stats to store info about players' armies and aggregated armies (teams)
 function InitializeStats()
@@ -625,8 +628,9 @@ function CreateArmyLine(armyID, army)
     group.nameColumn:SetColor(textColor)
     LayoutHelpers.AtLeftIn(group.nameColumn, group, position)
     LayoutHelpers.AtVerticalCenterIn(group.nameColumn, group)
-    
-    if isPlayerArmy and isSharing and not sessionReplay then
+
+    if isPlayerArmy and not sessionReplay then -- and isSharing 
+
         local tip = ''
         position = iconSize * 2   -- offset score column
         group.shareUnitsIcon = CreateInfoIcon(group, 'units.total.dds')
@@ -833,9 +837,11 @@ function CreateArmyLine(armyID, army)
         group:DisableHitTest()
         group.HandleEvent = function(self, event)
             if event.Type == 'MouseEnter' then
-                showResourceStorage = true
+                alliesInfoShowStorage = true
+                alliesInfo:SetText("Storage of Allies")
             elseif event.Type == 'MouseExit' then
-                showResourceStorage = false
+                alliesInfoShowStorage = false
+                alliesInfo:SetText("Income of Allies")
             end
         end
     end
@@ -1065,7 +1071,13 @@ function CreateSortLine(armyID)
         position = 0 --(iconSize + 3) * 3 -- offset by 3 share icons
         LayoutHelpers.AtRightIn(sortby.score, sortby, position)
         LayoutHelpers.AtVerticalCenterIn(sortby.score, sortby)
+         
+        alliesInfo = UIUtil.CreateText(controls.bgTop, "Income of Allies", fontSize, fontName)
+        alliesInfo:SetColor('ECECEC') -- #ECECEC
+        LayoutHelpers.AtRightIn(alliesInfo, sortby, 50)
+        LayoutHelpers.AtVerticalCenterIn(alliesInfo, sortby)
     end
+
     if sessionReplay or sessionOptions.Score ~= 'no' then
         Tooltip.AddControlTooltip(sortby.score, str.tooltip('army_score'))
     else
@@ -1878,6 +1890,7 @@ function UpdateUnitStats(player, scoreData)
     --end
 
 end
+
 function UpdatePlayerStats(armyID, armies, scoreData)
     local player = Stats.armies[armyID]
     --LOG(player.nameshort  .. ' units.bps = ' .. table.getsize(player.units.bps))
@@ -1894,14 +1907,19 @@ function UpdatePlayerStats(armyID, armies, scoreData)
     if not scoreData.general.score then log.Warning('UpdatePlayerStats scoreData.general.score is nil' ) end
     
     player.dead = armies[armyID].outOfGame --or num.init(scoreData.general.currentunits.count) == 0
-      
+    if sessionReplay then
+        player.ally = true
+    else 
+        player.ally = Diplomacy.CanShare(GetFocusArmy(), armyID)
+    end
+
     -- for dead/alive players, get only some score info 
     player.score = num.init(scoreData.general.score)
     -- get player's eco and initialize it to zero if nil score
-    player.eco.massTotal  = num.init(scoreData.resources.massin.total)
-    player.eco.massSpent  = num.init(scoreData.resources.massout.total)
-    player.eco.engyTotal  = num.init(scoreData.resources.energyin.total)
-    player.eco.engySpent  = num.init(scoreData.resources.energyout.total)
+    player.eco.massTotal = num.init(scoreData.resources.massin.total)
+    player.eco.massSpent = num.init(scoreData.resources.massout.total)
+    player.eco.engyTotal = num.init(scoreData.resources.energyin.total)
+    player.eco.engySpent = num.init(scoreData.resources.energyout.total)
 
     -- FIX an issue reported by Gyle due to changes in structure of FAF score data
     -- checking if reclaimed mass is store in new or old score data structure
@@ -1918,7 +1936,6 @@ function UpdatePlayerStats(armyID, armies, scoreData)
         player.eco.engyReclaim = num.init(scoreData.general.lastReclaimedEnergy)
     end
 
-     
     -- get player's kills Stats from score data and initialize it to zero if they are nil
     player.kills.acu   = num.init(scoreData.units.cdr.kills)
     player.kills.exp   = num.init(scoreData.units.experimental.kills)
@@ -2273,7 +2290,9 @@ function KillArmyLine(line)
     if line.shareUnitsIcon then line.shareUnitsIcon:Hide() end
     if line.shareMassIcon then  line.shareMassIcon:Hide()  end
     if line.shareEngyIcon then  line.shareEngyIcon:Hide()  end
-                       
+    if line.massColumn then     line.massColumn:Hide()  end
+    if line.engyColumn then     line.engyColumn:Hide()  end
+
     if sessionReplay then
         line.totalColumn:SetColor(armyColorDefeted)
         line.massColumn:SetColor(armyColorDefeted)
@@ -2379,19 +2398,23 @@ function _OnBeat()
                        line.unitColumn:SetText(GetStatsForArmy(player, Columns.Units.Active))
                    end
                else
-                   -- TODO show Stats of team-mates in game session!
-                   -- this will require change in FAF sync/share files 
-                   -- because these Stats are not shared at this moment in UI mods
-                   if data.resources.massin.rate and line.massColumn then
-                      -- line.massColumn:SetText(GetStatsForArmy(player, Columns.Mass.Active))
-                      -- line.engyColumn:SetText(GetStatsForArmy(player, Columns.Engy.Active))
-                        if showResourceStorage then
-                            line.massColumn:SetText(num.frmt(player.eco.massStored))
-                            line.engyColumn:SetText(num.frmt(player.eco.engyStored))
-                        else
-                            line.massColumn:SetText(GetStatsForArmy(player, Columns.Mass.Active))
-                            line.engyColumn:SetText(GetStatsForArmy(player, Columns.Engy.Active))
-                        end
+                   if not player.ally then
+                        ToggleEconomyColumns(line, false)
+                   else
+                        ToggleEconomyColumns(line, true)
+                        
+                       -- showing eco stats of team-mates in game session
+                       if data.resources.massin.rate and line.massColumn then
+                          -- line.massColumn:SetText(GetStatsForArmy(player, Columns.Mass.Active))
+                          -- line.engyColumn:SetText(GetStatsForArmy(player, Columns.Engy.Active))
+                            if alliesInfoShowStorage then
+                                line.massColumn:SetText(num.frmt(player.eco.massStored))
+                                line.engyColumn:SetText(num.frmt(player.eco.engyStored))
+                            else
+                                line.massColumn:SetText(GetStatsForArmy(player, Columns.Mass.Active))
+                                line.engyColumn:SetText(GetStatsForArmy(player, Columns.Engy.Active))
+                            end
+                       end
                    end
                end
                
@@ -2874,3 +2897,20 @@ function DisplayPingOwner(worldView, pingData)
     end
 
 end
+
+function ToggleEconomyColumns(line, isVisible)
+    if isVisible then
+        line.shareUnitsIcon:Show()
+        line.shareEngyIcon:Show()
+        line.shareMassIcon:Show()
+        line.massColumn:Show()
+        line.engyColumn:Show()
+    else 
+        line.shareUnitsIcon:Hide()
+        line.shareEngyIcon:Hide()
+        line.shareMassIcon:Hide()
+        line.massColumn:Hide()
+        line.engyColumn:Hide()
+    end
+end
+
