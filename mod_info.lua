@@ -1,15 +1,15 @@
--- #########################################################
 name         = "Supreme Score Board"
--- ######################################################### 
-version      = 3
-uid          = "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v0030"
+version      = 4
+uid          = "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v0040"
 author       = "HUSSAR"
 copyright    = "HUSSAR, free to re-use code as long as you credit me in your mod"
-contributors = "Anihilnine, Crotalus, Speed2, MaCielPL, Nojoke, Petricpwnz, Nexus_of_Reality, Col_Walter_Kurtz, PsychoBoB"
-description  = "Improves score board and replays by adding more columns, team stats, players sorting, filtering units by type and more. (HUSSAR)"
+contributors = "Anihilnine, Crotalus, Speed2, MaCielPL, Nojoke, Petricpwnz, Nexus_of_Reality, Col_Walter_Kurtz, PsychoBoB, BlackYps, Strogo, BenDover"
+description  = "Improves score board in Game and in Replay sessions by adding team stats, sending eco to allies, killed-by notifications, stats about reclaim, kill-ratio, info about game being rated or not, and more."
 
 icon         = "/mods/SupremeScoreBoard/mod_icon.png"
 url          = "http://forums.faforever.com/viewtopic.php?f=41&t=10887"
+github       = "https://github.com/FA-mods/SupremeScoreBoard"
+
 selectable   = true
 enabled      = true
 ui_only      = true
@@ -30,6 +30,7 @@ conflicts   = {
     "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1400", -- old SSB
     "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v1500", -- old SSB
     "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v0020", -- old SSB
+    "HUSSAR-PL-a1e2-c4t4-scfa-ssbmod-v0030", -- old SSB
     "HUSSAR-pl-a1e2-c4t4-scfa-SETmod-v0100",
     "HUSSAR-PL-a1e2-c4t4-scfa-SUImod-v0900", -- old SUI v0.9
     }
@@ -48,46 +49,48 @@ after = {
     --"ecbf6277-24e3-437a-b968-EcoManager-v11",
     --"ecbf6277-24e3-437a-b968-EcoManager-v12",
 }
---------------------------------------------------------------------------------------
---[[ TODO
- add ping info about players (lua/modules/ui/game/connectivity.lua)
- show acu kills and mvp kill ratio  
- group players colors before selecting team color to avoid green team color if two green players are in two teams
 
- add build power based on players engineers (requires fix in score data)
- add images to notifications for built experimental units (requires fix in FAF score data)
- add exp voice over from lua\ui\game\vo_computer.lua
- add army compare (strength, DPS, mass value) between teams (in replay session)
- add army overview with status of built TMLs. Nukes, HP for each major unit type (in game session)
- add more notifications about built nukes/t3 arty/experimental (in replay session)
- add stacked build menu (no tabs)
- add supreme empire tree functionality with movable UI elements
- -]] 
---------------------------------------------------------------------------------------
--- MOD HISTORY
---------------------------------------------------------------------------------------
---[[ v3.0 - HUSSAR - November, 2020
---------------------------------------------------------------------------------------
--- fixed displaying of reclaimed stats in score board
--- fixed speed slider when changing game speed via keyboard shortcut
--- fixed flashing of faction icon when a user creates a ping on the map
---]]
---------------------------------------------------------------------------------------
---[[ v1.4 - HUSSAR - October, 2017
---------------------------------------------------------------------------------------
--- fixed an issue with selecting text color for armies due to changes in FAF army colors
--- fixed an issue finding map quadrant for an army with incorrect army key defined in [map name]_save.lua
---]]
---------------------------------------------------------------------------------------
---[[ v1.3 - HUSSAR - July, 2016
---------------------------------------------------------------------------------------
+--[[ TODO
+-- fix UI scaling https://forums.faforever.com/viewtopic.php?f=41&t=10887&hilit=ping&start=170#p182944
+-- show ACU kills and MVP kill ratio  
+-- group players colors before selecting team color to avoid green team color if two green players are in two teams
+-- add ping info about players (lua/modules/ui/game/connectivity.lua)
+-- add build power based on players engineers (requires fix in score data)
+-- add images to notifications for built experimental units
+-- add exp voice over from lua\ui\game\vo_computer.lua
+-- add army compare (strength, DPS, mass value) between teams (in replay session)
+-- add army overview with status of built TMLs. Nukes, HP for each major unit type (in game session)
+-- add more notifications about built nukes/t3 arty/experimental (in replay session)
+-]] 
+
+history = [[
+
+### Version 4 - November 12, 2020
+- added economy income of allied players in game session
+- added economy storage of allied players in game session
+- added support for sharing economy when phantom mod is enabled
+- added player's name when someone creates a ping on the map
+- fixed original score board floating on game start
+- fixed hiding of SSB on toggle all UIs off
+- fixed initialization of players colors in SSB
+
+### Version 3 - November 3, 2020
+- fixed displaying of reclaimed stats in score board
+- fixed speed slider when changing game speed via keyboard shortcut
+- fixed flashing of faction icon when a user creates a ping on the map
+
+### Version 1.4 - October, 2017
+- fixed an issue with selecting text color for armies due to changes in FAF army colors
+- fixed an issue finding map quadrant for an army with incorrect army key defined in [map name]_save.lua
+
+### Version v1.3 - July, 2016
 - added info about who killed a player in Army notification window
 - added info about who decided to CTRL+K in Army notification window
 - added coloring of player names in Army notification window
 - added mod configuration under Game -> Options -> Interface tab
 - added interaction states for buttons in the sort line (first line of the score board)
-- changed mouse interaction in top row, now left click will show values in columns
-- changed mouse interaction in top row, now right click will sort values in columns
+- fixed mouse interaction in top row, now left click will show values in columns
+- fixed mouse interaction in top row, now right click will sort values in columns
 - fixed compatibility with other mods that modify score.lua (e.g. EcoManager) and SSB takes precedence over these mods
 - fixed numbering of teams based on players' starting locations and map quadrants (per Gyle request)
 - fixed messages with sent resources/units to allies (observer will see message target)
@@ -96,10 +99,8 @@ after = {
 - increased number of notifications for built experimental units (2 -> 5)
 - increased precision for rounding large numbers (1.2m -> 1.23m)
 - improved description of tooltips
---]]
---------------------------------------------------------------------------------------
---[[ v1.2 - HUSSAR - January, 2016
---------------------------------------------------------------------------------------
+
+### Version v1.2 - January, 2016
 - (all sessions) added replay ID below map info line
 - (all sessions) added calculation of game quality/balance if this value is not present in session options
 - (game session) added buttons for sharing mass/energy/units with allied human players (faster than LazyShare) 
@@ -126,19 +127,14 @@ after = {
 - changed ranking column to show exact values in ladder games and rounded values in regular games
 - changed coloring of player names and now they will match color of team
 - changed column with player names to include clan tags (if they exist)
---]]
---------------------------------------------------------------------------------------
---[[ v1.1 - HUSSAR - October 5, 2015
---------------------------------------------------------------------------------------
+
+### Version 1.1 - October 5, 2015
 - fixed info about active mods in replay session
 - fixed status of game raking
 - fixed tooltip about game quality/balance
 - added coloring of player names based on team color 
-- thanks to testers: Petricpwnz, Anihilnine
---]]
---------------------------------------------------------------------------------------
---[[ v1.0 - HUSSAR - September 25, 2015
---------------------------------------------------------------------------------------
+
+### Version 1.0 - September 25, 2015
 - added team lines that sums up statistics for allied players
 - added column with filters to show count of air/land/navy/base units  
 - added column for total mass of collected/killed/lost
@@ -171,8 +167,8 @@ after = {
 - added icons with info about victory conditions
 - added icons with info about AI multipliers
 - added notifications about 1st experimental unit built by a player
-- changed game time/speed fields into two fields   
-- changed unit counter to show unit count of all armies (in observer view) or just player's units (in player view) 
+- fixed game time/speed fields into two fields   
+- fixed unit counter to show unit count of all armies (in observer view) or just player's units (in player view) 
 - fixed missing tooltip for game speed slider
 - fixed performance in updating score panel by limiting number of for loops (n*n-times to n-times)
 - fixed issues with performing operations on uninitialized values of score data
@@ -181,8 +177,9 @@ after = {
 - fixed redundant function calls to SessionIsReplay()
 - fixed redundant function calls to SessionGetScenarioInfo()
 - fixed redundant imports of some LUA scripts (e.g. announcement.lua)
-* pending FAF patch that will actually add reclaim values to score data and thus enable them to show in score panel 
---]]
+
+]]
+ 
 --------------------------------------------------------------------------------------
 --[[ TEST NOTES:
 -- maps big:    Seton's Clutch, The Dark Heart, Seraphim Glaciers, Twin Rivers
@@ -192,9 +189,5 @@ after = {
 -- max teams    Fractal Cancer, Seraphim Glaciers, White Fire 
 -- clans        SGI Nequilich e VoR
 
-FAF bugs:
-limit logging: "Particle cap exceeded, discarding excess."
-
-logs line =  line# in this file + # of lines in original score.lua (615) 
 --]]  
 --------------------------------------------------------------------------------------
