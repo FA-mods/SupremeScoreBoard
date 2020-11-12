@@ -355,9 +355,9 @@ function CreateScoreUI(parent)
     else 
         boardWidth = boardWidth + 90  --280
     end    
-    controls.bgTop.Width:Set(boardWidth + boardMargin)
-    controls.bgBottom.Width:Set(boardWidth + boardMargin)
-    controls.bgStretch.Width:Set(boardWidth + boardMargin)
+    LayoutHelpers.SetWidth(controls.bgTop, boardWidth + boardMargin)
+    LayoutHelpers.SetWidth(controls.bgBottom, boardWidth + boardMargin)
+    LayoutHelpers.SetWidth(controls.bgStretch, boardWidth + boardMargin)
     
     controls.leftBracketMin = Bitmap(controls.bg)
     controls.leftBracketMax = Bitmap(controls.bg)
@@ -406,23 +406,30 @@ function CreateScoreUI(parent)
     controls.units = UIUtil.CreateText(controls.bgTop, '0/0', fontSize, fontMono)
     controls.units:SetColor('ffff9900')
     controls.unitIcon = CreateInfoIcon(controls.bgTop, 'units.total.dds')
+    LayoutHelpers.SetHeight(controls.unitIcon, iconSize-3)
     --controls.unitIcon:SetTexture(modTextures..'units.total.dds')
     Tooltip.AddControlTooltip(controls.units, str.tooltip('units_count'))
     Tooltip.AddControlTooltip(controls.unitIcon, str.tooltip('units_count'))
         
     SetLayout()
     
-    controls.timeIcon.Height:Set(iconSize)
-    controls.timeIcon.Width:Set(iconSize)
+    LayoutHelpers.SetHeight(controls.timeIcon, iconSize)
+    LayoutHelpers.SetHeight(controls.speedIcon, iconSize)
+    LayoutHelpers.SetHeight(controls.qualityIcon, iconSize)
+    LayoutHelpers.SetHeight(controls.unitIcon, iconSize)
+    LayoutHelpers.SetDimensions(controls.unitIcon, iconSize-3, iconSize)
     
-    controls.speedIcon.Height:Set(iconSize)
-    controls.speedIcon.Width:Set(iconSize)
+    --controls.timeIcon.Height:Set(iconSize)
+    --controls.timeIcon.Width:Set(iconSize)
     
-    controls.qualityIcon.Height:Set(iconSize)
-    controls.qualityIcon.Width:Set(iconSize)
+    --controls.speedIcon.Height:Set(iconSize)
+    --controls.speedIcon.Width:Set(iconSize)
     
-    controls.unitIcon.Height:Set(iconSize-3)
-    controls.unitIcon.Width:Set(iconSize)
+    --controls.qualityIcon.Height:Set(iconSize)
+    --controls.qualityIcon.Width:Set(iconSize)
+    
+    --controls.unitIcon.Height:Set(iconSize-3)
+    --controls.unitIcon.Width:Set(iconSize)
        
     GameMain.AddBeatFunction(_OnBeat, true)
     controls.bg.OnDestroy = function(self)
@@ -510,7 +517,7 @@ function SetupPlayerLines()
         observerLine = CreateArmyLine(observer.armyID, observer)
         observerLine.isObsLine = true
         observerLine.nameColumn.Top:Set(observerLine.Top)
-        observerLine.Height:Set(iconSize * 3)
+        LayoutHelpers.SetHeight(observerLine, iconSize * 3)
         observerLine.speedText = UIUtil.CreateText(controls.bgStretch, '', 15, UIUtil.bodyFont)
         observerLine.speedText:SetColor('ff00dbff')
         LayoutHelpers.AtRightIn(observerLine.speedText, observerLine, 5)
@@ -560,6 +567,10 @@ function SetupPlayerLines()
     
 end
 
+
+function SetIconSize(icon)
+    LayoutHelpers.SetDimensions(icon, iconSize, iconSize)
+end
 function CreateArmyLine(armyID, army)
     local group = Group(controls.bgStretch)
     
@@ -590,9 +601,8 @@ function CreateArmyLine(armyID, army)
     group.armyID = armyID
      
     group.faction = Bitmap(group)
-    group.faction:SetTexture(army.icon) -- ScoreMng.GetArmyIcon(army.faction))
-    group.faction.Height:Set(iconSize)
-    group.faction.Width:Set(iconSize)
+    group.faction:SetTexture(army.icon) -- ScoreMng.GetArmyIcon(army.faction))    
+    SetIconSize(group.faction)
     group.faction:DisableHitTest()
     LayoutHelpers.AtLeftTopIn(group.faction, group, position)
     
@@ -641,9 +651,8 @@ function CreateArmyLine(armyID, army)
         group.shareUnitsIcon = CreateInfoIcon(group, 'units.total.dds')
         --group.shareUnitsIcon:SetTexture(modTextures..'units.total.dds')
         LayoutHelpers.AtRightIn(group.shareUnitsIcon, group, position)
-        LayoutHelpers.AtVerticalCenterIn(group.shareUnitsIcon, group)
-        group.shareUnitsIcon.Height:Set(iconSize)
-        group.shareUnitsIcon.Width:Set(iconSize)
+        LayoutHelpers.AtVerticalCenterIn(group.shareUnitsIcon, group)        
+        SetIconSize(group.shareUnitsIcon)
         group.shareUnitsIcon.armyID = armyID
         group.shareUnitsIcon.OnClick = function(self, eventModifiers)
             if eventModifiers.Right then 
@@ -661,8 +670,7 @@ function CreateArmyLine(armyID, army)
         --group.shareEngyIcon:SetTexture(modTextures..'eco.engyIncome.dds')
         LayoutHelpers.AtRightIn(group.shareEngyIcon, group, position)
         LayoutHelpers.AtVerticalCenterIn(group.shareEngyIcon, group)
-        group.shareEngyIcon.Height:Set(iconSize)
-        group.shareEngyIcon.Width:Set(iconSize)
+        SetIconSize(group.shareEngyIcon)
         group.shareEngyIcon.armyID = armyID
         group.shareEngyIcon.OnClick = function(self, eventModifiers)
             if eventModifiers.Right then 
@@ -688,8 +696,7 @@ function CreateArmyLine(armyID, army)
         --group.shareMassIcon:SetTexture(modTextures..'eco.massIncome.dds')
         LayoutHelpers.AtRightIn(group.shareMassIcon, group, position)
         LayoutHelpers.AtVerticalCenterIn(group.shareMassIcon, group)
-        group.shareMassIcon.Height:Set(iconSize)
-        group.shareMassIcon.Width:Set(iconSize)
+        SetIconSize(group.shareMassIcon)
         group.shareMassIcon.armyID = armyID
         group.shareMassIcon.OnClick = function(self, eventModifiers)
             if eventModifiers.Right then 
@@ -747,8 +754,7 @@ function CreateArmyLine(armyID, army)
         group.massIcon:SetTexture(modTextures..'eco.massIncome.dds')
         LayoutHelpers.AtRightIn(group.massIcon, group, position)
         LayoutHelpers.AtVerticalCenterIn(group.massIcon, group)
-        group.massIcon.Height:Set(iconSize)
-        group.massIcon.Width:Set(iconSize)
+        SetIconSize(group.massIcon)
         -- show player's mass column
         position = (sw * 3) + iconSize + 1
         group.massColumn = UIUtil.CreateText(group, '0', fontSize, fontName)
@@ -763,8 +769,7 @@ function CreateArmyLine(armyID, army)
         group.engyIcon:SetTexture(modTextures..'eco.engyIncome.dds')
         LayoutHelpers.AtRightIn(group.engyIcon, group, position)
         LayoutHelpers.AtVerticalCenterIn(group.engyIcon, group)
-        group.engyIcon.Height:Set(iconSize)
-        group.engyIcon.Width:Set(iconSize)
+        SetIconSize(group.engyIcon)
         -- show player's energy column
         position = (sw * 2) + iconSize + 1
         group.engyColumn = UIUtil.CreateText(group, '0', fontSize, fontName)
@@ -782,9 +787,8 @@ function CreateArmyLine(armyID, army)
         group.totalIcon = Bitmap(group)
         group.totalIcon:SetTexture(modTextures..'eco.massTotal.dds')
         LayoutHelpers.AtRightIn(group.totalIcon, group, position)
-        LayoutHelpers.AtVerticalCenterIn(group.totalIcon, group)
-        group.totalIcon.Height:Set(iconSize)
-        group.totalIcon.Width:Set(iconSize)
+        LayoutHelpers.AtVerticalCenterIn(group.totalIcon, group)        
+        SetIconSize(group.totalIcon)
         -- show player's mass total value
         position = (sw * 1) + iconSize + 1
         group.totalColumn = UIUtil.CreateText(group, '0', fontSize, fontName)
@@ -802,8 +806,7 @@ function CreateArmyLine(armyID, army)
         group.unitIcon:SetTexture(modTextures..'units.total.dds')
         LayoutHelpers.AtRightIn(group.unitIcon, group, position)
         LayoutHelpers.AtVerticalCenterIn(group.unitIcon, group)
-        group.unitIcon.Height:Set(iconSize)
-        group.unitIcon.Width:Set(iconSize)
+        SetIconSize(group.unitIcon)
         -- show player's units total value 
         position = (sw * 0) + iconSize + 1
         group.unitColumn = UIUtil.CreateText(group, '0', fontSize, fontName)
@@ -815,9 +818,8 @@ function CreateArmyLine(armyID, army)
      
     --local groupHeight = iconSize + 2
     --if (isObserver) then groupHeight = groupHeight + 10 end
-    
-    group.Width:Set(boardWidth)
-    group.Height:Set(lineSize)
+        
+    LayoutHelpers.SetDimensions(group, boardWidth, lineSize)
     
     -- enable switching view to players' armies or observer 
     if (isPlayerArmy or isObserver) and sessionReplay then
@@ -854,8 +856,8 @@ function CreateArmyLine(armyID, army)
     return group
 end
  
-function CreateSortBoxForEcoColumn(group, column, isMass)
-    local iconPath = modTextures .. column ..'.dds'
+function CreateSortBoxBase(group, column, customPath)
+    local iconPath = customPath or modTextures .. column ..'.dds'
     local checkbox = Checkbox(group,
           iconPath, --'_btn_up.dds'),
           iconPath, --'_btn_over.dds'),
@@ -864,10 +866,16 @@ function CreateSortBoxForEcoColumn(group, column, isMass)
           iconPath, --'_btn_dis.dds'),
           iconPath, --'_btn_dis.dds'),
           'UI_Tab_Click_01', 'UI_Tab_Rollover_01')
-    checkbox.Height:Set(iconSize)
-    checkbox.Width:Set(iconSize)  
+    
+    LayoutHelpers.SetDimensions(checkbox, iconSize, iconSize)
     checkbox:UseAlphaHitTest(true) 
     checkbox:SetHighlight(true, 0.8, 1.0)
+    
+    return checkbox
+end
+
+function CreateSortBoxForEcoColumn(group, column, isMass)
+    local checkbox = CreateSortBoxBase(group, column)
 
     checkbox.OnClick = function(self, eventModifiers)
         self:ToggleCheck()
@@ -888,20 +896,7 @@ function CreateSortBoxForEcoColumn(group, column, isMass)
     return checkbox
 end
 function CreateSortBoxForUnitsColumn(group, column)
-    local iconPath = modTextures ..column ..'.dds'
-    
-    local checkbox = Checkbox(group,
-          iconPath,     --'_dis.dds', 'up 
-          iconPath,     --'.dds',     'upsel 
-          iconPath,     --'.dds',     'over          
-          iconPath,     --'_dis.dds', 'oversel 
-          iconPath,     --'_dis.dds', 'dis 
-          iconPath,     --'_dis.dds', 'dissel 
-          'UI_Tab_Click_01', 'UI_Tab_Rollover_01')
-    checkbox.Height:Set(iconSize)
-    checkbox.Width:Set(iconSize)  
-    checkbox:UseAlphaHitTest(true) 
-    checkbox:SetHighlight(true, 0.8, 1.0)
+    local checkbox = CreateSortBoxBase(group, column)
 
     checkbox.OnClick = function(self, eventModifiers) 
         Columns.Units.Active = column 
@@ -915,19 +910,7 @@ function CreateSortBoxForUnitsColumn(group, column)
     return checkbox        
 end
 function CreateSortBoxForScoreColumn(group, column)
-    local iconPath = modTextures..column .. '.dds'
-    local checkbox = Checkbox(group,
-          iconPath, --'_btn_up.dds'),
-          iconPath, --'_btn_over.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_dis.dds'),
-          iconPath, --'_btn_dis.dds'),
-          'UI_Tab_Click_01', 'UI_Tab_Rollover_01')
-    checkbox.Height:Set(iconSize)
-    checkbox.Width:Set(iconSize) 
-    checkbox:UseAlphaHitTest(true) 
-    checkbox:SetHighlight(true, 0.8, 1.0)
+    local checkbox = CreateSortBoxBase(group, column)
 
     checkbox.OnClick = function(self, eventModifiers)
         Columns.Score.Active = column 
@@ -941,19 +924,7 @@ function CreateSortBoxForScoreColumn(group, column)
     return checkbox
 end
 function CreateSortBoxForRatingColumn(group, column)
-    local iconPath = modTextures..column .. '.dds'
-    local checkbox = Checkbox(group,
-          iconPath, --'_btn_up.dds'),
-          iconPath, --'_btn_over.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_dis.dds'),
-          iconPath, --'_btn_dis.dds'),
-          'UI_Tab_Click_01', 'UI_Tab_Rollover_01')
-    checkbox.Height:Set(iconSize)
-    checkbox.Width:Set(iconSize) 
-    checkbox:UseAlphaHitTest(true) 
-    checkbox:SetHighlight(true, 0.8, 1.0)
+    local checkbox = CreateSortBoxBase(group, column)
 
     checkbox.OnClick = function(self, eventModifiers)
         Columns.Rating.Active = column  
@@ -966,19 +937,7 @@ function CreateSortBoxForRatingColumn(group, column)
     return checkbox
 end
 function CreateSortBoxForNameColumn(group, column, icon)
-    local iconPath = modTextures..icon ..'.dds'
-    local checkbox = Checkbox(group,
-          iconPath, --'_btn_up.dds'),
-          iconPath, --'_btn_over.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_dis.dds'),
-          iconPath, --'_btn_dis.dds'),
-          'UI_Tab_Click_01', 'UI_Tab_Rollover_01')
-    checkbox.Height:Set(iconSize)
-    checkbox.Width:Set(iconSize) 
-    checkbox:UseAlphaHitTest(true) 
-    checkbox:SetHighlight(true, 0.8, 1.0)
+    local checkbox = CreateSortBoxBase(group, column, modTextures..icon ..'.dds')
 
     checkbox.OnClick = function(self, eventModifiers)
         Columns.Name.Active = column  
@@ -991,19 +950,7 @@ function CreateSortBoxForNameColumn(group, column, icon)
     return checkbox
 end
 function CreateSortBoxForTotalColumn(group, column)
-    local iconPath = modTextures..column .. '.dds'
-    local checkbox = Checkbox(group,
-          iconPath, --'_btn_up.dds'),
-          iconPath, --'_btn_over.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_dis.dds'),
-          iconPath, --'_btn_dis.dds'),
-          'UI_Tab_Click_01', 'UI_Tab_Rollover_01')
-    checkbox.Height:Set(iconSize)
-    checkbox.Width:Set(iconSize) 
-    checkbox:UseAlphaHitTest(true) 
-    checkbox:SetHighlight(true, 0.8, 1.0)
+    local checkbox = CreateSortBoxBase(group, column)
 
     checkbox.OnClick = function(self, eventModifiers)
         Columns.Total.Active = column 
@@ -1017,19 +964,7 @@ function CreateSortBoxForTotalColumn(group, column)
     return checkbox
 end
 function CreateSortBoxForGenericColumn(group, column, icon)
-    local iconPath = modTextures..icon ..'.dds'
-    local checkbox = Checkbox(group,
-          iconPath, --'_btn_up.dds'),
-          iconPath, --'_btn_over.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_down.dds'),
-          iconPath, --'_btn_dis.dds'),
-          iconPath, --'_btn_dis.dds'),
-          'UI_Tab_Click_01', 'UI_Tab_Rollover_01')
-    checkbox.Height:Set(iconSize)
-    checkbox.Width:Set(iconSize) 
-    checkbox:UseAlphaHitTest(true) 
-    checkbox:SetHighlight(true, 0.8, 1.0)
+    local checkbox = CreateSortBoxBase(group, column, modTextures..icon ..'.dds')
 
     checkbox.OnClick = function(self, eventModifiers)
         SortArmyLinesBy(column) 
@@ -1200,8 +1135,7 @@ function CreateSortLine(armyID)
      
         end 
      
-    sortby.Height:Set(iconSize + 5)
-    sortby.Width:Set(boardWidth)
+    LayoutHelpers.SetDimensions(sortby, boardWidth, iconSize + 5)
     
     return sortby
 end
@@ -1212,15 +1146,13 @@ function CreateSeparatorLine(armyID)
     line.isSortLine = true
     line.isArmyLine = false
     line.isTeamLine = false
-    line.Height:Set(iconSize)
-    line.Width:Set(boardWidth)
+    LayoutHelpers.SetDimensions(line, boardWidth, iconSize)
      
     line.bmp = Bitmap(line)
     line.bmp:SetTexture(modTextures..'score_seperator.dds')
     
     line.bmp:DisableHitTest(true)
-    line.bmp.Height:Set(iconSize)
-    line.bmp.Width:Set(boardWidth)
+    LayoutHelpers.SetDimensions(line.bmp, boardWidth, iconSize)
     --LayoutHelpers.AtHorizontalCenterIn(line.bmp, line)
     LayoutHelpers.AtRightIn(line.bmp, line)
     LayoutHelpers.AtVerticalCenterIn(line.bmp, line)
@@ -1241,8 +1173,7 @@ function CreateMapLine(armyID)
     LayoutHelpers.AtVerticalCenterIn(group.name, group, 1)
     LayoutHelpers.AtHorizontalCenterIn(group.name, group)
       
-    group.Height:Set(lineSize+2)
-    group.Width:Set(boardWidth)        
+    LayoutHelpers.SetDimensions(group, boardWidth, lineSize + 2) 
     
     group:DisableHitTest()
     
@@ -1313,15 +1244,12 @@ function CreateInfoLine(armyID)
     LayoutHelpers.AtLeftIn(group.rank, group, position)
          
     position = position + iconSize + seperator
-    group.Height:Set(lineSize)
-    --group.Width:Set(boardWidth)        
-    group.Width:Set(position)        
+    LayoutHelpers.SetDimensions(group, position, lineSize)
     group:DisableHitTest()
     
     local center = Group(controls.bgStretch)    
     center.armyID = armyID
-    center.Height:Set(lineSize+2)
-    center.Width:Set(boardWidth)        
+    LayoutHelpers.SetDimensions(center, boardWidth, lineSize + 2)  
     center:DisableHitTest()
    
     LayoutHelpers.AtVerticalCenterIn(group, center)
@@ -1353,8 +1281,7 @@ end
 function CreateInfoIcon(parent, iconName)
    local icon = Bitmap(parent)
    icon:SetTexture(modTextures..iconName)
-   icon.Height:Set(iconSize)
-   icon.Width:Set(iconSize)
+   LayoutHelpers.SetDimensions(icon, iconSize, iconSize)
    icon:UseAlphaHitTest(true) 
    icon:SetSounds(true) 
    icon:SetHighlight(true, 0.8, 1.0)
