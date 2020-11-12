@@ -628,6 +628,11 @@ function CreateArmyLine(armyID, army)
     group.nameColumn:SetColor(textColor)
     LayoutHelpers.AtLeftIn(group.nameColumn, group, position)
     LayoutHelpers.AtVerticalCenterIn(group.nameColumn, group)
+    
+    if string.len(armyName) > 30 and not sessionReplay then
+        armyName = string.sub(armyName, 1, 30) .. '...'
+        group.nameColumn:SetText(armyName)
+    end
 
     if isPlayerArmy and not sessionReplay then -- and isSharing 
 
