@@ -36,8 +36,8 @@ WorldView = Class(orgWorldView, Control) {
                 local worldView = import('/lua/ui/game/worldview.lua').viewLeft
                 local pos = worldView:Project(pingData.Location)
                 LayoutHelpers.AtLeftTopIn(pingOverlay, worldView, 
-                    pos.x - pingOverlay.Width() / 2, 
-                    pos.y - pingOverlay.Height() / 2 + 1)
+                    pos.x - (pingOverlay.Width() / 2), 
+                    pos.y - (pingOverlay.Height() / 2) + 20)
             end
 
             pingOverlay.text = UIUtil.CreateText(pingOverlay, armyName, fontSize, UIUtil.bodyFont)
