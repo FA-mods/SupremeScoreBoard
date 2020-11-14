@@ -1,11 +1,7 @@
 local SSB = '/mods/SupremeScoreBoard/modules/score_board.lua'
+local LayoutHelpers = import('/lua/maui/layouthelpers.lua')
 
 local armiesDetails = GetArmiesTable().armiesTable
-local pingColors = {
-    red    = 'red',
-    yellow = 'yellow',
-    blue   = '3DBDCC', --#3DBDCC
-}
 
 -- overloading WorldView control
 local orgWorldView = WorldView 
@@ -17,14 +13,15 @@ WorldView = Class(orgWorldView, Control) {
         import(SSB).DisplayPingOwner(self, pingData)
         
         orgWorldView.DisplayPing(self, pingData)
-
+        
+        -- adding ping overlay with name of player that created a ping
         local options = Prefs.GetFromCurrentProfile('options')
         if options['SSB_Ping_Name'] ~= false and not pingData.Marker and not pingData.Renew then
             -- showing name of player that created a ping
             local armyIndex = pingData.Owner + 1
             local armyName  = armiesDetails[armyIndex].nickname
             local fontSize  = options['SSB_Ping_Size'] or 14
-            local fontColor = options['SSB_Ping_Color'] or 'white'
+            local fontColor = options['SSB_Ping_Color'] or 'ping'
             local additionalTime = options['SSB_Ping_Time'] or 0
             local startTime = GameTime()
             
@@ -37,15 +34,15 @@ WorldView = Class(orgWorldView, Control) {
                 local pos = worldView:Project(pingData.Location)
                 LayoutHelpers.AtLeftTopIn(pingOverlay, worldView, 
                     pos.x - (pingOverlay.Width() / 2), 
-                    pos.y - (pingOverlay.Height() / 2) + 20)
+                    pos.y - (pingOverlay.Height() / 2) + LayoutHelpers.ScaleNumber(20))
             end
 
             pingOverlay.text = UIUtil.CreateText(pingOverlay, armyName, fontSize, UIUtil.bodyFont)
             pingOverlay.text:SetDropShadow(true)
             if fontColor == 'army' and armiesDetails[armyIndex] then
                 pingOverlay.text:SetColor(armiesDetails[armyIndex].color)
-            elseif fontColor == 'ping' and pingColors[pingData.ArrowColor] then
-                pingOverlay.text:SetColor(pingColors[pingData.ArrowColor])
+            elseif fontColor == 'ping' then 
+                pingOverlay.text:SetColor(pingData.TextColor or 'white')
             else
                 pingOverlay.text:SetColor('white')
             end
@@ -55,8 +52,8 @@ WorldView = Class(orgWorldView, Control) {
                 local pingTime = startTime + pingData.Lifetime + additionalTime
                 while true do
                     if pingTime <= GameTime() then
-                        pingOverlay:Destroy()
-                        break
+                       pingOverlay:Destroy()
+                       break
                     end
                     WaitSeconds(0.5)
                 end
