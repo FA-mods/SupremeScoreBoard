@@ -1770,8 +1770,18 @@ function UpdateUnitStats(player, scoreData)
     --    end
     --end
 
-    player.units.total = num.init(scoreData.general.currentunits.count)
-    player.units.cap   = num.init(scoreData.general.currentcap.count)
+    -- checking for old structure in score data
+    if scoreData.general.currentunits.count then
+        player.units.total = num.init(scoreData.general.currentunits.count)
+    else 
+        player.units.total = num.init(scoreData.general.currentunits)
+    end
+    if scoreData.general.currentcap.count then
+        player.units.cap = num.init(scoreData.general.currentcap.count)
+    else 
+        player.units.cap = num.init(scoreData.general.currentcap)
+    end
+
     player.units.acu   = num.subt0(scoreData.units.cdr.built, scoreData.units.cdr.lost)
     player.units.exp   = num.subt0(scoreData.units.experimental.built, scoreData.units.experimental.lost)
     player.units.air   = num.subt0(scoreData.units.air.built, scoreData.units.air.lost)
