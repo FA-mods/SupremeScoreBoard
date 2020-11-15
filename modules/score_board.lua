@@ -1910,6 +1910,20 @@ function UpdatePlayerStats(armyID, armies, scoreData)
     else
         player.eco.massIncome = num.init(scoreData.resources.massin.rate)   * 10 -- per game ticks
         player.eco.engyIncome = num.init(scoreData.resources.energyin.rate) * 10 -- per game ticks
+        -- trying to fix income rate by adjusting reclaim
+--        local massReclaim = num.init(scoreData.resources.massin.reclaimRate)
+--        local massIncome  = num.init(scoreData.resources.massin.rate) * 10 -- per game ticks
+
+--        local engyReclaim = num.init(scoreData.resources.energyin.reclaimRate)
+--        local engyIncome  = num.init(scoreData.resources.energyin.rate) * 10 -- per game ticks
+--        -- TODO remove "- massReclaim" when FAF does not include reclaim in income rate:
+--        player.eco.massIncome = massIncome - massReclaim
+--        player.eco.engyIncome = engyIncome - engyReclaim
+
+--        if player.nameshort == 'HUSSAR' then
+--             WARN('SSB income=' .. string.format('%3.1f', massIncome)   .. ' '.. string.format('%3.1f', scoreData.resources.massin.rate)
+--                 .. ' reclaim=' .. string.format('%3.1f', massReclaim)  .. ' '.. string.format('%3.1f', scoreData.resources.massin.reclaimRate) )
+--        end
 
         player.eco.massStored = num.init(scoreData.resources.storage.storedMass)
         player.eco.engyStored = num.init(scoreData.resources.storage.storedEnergy)
