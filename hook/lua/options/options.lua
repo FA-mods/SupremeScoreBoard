@@ -160,7 +160,17 @@ table.insert(options.ui.items,
         custom  = GetBooleanStates(),
         set     = SetOptions,
     }) 
-    
+table.insert(options.ui.items,
+    {
+        tip     = "Specify whether or not show tooptip when hover share resources/units icons \n \n Game Session only",
+        title   = "SSB Show Tooltip When Hover Icons",
+        key     = 'SSB_Show_Tooltip_On_Hover',
+        type    = 'toggle',
+        default = true,
+        custom  = GetBooleanStates(),
+        set     = SetOptions,
+    })
+
 -- SSB Ping options
 table.insert(options.ui.items,
     {
