@@ -2352,10 +2352,14 @@ function _OnBeat()
                
                -- update army's score
                if player.score == -1 then
-                   line.scoreColumn:SetText(LOC("<LOC _Playing>Playing"))
+                   if player.ally then
+                      line.scoreColumn:SetText(' ')
+                   else
+                      line.scoreColumn:SetText(LOC("<LOC _Playing>Playing"))
+                   end
                else
                    line.scoreColumn:SetText(' '..GetStatsForArmy(player, Columns.Score.Active))
-               end        
+               end
                
                if focusedArmyID == armyID then -- current player  
                    HighlightUI(line, true) 
@@ -2384,7 +2388,11 @@ function _OnBeat()
                   log.Trace('OnBeat() player has died: '..player.nickname)
                   
                   if data.general.score == -1 then
-                      line.scoreColumn:SetText(LOC("<LOC _Defeated>Defeated"))
+                       if player.ally then
+                          line.scoreColumn:SetText(' ')
+                       else
+                          line.scoreColumn:SetText(LOC("<LOC _Playing>Playing"))
+                       end
                   end
                   if Stats.teamsActive then 
                       local teamId = Stats.armies[armyID].teamID
@@ -2421,7 +2429,8 @@ function _OnBeat()
                end 
                -- update army's score
                if team.score <= -1 then
-                  line.scoreColumn:SetText(LOC("<LOC _Playing>Playing"))
+--                  line.scoreColumn:SetText(LOC("<LOC _Playing>Playing"))
+                  line.scoreColumn:SetText(' ')
                else
                   line.scoreColumn:SetText(' '..GetStatsForArmy(team, Columns.Score.Active))
                end 
