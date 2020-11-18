@@ -52,7 +52,7 @@ function DisplayPing(worldView, pingData)
         if fontColor == 'army' and armiesDetails[armyIndex] then
             pingOverlay.text:SetColor(armiesDetails[armyIndex].color)
         elseif fontColor == 'ping' then 
-            pingOverlay.text:SetColor(pingData.TextColor or 'white')
+            pingOverlay.text:SetColor(pingData.TextColor or 'Yellow')
         else
             pingOverlay.text:SetColor('white')
         end
