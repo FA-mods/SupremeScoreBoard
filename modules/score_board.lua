@@ -62,7 +62,7 @@ Stats = {}
 Columns = {}
 GameOptions = import(modPath .. 'modules/options.lua').GetOptions(true)
 
-log.IsEnabled = true        
+log.IsEnabled = true
 
 local lastUnitWarning = false
 local unitWarningUsed = false
@@ -112,21 +112,21 @@ local cid = 1
 local Colors = { }
 Colors[cid] = {armyColor = 'ff40bf40', textColor = 'ff40bf40'} cid=cid+1 --#ff40bf40 #ff40bf40  mid green
 Colors[cid] = {armyColor = 'fffafa00', textColor = 'ffffff42'} cid=cid+1 --#fffafa00 #ffffff42  new yellow
-Colors[cid] = {armyColor = 'ff9161ff', textColor = 'FFA946F4'} cid=cid+1 --#ff9161ff #FFA946F4  purple
-Colors[cid] = {armyColor = 'ffe80a0a', textColor = 'FFF73C3C'} cid=cid+1 --#ffe80a0a #FFF73C3C  Cybran red ff3f15
-Colors[cid] = {armyColor = 'ff436eee', textColor = 'FF6184EF'} cid=cid+1 --#ff436eee #FF6184EF  new blue 
 Colors[cid] = {armyColor = 'ffffffff', textColor = 'ffffffff'} cid=cid+1 --#ffffffff #ffffffff  white
-Colors[cid] = {armyColor = 'ffff32ff', textColor = 'ffff32ff'} cid=cid+1 --#ffff32ff #ffff32ff  fuschia pink
-Colors[cid] = {armyColor = 'ffff873e', textColor = 'FFF17224'} cid=cid+1 --#ffff873e #FFF17224  orange (Nomads)
+Colors[cid] = {armyColor = 'ffff873e', textColor = 'FFF17224'} cid=cid+1 --#ffff873e #ffff873e  orange (Nomads)
+Colors[cid] = {armyColor = 'ffe80a0a', textColor = 'FFF73C3C'} cid=cid+1 --#ffe80a0a #FFF73C3C  Cybran red ff3f15
 Colors[cid] = {armyColor = 'ff66ffcc', textColor = 'ff66ffcc'} cid=cid+1 --#ff66ffcc #ff66ffcc  aqua
+Colors[cid] = {armyColor = 'ffff32ff', textColor = 'ffff32ff'} cid=cid+1 --#ffff32ff #ffff32ff  fuschia pink
+Colors[cid] = {armyColor = 'ff9161ff', textColor = 'FFA946F4'} cid=cid+1 --#ff9161ff #FFA946F4  purple
+Colors[cid] = {armyColor = 'ff436eee', textColor = 'FF6184EF'} cid=cid+1 --#ff436eee #FF6184EF  new blue 
 
-Colors[cid] = {armyColor = 'ff76a101', textColor = 'ff76a101'} cid=cid+1 --#ff76a101 #ff76a101  Order Green (old)
 Colors[cid] = {armyColor = 'ff9fd802', textColor = 'ff9fd802'} cid=cid+1 --#ff9fd802 #ff9fd802  Order Green (new)
 Colors[cid] = {armyColor = 'ffffbf80', textColor = 'ffffbf80'} cid=cid+1 --#ffffbf80 #ffffbf80  light orange
 Colors[cid] = {armyColor = 'ff2e8b57', textColor = 'ff3db874'} cid=cid+1 --#ff2e8b57 #ff3db874  dark new green
 Colors[cid] = {armyColor = 'ffff88ff', textColor = 'ffff88ff'} cid=cid+1 --#ffff88ff #ffff88ff  light pink
 Colors[cid] = {armyColor = 'ffb76518', textColor = 'ffe17d22'} cid=cid+1 --#ffb76518 #ffe17d22  new brown
 Colors[cid] = {armyColor = 'ffa79602', textColor = 'ffa79602'} cid=cid+1 --#ffa79602 #ffa79602  Sera golden
+Colors[cid] = {armyColor = 'ff76a101', textColor = 'ff76a101'} cid=cid+1 --#ff76a101 #ff76a101  Order Green (old)
 Colors[cid] = {armyColor = 'ff901427', textColor = 'FFCB2D44'} cid=cid+1 --#ff901427 #FFCB2D44  dark red 
 Colors[cid] = {armyColor = 'ff5f01a7', textColor = 'FF8C38CB'} cid=cid+1 --#ff5f01a7 #FF8C38CB  dark purple
 Colors[cid] = {armyColor = 'ff2f4f4f', textColor = 'FF549090'} cid=cid+1 --#ff2f4f4f #FF549090  dark green (olive)
@@ -175,6 +175,8 @@ function InitializeStats()
                 army.nameshort = str.subs(army.nickname, "%(", "%)") or army.nickname
                 army.namefull  = army.nameshort ..' ('.. str.subs(' '..army.nickname, " ", " %(") ..')'
                 --army.namefull  = army.nickname
+--                army.nameshort = ScoreMng.GetArmyName(id, true)
+--                army.namefull  = ScoreMng.GetArmyName(id, true)
                 Stats.ai.active = true
             end 
             army.icon = ScoreMng.GetArmyIcon(army.faction)
@@ -630,9 +632,9 @@ function CreateArmyLine(armyID, army)
         LayoutHelpers.AtVerticalCenterIn(group.rating, group)
         position = position + sw - 18 -- offset for rating text 12
     end
-            
+
     local armyName = army.namefull -- army.nameshort   
-    
+
     group.nameColumn = UIUtil.CreateText(group, armyName, fontSize, fontName)
     group.nameColumn:DisableHitTest() 
     group.nameColumn:SetColor(textColor)
@@ -2059,16 +2061,41 @@ function UpdateTeamColor(team, armies)
         for _,armyID in team.members.ids do
             local army = armies[armyID]
             if not army.outOfGame and army.color == item.armyColor then
-                --log.Trace('UpdateTeamColor()... team.color= '..army.color)
+--                WARN('UpdateTeamColor()... team.color= '..army.color)
                 team.color    = item.armyColor
                 team.txtColor = item.textColor
                 team.colorChanged = true
-                return 
+                break --return 
             end
         end
-    end 
-    --log.Trace('UpdateTeamStatus... DONE'..team.key)
-     
+        if team.colorChanged then
+            break
+        end
+    end
+
+--    if Stats.teamsActive and team.colorChanged then
+--        --log.Trace('UpdateTeamStatus... DONE'..team.key)
+--        for _, line in controls.armyLines do
+--            local armyID = line.armyID
+--            local army = Stats.armies[armyID]
+----            local armyTeam = Stats.teams[armyID] -- armyTeam.teamID
+--            if not line.dead and army and army.teamID == team.teamID then
+--                WARN('SetSolidColor()... team.color= '..team.color .. ' armyID=' .. armyID)
+--                if line.color then
+--                   line.color:SetSolidColor(team.color)
+--                end
+--                if line.nameColumn then
+--                   line.nameColumn:SetColor(team.color)
+--                end
+--                if line.rating then
+--                   line.rating:SetColor(team.color)
+--                end
+--                if line.scoreColumn then
+--                   line.scoreColumn:SetColor(team.color)
+--                end
+--            end
+--        end
+--    end
 end
 function UpdateTeamStatus(team, armies)
     --log.Trace('UpdateTeamStatus... '..team.key)
@@ -2409,7 +2436,7 @@ function _OnBeat()
                end
                
                if player.dead then
-                  log.Trace('OnBeat() player has died: '..player.nickname)
+--                  WARN('OnBeat() player has died: '..player.nickname)
                   
                   if data.general.score == -1 then
                        if player.ally then
@@ -2423,11 +2450,12 @@ function _OnBeat()
                       local team = Stats.teams[teamId]
                       UpdateTeamStatus(team, armies)
                       team.statusChanged = true
-                      -- check if team color needs to change
-                      --if (team.color == player.color) then
-                      --    team.colorChanged = true
-                      --    UpdateTeamColor(team, armies)
-                      --end
+                      -- TODO change team color when team mate has died
+--                      if team.color == player.color then
+--                          team.colorChanged = true
+--                          WARN('team.colorChanged team.color= ' .. team.color)
+--                          UpdateTeamColor(team, armies)
+--                      end
                   end
                   KillArmyLine(line)
                end
@@ -2459,10 +2487,11 @@ function _OnBeat()
                   line.scoreColumn:SetText(' '..GetStatsForArmy(team, Columns.Score.Active))
                end 
                -- update team color only for alive teams
-               if team.colorChanged and not team.dead then
-                  team.colorChanged = false
-                  line.color:SetSolidColor(team.color)
-               end
+--               if team.colorChanged and not team.dead then
+--                  team.colorChanged = false
+--                  WARN('SetSolidColor()... team.color= '..team.color)
+--                  line.color:SetSolidColor(team.color)
+--               end
                if team.dead and not line.dead then
                   log.Trace('OnBeat() team has died: '..team.namefull)
                   KillArmyLine(line)
