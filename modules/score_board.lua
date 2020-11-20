@@ -665,8 +665,11 @@ function CreateArmyLine(armyID, army)
                  Diplomacy.SendUnits(self.armyID, false) -- share selected units
              end         
         end 
-        Tooltip.AddControlTooltip(group.shareUnitsIcon, str.tooltip('share_units'))
-        
+
+        if GameOptions['SSB_Show_Tooltip_On_Hover']  then
+            Tooltip.AddControlTooltip(group.shareUnitsIcon, str.tooltip('share_units'))
+        end
+
         position = position + iconSize + 5
         group.shareEngyIcon = CreateInfoIcon(group, 'eco.engyIncome.dds')
         --group.shareEngyIcon:SetTexture(modTextures..'eco.engyIncome.dds')
@@ -683,8 +686,11 @@ function CreateArmyLine(armyID, army)
                 Diplomacy.SendResource(self.armyID, 0, 50) -- Share 50% energy
             end 
         end 
-        Tooltip.AddControlTooltip(group.shareEngyIcon, str.tooltip('share_engy'))
-        
+
+        if GameOptions['SSB_Show_Tooltip_On_Hover']  then
+            Tooltip.AddControlTooltip(group.shareEngyIcon, str.tooltip('share_engy'))
+        end
+
         -- UI for showing allied players' energy stats
         position = position + iconSize + 3
         group.engyColumn = UIUtil.CreateText(group, '0', fontSize, fontName)
@@ -709,7 +715,10 @@ function CreateArmyLine(armyID, army)
                 Diplomacy.SendResource(self.armyID, 50, 0) -- Share 50% mass
             end
         end
-        Tooltip.AddControlTooltip(group.shareMassIcon, str.tooltip('share_mass'))
+
+        if GameOptions['SSB_Show_Tooltip_On_Hover']  then
+            Tooltip.AddControlTooltip(group.shareMassIcon, str.tooltip('share_mass'))
+        end
 
         -- UI for showing allied players' mass stats
         position = position + iconSize + 2
