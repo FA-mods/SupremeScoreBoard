@@ -6,12 +6,13 @@ local orgCreateUI = CreateUI
 function CreateUI(isReplay, parent)
     orgCreateUI(isReplay)
 
-    local parent = import('/lua/ui/game/borders.lua').GetMapGroup()
+    if not import('/lua/ui/campaign/campaignmanager.lua').campaignMode then
+        local parent = import('/lua/ui/game/borders.lua').GetMapGroup()
      
-    --TODO-FAF remove
-    import(modScripts .. 'score_board.lua').CreateScoreUI(parent)
-    --import(modScripts .. "init.lua").init(isReplay, import('/lua/ui/game/borders.lua').GetMapGroup())
+        --TODO-FAF remove
+        import(modScripts .. 'score_board.lua').CreateScoreUI(parent)
+        --import(modScripts .. "init.lua").init(isReplay, import('/lua/ui/game/borders.lua').GetMapGroup())
      
-    --ForkThread(import(modScripts..'scoreStats.lua').syncStats)
-    
+        --ForkThread(import(modScripts..'scoreStats.lua').syncStats)
+    end
 end
