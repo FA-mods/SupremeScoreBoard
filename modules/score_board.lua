@@ -504,7 +504,7 @@ function SetupPlayerLines()
     end
   
     -- create observer's controls
-    if sessionReplay then
+    if sessionReplay or (sessionInfo.Options.CheatsEnabled == 'true') then
         local observer = {}
         observer.armyID = 0 -- will be between army lines (+IDs) and team lines (-IDs) 
         observer.type = 'observer'
@@ -824,7 +824,7 @@ function CreateArmyLine(armyID, army)
     LayoutHelpers.SetDimensions(group, boardWidth, lineSize)
     
     -- enable switching view to players' armies or observer 
-    if (isPlayerArmy or isObserver) and sessionReplay then
+    if (isPlayerArmy or isObserver) and sessionReplay or (sessionInfo.Options.CheatsEnabled == 'true') then
         group.bg = Bitmap(group)
         group.bg:SetSolidColor('00000000')
         group.bg.Height:Set(group.faction.Height)
